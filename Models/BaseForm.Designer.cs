@@ -1,6 +1,6 @@
 ﻿namespace Models
 {
-    abstract partial class BaseForm
+    public partial class BaseForm : System.Windows.Forms.Form
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(309, 203);
+            this.ClientSize = new System.Drawing.Size(304, 216);
+            this.MaximumSize = new System.Drawing.Size(570, 400);
             this.Name = "BaseForm";
             this.Text = "BaseForm";
             this.ResumeLayout(false);
