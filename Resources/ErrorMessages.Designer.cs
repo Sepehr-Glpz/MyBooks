@@ -59,5 +59,14 @@ namespace Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to  A Name is required to continue!.
+        /// </summary>
+        public static string NameRequiredError {
+            get {
+                return ResourceManager.GetString("NameRequiredError", resourceCulture);
+            }
+        }
     }
 }

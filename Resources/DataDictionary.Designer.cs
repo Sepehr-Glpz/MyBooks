@@ -59,5 +59,32 @@ namespace Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Library Books.
+        /// </summary>
+        public static string Book {
+            get {
+                return ResourceManager.GetString("Book", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string BookName {
+            get {
+                return ResourceManager.GetString("BookName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book&apos;s Name.
+        /// </summary>
+        public static string LocalBookName {
+            get {
+                return ResourceManager.GetString("LocalBookName", resourceCulture);
+            }
+        }
     }
 }
