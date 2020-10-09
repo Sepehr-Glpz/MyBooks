@@ -25,7 +25,7 @@
 
         public System.DateTime PublishYear { get; set; }
 
-        public string Genre { get; set; }
+        public BookGenres Genre { get; set; }
 
 
 
