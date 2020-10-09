@@ -16,7 +16,7 @@
         #endregion /Configuration
         public Book() : base()
         {
-
+           
         }
 
         public string Name { get; set; }
@@ -27,6 +27,9 @@
 
         public BookGenres Genre { get; set; }
 
+        public User OwnerUser { get; set; }
+
+        public System.Guid OwnerId { get; set; }
 
 
     }
