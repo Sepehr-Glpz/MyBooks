@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The length og the name must be between 2-20!.
+        /// </summary>
+        public static string NameLengthError {
+            get {
+                return ResourceManager.GetString("NameLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to  A Name is required to continue!.
         /// </summary>
         public static string NameRequiredError {

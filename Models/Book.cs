@@ -11,12 +11,15 @@
             public Configuration() : base()
             {
                 HasOptional(current => current.OwnerUser)
-                     .WithMany(User => User.Books)
+                     .WithMany(user => user.Books)
                      .HasForeignKey(current => current.OwnerUserId)
                      .WillCascadeOnDelete(false);
 
                 Property(current => current.BookName)
-                    .IsRequired();
+                    .HasMaxLength(20)
+                    .IsVariableLength()
+                    .IsUnicode();
+                    
 
             }
         }
@@ -31,6 +34,8 @@
             Display(Name =nameof(Resources.DataDictionary.LocalBookName))]
         [System.ComponentModel.DataAnnotations.
             Required(AllowEmptyStrings =false,ErrorMessage =nameof(Resources.ErrorMessages.NameRequiredError))]
+        [System.ComponentModel.DataAnnotations.
+            StringLength(maximumLength:20,MinimumLength =2,ErrorMessage =nameof(Resources.ErrorMessages.NameLengthError))]
         public string BookName { get; set; }
 
         public string WriterName { get; set; }
