@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="BookGenres.cs" />
+    <Compile Include="BookType.cs" />
     <Compile Include="ComplexTypes\FullName.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="DatabaseContextInitializer.cs" />
