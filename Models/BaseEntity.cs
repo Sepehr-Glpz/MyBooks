@@ -6,6 +6,7 @@
         {
             Id = System.Guid.NewGuid();
         }
+        [System.ComponentModel.Browsable(false)]
         [System.ComponentModel.DataAnnotations.Key]
         public System.Guid Id { get; set; }
 

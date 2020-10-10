@@ -126,6 +126,9 @@
   <data name="BookType" xml:space="preserve">
     <value>Book Type</value>
   </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
   <data name="Genre" xml:space="preserve">
     <value>Book Genre</value>
   </data>
@@ -135,6 +138,9 @@
   <data name="LocalBookType" xml:space="preserve">
     <value>Book's Type</value>
   </data>
+  <data name="LocalDescription" xml:space="preserve">
+    <value>Book's Description</value>
+  </data>
   <data name="LocalGenre" xml:space="preserve">
     <value>Book's Genre</value>
   </data>
@@ -143,6 +149,9 @@
   </data>
   <data name="LocalWriterName" xml:space="preserve">
     <value>Author's Name</value>
+  </data>
+  <data name="OwnerUser" xml:space="preserve">
+    <value>Book's Owner</value>
   </data>
   <data name="PublishYear" xml:space="preserve">
     <value>Year</value>

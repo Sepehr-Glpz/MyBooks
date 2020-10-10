@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description Length Can Only be {1} characters!.
+        /// </summary>
+        public static string DescriptionLengthError {
+            get {
+                return ResourceManager.GetString("DescriptionLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You Must specify a genre for this book!.
         /// </summary>
         public static string GenreError {
@@ -79,7 +88,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The length of the name must be between 2-20 characters!.
+        ///   Looks up a localized string similar to The length of the name must be between {2}-{1} characters!.
         /// </summary>
         public static string NameLengthError {
             get {
@@ -97,7 +106,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Publish year must be between 0-10000 !.
+        ///   Looks up a localized string similar to The Publish year must be between {1}-{2} !.
         /// </summary>
         public static string PublishYearRangeError {
             get {
@@ -106,7 +115,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The Author&apos;s name must be between 3-20 characters!.
+        ///   Looks up a localized string similar to The Author&apos;s name must be between {2}-{1} characters!.
         /// </summary>
         public static string WriterNameLengthError {
             get {

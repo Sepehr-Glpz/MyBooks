@@ -29,6 +29,14 @@
                 Property(current => current.PublishYear)
                     .IsOptional();
 
+                Property(current => current.Description)
+                    .IsOptional()
+                    .HasMaxLength(1024)
+                    .IsVariableLength()
+                    .IsUnicode();
+
+                Property(current => current.OwnerUserId)
+                     .IsOptional();
             }
         }
         #endregion /Configuration
@@ -39,49 +47,80 @@
         [System.ComponentModel.DataAnnotations.Schema.
             Column(name: nameof(Resources.DataDictionary.BookName))]
         [System.ComponentModel.DataAnnotations.
-            Display(Name = nameof(Resources.DataDictionary.LocalBookName))]
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalBookName))]
         [System.ComponentModel.DataAnnotations.
-            Required(AllowEmptyStrings = false, ErrorMessage = nameof(Resources.ErrorMessages.NameRequiredError))]
+            Required(AllowEmptyStrings = false,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.NameRequiredError))]
         [System.ComponentModel.DataAnnotations.
-            StringLength(maximumLength: 20, MinimumLength = 2, ErrorMessage = nameof(Resources.ErrorMessages.NameLengthError))]
+            StringLength(maximumLength: 20, MinimumLength = 2,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.NameLengthError))]
         public string BookName { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
             Column(name: nameof(Resources.DataDictionary.WriterName))]
         [System.ComponentModel.DataAnnotations.
-            Display(Name = nameof(Resources.DataDictionary.LocalWriterName))]
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalWriterName))]
         [System.ComponentModel.DataAnnotations.
-            StringLength(maximumLength: 20, MinimumLength = 3, ErrorMessage = nameof(Resources.ErrorMessages.WriterNameLengthError))]
+            StringLength(maximumLength: 20, MinimumLength = 3,
+            ErrorMessageResourceType = typeof(Resources.DataDictionary),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.WriterNameLengthError))]
+
         public string WriterName { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
             Column(name: nameof(Resources.DataDictionary.PublishYear))]
         [System.ComponentModel.DataAnnotations.
-            Display(Name = nameof(Resources.DataDictionary.LocalPublishYear))]
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalPublishYear))]
         [System.ComponentModel.DataAnnotations.
-            Range(minimum: 0, maximum: 10000, ErrorMessage = nameof(Resources.ErrorMessages.PublishYearRangeError))]
+            Range(type: typeof(int), minimum: "0", maximum: "10000",
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.PublishYearRangeError))]
         public int PublishYear { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
             Column(name: nameof(Resources.DataDictionary.Genre))]
         [System.ComponentModel.DataAnnotations.
-            Display(Name = nameof(Resources.DataDictionary.LocalGenre))]
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalGenre))]
         [System.ComponentModel.DataAnnotations.
-            Required(AllowEmptyStrings = false, ErrorMessage = nameof(Resources.ErrorMessages.GenreError))]
+            Required(AllowEmptyStrings = false,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.GenreError))]
         public BookGenres Genre { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
             Column(name: nameof(Resources.DataDictionary.BookType))]
         [System.ComponentModel.DataAnnotations.
-            Display(Name =nameof(Resources.DataDictionary.LocalBookType))]
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalBookType))]
         [System.ComponentModel.DataAnnotations.
-            Required(AllowEmptyStrings =false,ErrorMessage =nameof(Resources.ErrorMessages.BookTypeError))]
+            Required(AllowEmptyStrings = false,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages), 
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.BookTypeError))]
         public BookType BookType { get; set; }
 
+        [System.ComponentModel.DataAnnotations.Schema.
+            Column(name: nameof(Resources.DataDictionary.Description))]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalDescription))]
+        [System.ComponentModel.DataAnnotations.
+            StringLength(maximumLength: 1024, MinimumLength = 0, 
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.DescriptionLengthError))]
         public string Description { get; set; }
 
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary), 
+            Name = nameof(Resources.DataDictionary.OwnerUser))]
         public virtual User OwnerUser { get; set; }
 
+        [System.ComponentModel.Browsable(false)]
         public System.Guid OwnerUserId { get; set; }
 
 

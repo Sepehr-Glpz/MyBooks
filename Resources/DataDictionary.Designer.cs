@@ -88,6 +88,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book Genre.
         /// </summary>
         public static string Genre {
@@ -115,6 +124,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Book&apos;s Description.
+        /// </summary>
+        public static string LocalDescription {
+            get {
+                return ResourceManager.GetString("LocalDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book&apos;s Genre.
         /// </summary>
         public static string LocalGenre {
@@ -138,6 +156,15 @@ namespace Resources {
         public static string LocalWriterName {
             get {
                 return ResourceManager.GetString("LocalWriterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book&apos;s Owner.
+        /// </summary>
+        public static string OwnerUser {
+            get {
+                return ResourceManager.GetString("OwnerUser", resourceCulture);
             }
         }
         

@@ -120,19 +120,22 @@
   <data name="BookTypeError" xml:space="preserve">
     <value>You Must specify a Book Type for this book!</value>
   </data>
+  <data name="DescriptionLengthError" xml:space="preserve">
+    <value>Description Length Can Only be {1} characters!</value>
+  </data>
   <data name="GenreError" xml:space="preserve">
     <value>You Must specify a genre for this book!</value>
   </data>
   <data name="NameLengthError" xml:space="preserve">
-    <value>The length of the name must be between 2-20 characters!</value>
+    <value>The length of the name must be between {2}-{1} characters!</value>
   </data>
   <data name="NameRequiredError" xml:space="preserve">
     <value> A Book name is required to continue!</value>
   </data>
   <data name="PublishYearRangeError" xml:space="preserve">
-    <value>The Publish year must be between 0-10000 !</value>
+    <value>The Publish year must be between {1}-{2} !</value>
   </data>
   <data name="WriterNameLengthError" xml:space="preserve">
-    <value>The Author's name must be between 3-20 characters!</value>
+    <value>The Author's name must be between {2}-{1} characters!</value>
   </data>
 </root>
