@@ -61,7 +61,25 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The length og the name must be between 2-20!.
+        ///   Looks up a localized string similar to You Must specify a Book Type for this book!.
+        /// </summary>
+        public static string BookTypeError {
+            get {
+                return ResourceManager.GetString("BookTypeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Must specify a genre for this book!.
+        /// </summary>
+        public static string GenreError {
+            get {
+                return ResourceManager.GetString("GenreError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The length of the name must be between 2-20 characters!.
         /// </summary>
         public static string NameLengthError {
             get {
@@ -70,11 +88,29 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to  A Name is required to continue!.
+        ///   Looks up a localized string similar to  A Book name is required to continue!.
         /// </summary>
         public static string NameRequiredError {
             get {
                 return ResourceManager.GetString("NameRequiredError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Publish year must be between 0-10000 !.
+        /// </summary>
+        public static string PublishYearRangeError {
+            get {
+                return ResourceManager.GetString("PublishYearRangeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Author&apos;s name must be between 3-20 characters!.
+        /// </summary>
+        public static string WriterNameLengthError {
+            get {
+                return ResourceManager.GetString("WriterNameLengthError", resourceCulture);
             }
         }
     }

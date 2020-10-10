@@ -79,11 +79,83 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Book Type.
+        /// </summary>
+        public static string BookType {
+            get {
+                return ResourceManager.GetString("BookType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book Genre.
+        /// </summary>
+        public static string Genre {
+            get {
+                return ResourceManager.GetString("Genre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book&apos;s Name.
         /// </summary>
         public static string LocalBookName {
             get {
                 return ResourceManager.GetString("LocalBookName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book&apos;s Type.
+        /// </summary>
+        public static string LocalBookType {
+            get {
+                return ResourceManager.GetString("LocalBookType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Book&apos;s Genre.
+        /// </summary>
+        public static string LocalGenre {
+            get {
+                return ResourceManager.GetString("LocalGenre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publish Year.
+        /// </summary>
+        public static string LocalPublishYear {
+            get {
+                return ResourceManager.GetString("LocalPublishYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author&apos;s Name.
+        /// </summary>
+        public static string LocalWriterName {
+            get {
+                return ResourceManager.GetString("LocalWriterName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Year.
+        /// </summary>
+        public static string PublishYear {
+            get {
+                return ResourceManager.GetString("PublishYear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        public static string WriterName {
+            get {
+                return ResourceManager.GetString("WriterName", resourceCulture);
             }
         }
     }

@@ -117,10 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BookTypeError" xml:space="preserve">
+    <value>You Must specify a Book Type for this book!</value>
+  </data>
+  <data name="GenreError" xml:space="preserve">
+    <value>You Must specify a genre for this book!</value>
+  </data>
   <data name="NameLengthError" xml:space="preserve">
-    <value>The length og the name must be between 2-20!</value>
+    <value>The length of the name must be between 2-20 characters!</value>
   </data>
   <data name="NameRequiredError" xml:space="preserve">
-    <value> A Name is required to continue!</value>
+    <value> A Book name is required to continue!</value>
+  </data>
+  <data name="PublishYearRangeError" xml:space="preserve">
+    <value>The Publish year must be between 0-10000 !</value>
+  </data>
+  <data name="WriterNameLengthError" xml:space="preserve">
+    <value>The Author's name must be between 3-20 characters!</value>
   </data>
 </root>
