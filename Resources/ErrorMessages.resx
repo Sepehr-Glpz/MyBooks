@@ -117,14 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BookDescriptionLengthError" xml:space="preserve">
+    <value>Book Description length cannot be more than {1} characters!</value>
+  </data>
   <data name="BookTypeError" xml:space="preserve">
     <value>You Must specify a Book Type for this book!</value>
   </data>
-  <data name="DescriptionLengthError" xml:space="preserve">
-    <value>Description Length Can Only be {1} characters!</value>
-  </data>
   <data name="GenreError" xml:space="preserve">
     <value>You Must specify a genre for this book!</value>
+  </data>
+  <data name="IsActiveError" xml:space="preserve">
+    <value>You Must declare a state for Activity Privileges!</value>
+  </data>
+  <data name="IsAdminError" xml:space="preserve">
+    <value>You Must declare a state for admin privileges!</value>
+  </data>
+  <data name="IsSysAdminError" xml:space="preserve">
+    <value>You Must declare a state for system admin privileges!</value>
   </data>
   <data name="NameLengthError" xml:space="preserve">
     <value>The length of the name must be between {2}-{1} characters!</value>
@@ -132,8 +141,23 @@
   <data name="NameRequiredError" xml:space="preserve">
     <value> A Book name is required to continue!</value>
   </data>
+  <data name="PasswordLengthError" xml:space="preserve">
+    <value>The length of the password must be between {2} and {1} characters!</value>
+  </data>
+  <data name="PasswordRequiredError" xml:space="preserve">
+    <value>You must specify a password to continue!</value>
+  </data>
   <data name="PublishYearRangeError" xml:space="preserve">
     <value>The Publish year must be between {1}-{2} !</value>
+  </data>
+  <data name="UserDescriptionLengthError" xml:space="preserve">
+    <value>User Description length cannot be more than {1} characters!</value>
+  </data>
+  <data name="UsernameLengthError" xml:space="preserve">
+    <value>The length of the username must be between {2} and {1} characters!</value>
+  </data>
+  <data name="UsernameRequiredError" xml:space="preserve">
+    <value>You must specify a username to continue!</value>
   </data>
   <data name="WriterNameLengthError" xml:space="preserve">
     <value>The Author's name must be between {2}-{1} characters!</value>

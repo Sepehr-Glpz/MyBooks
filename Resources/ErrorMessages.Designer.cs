@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Book Description length cannot be more than {1} characters!.
+        /// </summary>
+        public static string BookDescriptionLengthError {
+            get {
+                return ResourceManager.GetString("BookDescriptionLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You Must specify a Book Type for this book!.
         /// </summary>
         public static string BookTypeError {
@@ -70,20 +79,38 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Description Length Can Only be {1} characters!.
-        /// </summary>
-        public static string DescriptionLengthError {
-            get {
-                return ResourceManager.GetString("DescriptionLengthError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to You Must specify a genre for this book!.
         /// </summary>
         public static string GenreError {
             get {
                 return ResourceManager.GetString("GenreError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Must declare a state for Activity Privileges!.
+        /// </summary>
+        public static string IsActiveError {
+            get {
+                return ResourceManager.GetString("IsActiveError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Must declare a state for admin privileges!.
+        /// </summary>
+        public static string IsAdminError {
+            get {
+                return ResourceManager.GetString("IsAdminError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Must declare a state for system admin privileges!.
+        /// </summary>
+        public static string IsSysAdminError {
+            get {
+                return ResourceManager.GetString("IsSysAdminError", resourceCulture);
             }
         }
         
@@ -106,11 +133,56 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The length of the password must be between {2} and {1} characters!.
+        /// </summary>
+        public static string PasswordLengthError {
+            get {
+                return ResourceManager.GetString("PasswordLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must specify a password to continue!.
+        /// </summary>
+        public static string PasswordRequiredError {
+            get {
+                return ResourceManager.GetString("PasswordRequiredError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Publish year must be between {1}-{2} !.
         /// </summary>
         public static string PublishYearRangeError {
             get {
                 return ResourceManager.GetString("PublishYearRangeError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User Description length cannot be more than {1} characters!.
+        /// </summary>
+        public static string UserDescriptionLengthError {
+            get {
+                return ResourceManager.GetString("UserDescriptionLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The length of the username must be between {2} and {1} characters!.
+        /// </summary>
+        public static string UsernameLengthError {
+            get {
+                return ResourceManager.GetString("UsernameLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must specify a username to continue!.
+        /// </summary>
+        public static string UsernameRequiredError {
+            get {
+                return ResourceManager.GetString("UsernameRequiredError", resourceCulture);
             }
         }
         

@@ -105,14 +105,14 @@
         public BookType BookType { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.Description))]
+            Column(name: nameof(Resources.DataDictionary.BookDescription))]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
-            Name = nameof(Resources.DataDictionary.LocalDescription))]
+            Name = nameof(Resources.DataDictionary.LocalBookDescription))]
         [System.ComponentModel.DataAnnotations.
             StringLength(maximumLength: 1024, MinimumLength = 0, 
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
-            ErrorMessageResourceName = nameof(Resources.ErrorMessages.DescriptionLengthError))]
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.BookDescriptionLengthError))]
         public string Description { get; set; }
 
         [System.ComponentModel.DataAnnotations.

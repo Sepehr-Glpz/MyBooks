@@ -1,5 +1,7 @@
 ﻿namespace Models
 {
+    [System.ComponentModel.DataAnnotations.Schema.
+        Table(name:nameof(Resources.DataDictionary.User))]
     public class User : BaseEntity
     {
         #region Configuration
@@ -8,6 +10,21 @@
         {
             public Configuration() : base()
             {
+                Property(current => current.Username)
+                    .HasMaxLength(20)
+                    .IsVariableLength()
+                    .IsUnicode();
+
+                Property(current => current.Password)
+                    .HasMaxLength(25)
+                    .IsVariableLength()
+                    .IsUnicode();
+
+                Property(current => current.Description)
+                    .HasMaxLength(1024)
+                    .IsVariableLength()
+                    .IsUnicode()
+                    .IsOptional();
 
             }
         }
@@ -18,21 +35,83 @@
             FullName = new ComplexTypes.FullName();
             IsSysAdmin = false;
         }
+
+        [System.ComponentModel.DataAnnotations.Schema.
+            Column(name:nameof(Resources.DataDictionary.Username))]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name =nameof(Resources.DataDictionary.LocalUsername))]
+        [System.ComponentModel.DataAnnotations.
+            Required(AllowEmptyStrings =false,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.UsernameRequiredError))]
+        [System.ComponentModel.DataAnnotations.
+            StringLength(maximumLength:20,MinimumLength =3,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.UsernameLengthError))]
         public string Username { get; set; }
 
+        [System.ComponentModel.DataAnnotations.Schema.
+            Column(name:nameof(Resources.DataDictionary.Password))]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalPasswordName))]
+        [System.ComponentModel.DataAnnotations.
+            Required(AllowEmptyStrings =false,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.PasswordRequiredError))]
+        [System.ComponentModel.DataAnnotations.
+            StringLength(maximumLength:25,MinimumLength =5,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.PasswordLengthError))]
         public string Password { get; set; }
 
+        [System.ComponentModel.DataAnnotations.Schema.
+            Column(name:nameof(Resources.DataDictionary.UserDescription))]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalUserDescription))]
+        [System.ComponentModel.DataAnnotations.
+            StringLength(maximumLength:1024,MinimumLength =0,
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.UserDescriptionLengthError))]
         public string Description { get; set; }
 
         [System.ComponentModel.Browsable(false)]
+        [System.ComponentModel.DataAnnotations.Schema.
+            Column(name:nameof(Resources.DataDictionary.UserFullName))]
         public ComplexTypes.FullName FullName { get; set; }
 
         public virtual System.Collections.Generic.IList<Book> Books { get; set; }
 
+        [System.ComponentModel.DataAnnotations.Schema.
+            Column(name:nameof(Resources.DataDictionary.IsSysAdmin))]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalIsSysAdmin))]
+        [System.ComponentModel.DataAnnotations.
+            Required(ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.IsSysAdminError))]
         public bool IsSysAdmin { get; set; }
 
+        [System.ComponentModel.DataAnnotations.Schema.
+            Column(name:nameof(Resources.DataDictionary.IsAdmin))]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalIsAdmin))]
+        [System.ComponentModel.DataAnnotations.
+            Required(ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.IsAdminError))]
         public bool IsAdmin { get; set; }
 
+        [System.ComponentModel.DataAnnotations.Schema.
+            Column(name:nameof(Resources.DataDictionary.IsActive))]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.LocalIsActive))]
+        [System.ComponentModel.DataAnnotations.
+            Required(ErrorMessageResourceType = typeof(Resources.ErrorMessages),
+            ErrorMessageResourceName = nameof(Resources.ErrorMessages.IsActiveError))]
         public bool IsActive { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.NotMapped]
