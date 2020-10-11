@@ -78,8 +78,6 @@
         public string Description { get; set; }
 
         [System.ComponentModel.Browsable(false)]
-        [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: "Fullname")]
         public ComplexTypes.FullName FullName { get; set; }
 
         public virtual System.Collections.Generic.IList<Book> Books { get; set; }
