@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Full name.
+        /// </summary>
+        public static string DisplayFullName {
+            get {
+                return ResourceManager.GetString("DisplayFullName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book Genre.
         /// </summary>
         public static string Genre {
@@ -246,6 +255,15 @@ namespace Resources {
         public static string OwnerUser {
             get {
                 return ResourceManager.GetString("OwnerUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner Id.
+        /// </summary>
+        public static string OwnerUserId {
+            get {
+                return ResourceManager.GetString("OwnerUserId", resourceCulture);
             }
         }
         

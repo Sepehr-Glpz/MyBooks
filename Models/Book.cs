@@ -121,6 +121,9 @@
         public virtual User OwnerUser { get; set; }
 
         [System.ComponentModel.Browsable(false)]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.OwnerUserId))]
         public System.Guid OwnerUserId { get; set; }
 
 

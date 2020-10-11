@@ -115,6 +115,9 @@
         public bool IsActive { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        [System.ComponentModel.DataAnnotations.
+            Display(ResourceType = typeof(Resources.DataDictionary),
+            Name = nameof(Resources.DataDictionary.DisplayFullName))]
         public string DisplayFullName
         {
             get
