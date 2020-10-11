@@ -61,83 +61,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Library Books.
-        /// </summary>
-        public static string Book {
-            get {
-                return ResourceManager.GetString("Book", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Description.
-        /// </summary>
-        public static string BookDescription {
-            get {
-                return ResourceManager.GetString("BookDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Name.
-        /// </summary>
-        public static string BookName {
-            get {
-                return ResourceManager.GetString("BookName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Book Type.
-        /// </summary>
-        public static string BookType {
-            get {
-                return ResourceManager.GetString("BookType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Full name.
         /// </summary>
         public static string DisplayFullName {
             get {
                 return ResourceManager.GetString("DisplayFullName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Book Genre.
-        /// </summary>
-        public static string Genre {
-            get {
-                return ResourceManager.GetString("Genre", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Active.
-        /// </summary>
-        public static string IsActive {
-            get {
-                return ResourceManager.GetString("IsActive", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Admin.
-        /// </summary>
-        public static string IsAdmin {
-            get {
-                return ResourceManager.GetString("IsAdmin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to System Admin.
-        /// </summary>
-        public static string IsSysAdmin {
-            get {
-                return ResourceManager.GetString("IsSysAdmin", resourceCulture);
             }
         }
         
@@ -264,69 +192,6 @@ namespace Resources {
         public static string OwnerUserId {
             get {
                 return ResourceManager.GetString("OwnerUserId", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to User Password.
-        /// </summary>
-        public static string Password {
-            get {
-                return ResourceManager.GetString("Password", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Year.
-        /// </summary>
-        public static string PublishYear {
-            get {
-                return ResourceManager.GetString("PublishYear", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Users.
-        /// </summary>
-        public static string User {
-            get {
-                return ResourceManager.GetString("User", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Description.
-        /// </summary>
-        public static string UserDescription {
-            get {
-                return ResourceManager.GetString("UserDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Fullname.
-        /// </summary>
-        public static string UserFullName {
-            get {
-                return ResourceManager.GetString("UserFullName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Username.
-        /// </summary>
-        public static string Username {
-            get {
-                return ResourceManager.GetString("Username", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Author.
-        /// </summary>
-        public static string WriterName {
-            get {
-                return ResourceManager.GetString("WriterName", resourceCulture);
             }
         }
     }

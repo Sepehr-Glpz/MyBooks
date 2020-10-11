@@ -36,6 +36,7 @@
             this.ClientSize = new System.Drawing.Size(363, 239);
             this.Name = "StartupLanguageForm";
             this.Text = "Language Form";
+            this.Load += new System.EventHandler(this.StartupLanguageForm_Load);
             this.ResumeLayout(false);
 
         }

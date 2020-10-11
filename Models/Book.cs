@@ -1,7 +1,7 @@
 ﻿namespace Models
 {
     [System.ComponentModel.DataAnnotations.Schema.Table
-        (name: nameof(Resources.DataDictionary.Book))]
+        (name: "Library Books")]
     public class Book : BaseEntity
     {
         #region Configuration
@@ -45,7 +45,7 @@
 
         }
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.BookName))]
+            Column(name:"Name")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalBookName))]
@@ -60,7 +60,7 @@
         public string BookName { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.WriterName))]
+            Column(name:"Author")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalWriterName))]
@@ -72,7 +72,7 @@
         public string WriterName { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.PublishYear))]
+            Column(name: "Year")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalPublishYear))]
@@ -83,7 +83,7 @@
         public int PublishYear { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.Genre))]
+            Column(name:"Book Genre")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalGenre))]
@@ -94,7 +94,7 @@
         public BookGenres Genre { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.BookType))]
+            Column(name: "Book Type")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalBookType))]
@@ -105,7 +105,7 @@
         public BookType BookType { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.BookDescription))]
+            Column(name: "Description")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalBookDescription))]

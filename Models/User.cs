@@ -1,7 +1,7 @@
 ﻿namespace Models
 {
     [System.ComponentModel.DataAnnotations.Schema.
-        Table(name: nameof(Resources.DataDictionary.User))]
+        Table(name: "Users")]
     public class User : BaseEntity
     {
         #region Configuration
@@ -37,7 +37,7 @@
         }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.Username))]
+            Column(name: "Username")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalUsername))]
@@ -52,7 +52,7 @@
         public string Username { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.Password))]
+            Column(name: "User Password")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalPasswordName))]
@@ -67,7 +67,7 @@
         public string Password { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.UserDescription))]
+            Column(name: "Description")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalUserDescription))]
@@ -79,13 +79,13 @@
 
         [System.ComponentModel.Browsable(false)]
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.UserFullName))]
+            Column(name: "Fullname")]
         public ComplexTypes.FullName FullName { get; set; }
 
         public virtual System.Collections.Generic.IList<Book> Books { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.IsSysAdmin))]
+            Column(name: "System Admin")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalIsSysAdmin))]
@@ -95,7 +95,7 @@
         public bool IsSysAdmin { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.IsAdmin))]
+            Column(name: "Admin")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalIsAdmin))]
@@ -105,7 +105,7 @@
         public bool IsAdmin { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name: nameof(Resources.DataDictionary.IsActive))]
+            Column(name: "Active")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalIsActive))]

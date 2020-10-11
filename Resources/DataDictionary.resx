@@ -117,32 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Book" xml:space="preserve">
-    <value>Library Books</value>
-  </data>
-  <data name="BookDescription" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="BookName" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="BookType" xml:space="preserve">
-    <value>Book Type</value>
-  </data>
   <data name="DisplayFullName" xml:space="preserve">
     <value>Full name</value>
-  </data>
-  <data name="Genre" xml:space="preserve">
-    <value>Book Genre</value>
-  </data>
-  <data name="IsActive" xml:space="preserve">
-    <value>Active</value>
-  </data>
-  <data name="IsAdmin" xml:space="preserve">
-    <value>Admin</value>
-  </data>
-  <data name="IsSysAdmin" xml:space="preserve">
-    <value>System Admin</value>
   </data>
   <data name="LocalBookDescription" xml:space="preserve">
     <value>Book's Description</value>
@@ -185,26 +161,5 @@
   </data>
   <data name="OwnerUserId" xml:space="preserve">
     <value>Owner Id</value>
-  </data>
-  <data name="Password" xml:space="preserve">
-    <value>User Password</value>
-  </data>
-  <data name="PublishYear" xml:space="preserve">
-    <value>Year</value>
-  </data>
-  <data name="User" xml:space="preserve">
-    <value>Users</value>
-  </data>
-  <data name="UserDescription" xml:space="preserve">
-    <value>Description</value>
-  </data>
-  <data name="UserFullName" xml:space="preserve">
-    <value>Fullname</value>
-  </data>
-  <data name="Username" xml:space="preserve">
-    <value>Username</value>
-  </data>
-  <data name="WriterName" xml:space="preserve">
-    <value>Author</value>
   </data>
 </root>
