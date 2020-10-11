@@ -7,7 +7,7 @@
         {
             System.Windows.Forms.Application.EnableVisualStyles();
             System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
-            System.Windows.Forms.Application.Run(new LanguageForm());  
+            System.Windows.Forms.Application.Run(Infrastructure.Utility.LanguageForm);  
         }
     }
 }

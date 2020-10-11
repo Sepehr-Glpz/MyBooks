@@ -28,7 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // LanguageForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.ClientSize = new System.Drawing.Size(380, 257);
+            this.Name = "LanguageForm";
+            this.Text = "Language Form";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
