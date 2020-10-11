@@ -1,6 +1,6 @@
 ﻿namespace MyApplication
 {
-    partial class StartupLanguageForm
+    public partial class LanguageForm : Infrastructure.BaseForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // StartupLanguageForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(363, 239);
-            this.Name = "StartupLanguageForm";
-            this.Text = "Language Form";
-            this.Load += new System.EventHandler(this.StartupLanguageForm_Load);
-            this.ResumeLayout(false);
-
+            this.components = new System.ComponentModel.Container();
         }
 
         #endregion
