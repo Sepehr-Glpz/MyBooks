@@ -100,7 +100,7 @@
             Name = nameof(Resources.DataDictionary.LocalBookType))]
         [System.ComponentModel.DataAnnotations.
             Required(AllowEmptyStrings = false,
-            ErrorMessageResourceType = typeof(Resources.ErrorMessages), 
+            ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.BookTypeError))]
         public BookType BookType { get; set; }
 
@@ -110,13 +110,13 @@
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalBookDescription))]
         [System.ComponentModel.DataAnnotations.
-            StringLength(maximumLength: 1024, MinimumLength = 0, 
+            StringLength(maximumLength: 1024, MinimumLength = 0,
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.BookDescriptionLengthError))]
         public string Description { get; set; }
 
         [System.ComponentModel.DataAnnotations.
-            Display(ResourceType = typeof(Resources.DataDictionary), 
+            Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.OwnerUser))]
         public virtual User OwnerUser { get; set; }
 

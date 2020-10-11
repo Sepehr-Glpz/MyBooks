@@ -9,7 +9,7 @@
 
         internal static void Seed(DatabaseContext databaseContext)
         {
-         
+            databaseContext.SaveChanges();
         }
 
 

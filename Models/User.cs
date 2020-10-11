@@ -1,7 +1,7 @@
 ﻿namespace Models
 {
     [System.ComponentModel.DataAnnotations.Schema.
-        Table(name:nameof(Resources.DataDictionary.User))]
+        Table(name: nameof(Resources.DataDictionary.User))]
     public class User : BaseEntity
     {
         #region Configuration
@@ -37,55 +37,55 @@
         }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name:nameof(Resources.DataDictionary.Username))]
+            Column(name: nameof(Resources.DataDictionary.Username))]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
-            Name =nameof(Resources.DataDictionary.LocalUsername))]
+            Name = nameof(Resources.DataDictionary.LocalUsername))]
         [System.ComponentModel.DataAnnotations.
-            Required(AllowEmptyStrings =false,
+            Required(AllowEmptyStrings = false,
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.UsernameRequiredError))]
         [System.ComponentModel.DataAnnotations.
-            StringLength(maximumLength:20,MinimumLength =3,
+            StringLength(maximumLength: 20, MinimumLength = 3,
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.UsernameLengthError))]
         public string Username { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name:nameof(Resources.DataDictionary.Password))]
+            Column(name: nameof(Resources.DataDictionary.Password))]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalPasswordName))]
         [System.ComponentModel.DataAnnotations.
-            Required(AllowEmptyStrings =false,
+            Required(AllowEmptyStrings = false,
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.PasswordRequiredError))]
         [System.ComponentModel.DataAnnotations.
-            StringLength(maximumLength:25,MinimumLength =5,
+            StringLength(maximumLength: 25, MinimumLength = 5,
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.PasswordLengthError))]
         public string Password { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name:nameof(Resources.DataDictionary.UserDescription))]
+            Column(name: nameof(Resources.DataDictionary.UserDescription))]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalUserDescription))]
         [System.ComponentModel.DataAnnotations.
-            StringLength(maximumLength:1024,MinimumLength =0,
+            StringLength(maximumLength: 1024, MinimumLength = 0,
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.UserDescriptionLengthError))]
         public string Description { get; set; }
 
         [System.ComponentModel.Browsable(false)]
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name:nameof(Resources.DataDictionary.UserFullName))]
+            Column(name: nameof(Resources.DataDictionary.UserFullName))]
         public ComplexTypes.FullName FullName { get; set; }
 
         public virtual System.Collections.Generic.IList<Book> Books { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name:nameof(Resources.DataDictionary.IsSysAdmin))]
+            Column(name: nameof(Resources.DataDictionary.IsSysAdmin))]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalIsSysAdmin))]
@@ -95,7 +95,7 @@
         public bool IsSysAdmin { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name:nameof(Resources.DataDictionary.IsAdmin))]
+            Column(name: nameof(Resources.DataDictionary.IsAdmin))]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalIsAdmin))]
@@ -105,7 +105,7 @@
         public bool IsAdmin { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name:nameof(Resources.DataDictionary.IsActive))]
+            Column(name: nameof(Resources.DataDictionary.IsActive))]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalIsActive))]
@@ -123,7 +123,7 @@
             get
             {
                 string result = FullName.ToString();
-                if (string.IsNullOrEmpty(result)==true)
+                if (string.IsNullOrEmpty(result) == true)
                 {
                     result = "Undefined";
                 }
@@ -141,7 +141,7 @@
                 {
                     result = $"{result}- Fullname: {DisplayFullName}";
                 }
-                if(IsActive==true)
+                if (IsActive == true)
                 {
                     result = $"{result}- [ENABLED]";
                 }
@@ -149,7 +149,7 @@
                 {
                     result = $"{result}- [DISABLED]";
                 }
-                if (IsAdmin==true)
+                if (IsAdmin == true)
                 {
                     result = $"{result}- [ADMIN]";
                 }
@@ -157,7 +157,7 @@
                 {
                     result = $"{result}- [USER]";
                 }
-                if (IsSysAdmin==true)
+                if (IsSysAdmin == true)
                 {
                     result = $"{result}- [SYSTEM ADMIN]";
                 }
