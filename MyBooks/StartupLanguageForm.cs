@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 namespace MyApplication
 {
-    public partial class StartupLanguageForm : Models.BaseForm
+    public partial class StartupLanguageForm : System.Windows.Forms.Form
     {
         public StartupLanguageForm()
         {
