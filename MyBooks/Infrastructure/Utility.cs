@@ -22,7 +22,18 @@
             }
         }
 
-
+        private static MyApplication.LoginForm loginForm;
+        public static MyApplication.LoginForm LoginForm
+        {
+            get
+            {
+                if (loginForm == null || loginForm.IsDisposed == true)
+                {
+                    loginForm = new MyApplication.LoginForm();
+                }
+                return loginForm;
+            }
+        }
 
 
 
