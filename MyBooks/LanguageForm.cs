@@ -11,6 +11,9 @@
         private void LanguageForm_Load(object sender, System.EventArgs e)
         {
             this.CenterToScreen();
+            Infrastructure.Utility.FormBackcolor = System.Drawing.Color.LightGreen;
+            Infrastructure.Utility.FormButtonBackColor = System.Drawing.Color.Khaki;
+            Infrastructure.Utility.FormTextColor = System.Drawing.SystemColors.ControlText;
         }
 
         private void Button_MouseEnter(object sender, System.EventArgs e)
@@ -22,13 +25,13 @@
         private void Button_MouseLeave(object sender, System.EventArgs e)
         {
             System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
-            currentButton.BackColor = System.Drawing.Color.Khaki;
+            currentButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
         }
 
         private void LanguageButton_Click(object sender, System.EventArgs e)
         {
             System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
-            switch(currentButton.Name)
+            switch (currentButton.Name)
             {
                 case "englishButton":
                     System.Globalization.CultureInfo englishCultureInfo =
@@ -45,7 +48,7 @@
                     break;
 
                 default:
-                    return;          
+                    return;
             }
 
             this.Hide();

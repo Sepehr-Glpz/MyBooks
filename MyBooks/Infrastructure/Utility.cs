@@ -7,7 +7,9 @@
         }
         public static Models.User AuthenticatedUser { get; set; }
 
-
+        public static System.Drawing.Color FormBackcolor { get; set; }
+        public static System.Drawing.Color FormTextColor { get; set; }
+        public static System.Drawing.Color FormButtonBackColor { get; set; }
 
         private static MyApplication.LanguageForm languageForm;
         public static MyApplication.LanguageForm LanguageForm

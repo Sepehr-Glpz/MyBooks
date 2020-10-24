@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-
+﻿using System.Linq;
 namespace MyApplication
 {
     public partial class LoginForm : Infrastructure.BaseForm
@@ -13,6 +6,14 @@ namespace MyApplication
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void LoginForm_Load(object sender, System.EventArgs e)
+        {
+            this.Text = Resources.LoginForm.LoginFormText;
+            this.usernameLable.Text = Resources.LoginForm.usernameLabel;
+            this.usernameLable.ForeColor = Infrastructure.Utility.FormTextColor;
+            
         }
     }
 }
