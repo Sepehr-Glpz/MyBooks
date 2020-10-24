@@ -121,6 +121,6 @@
     <value>ورود</value>
   </data>
   <data name="usernameLabel" xml:space="preserve">
-    <value>نام کاربری:</value>
+    <value>&amp;نام کاربری:</value>
   </data>
 </root>

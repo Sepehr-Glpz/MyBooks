@@ -9,8 +9,9 @@ namespace MyApplication
         }
 
         private void LoginForm_Load(object sender, System.EventArgs e)
-        {
+        { 
             this.Text = Resources.LoginForm.LoginFormText;
+            this.BackColor = Infrastructure.Utility.FormBackcolor;
             this.usernameLable.Text = Resources.LoginForm.usernameLabel;
             this.usernameLable.ForeColor = Infrastructure.Utility.FormTextColor;
             
