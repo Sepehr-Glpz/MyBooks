@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;Password:.
+        /// </summary>
+        public static string passwordLabel {
+            get {
+                return ResourceManager.GetString("passwordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Username:.
         /// </summary>
         public static string usernameLabel {

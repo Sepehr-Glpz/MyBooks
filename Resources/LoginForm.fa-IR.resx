@@ -120,6 +120,9 @@
   <data name="LoginFormText" xml:space="preserve">
     <value>ورود</value>
   </data>
+  <data name="passwordLabel" xml:space="preserve">
+    <value>&amp;رمز عبور:</value>
+  </data>
   <data name="usernameLabel" xml:space="preserve">
     <value>&amp;نام کاربری:</value>
   </data>
