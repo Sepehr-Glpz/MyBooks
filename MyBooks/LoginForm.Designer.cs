@@ -76,13 +76,14 @@
             // passwordVisibleButton
             // 
             this.passwordVisibleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.passwordVisibleButton.BackColor = System.Drawing.SystemColors.Window;
             this.passwordVisibleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordVisibleButton.Location = new System.Drawing.Point(453, 38);
             this.passwordVisibleButton.Name = "passwordVisibleButton";
             this.passwordVisibleButton.Size = new System.Drawing.Size(25, 20);
             this.passwordVisibleButton.TabIndex = 4;
             this.passwordVisibleButton.Text = "👁";
-            this.passwordVisibleButton.UseVisualStyleBackColor = true;
+            this.passwordVisibleButton.UseVisualStyleBackColor = false;
             this.passwordVisibleButton.Click += new System.EventHandler(this.PasswordVisibleButton_Click);
             // 
             // LoginForm

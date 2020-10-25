@@ -25,20 +25,37 @@ namespace MyApplication
 
 
 
+            string culture = 
+                System.Threading.Thread.CurrentThread.CurrentUICulture.Name.Substring(startIndex: 0, 2);
+            switch(culture.ToUpper())
+            {
+                case "FA":
+                case "AR":
+                    {
+                        RightToLeftLayout = true;
+                        RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+                        break;
+                    }
+                default:
+                    {
+                        RightToLeftLayout = false;
+                        RightToLeft = System.Windows.Forms.RightToLeft.No;
+                        break;
+                    }
+            }
 
-
-            passwordTextBox.UseSystemPasswordChar = false;
+            passwordTextBox.UseSystemPasswordChar = true;
         }
 
         private void PasswordVisibleButton_Click(object sender, System.EventArgs e)
         {
-            if (passwordTextBox.UseSystemPasswordChar==false)
+            if (passwordTextBox.UseSystemPasswordChar==true)
             {
-                passwordTextBox.UseSystemPasswordChar = true;
+                passwordTextBox.UseSystemPasswordChar = false;
             }
             else
             {
-                passwordTextBox.UseSystemPasswordChar = false;
+                passwordTextBox.UseSystemPasswordChar = true;
             }
         }
     }
