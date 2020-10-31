@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="exitButton" xml:space="preserve">
+    <value>&amp;Exit</value>
+  </data>
+  <data name="formClosingMessage" xml:space="preserve">
+    <value>Are You sure you want to close the application?</value>
+  </data>
+  <data name="formClosingMessageCaption" xml:space="preserve">
+    <value>Warning</value>
+  </data>
   <data name="loginButton" xml:space="preserve">
     <value>&amp;Login</value>
   </data>
@@ -126,8 +135,11 @@
   <data name="passwordLabel" xml:space="preserve">
     <value>&amp;Password:</value>
   </data>
+  <data name="registerButton" xml:space="preserve">
+    <value>&amp;Register</value>
+  </data>
   <data name="resetButton" xml:space="preserve">
-    <value>&amp;Reset</value>
+    <value>Re&amp;set</value>
   </data>
   <data name="usernameLabel" xml:space="preserve">
     <value>&amp;Username:</value>

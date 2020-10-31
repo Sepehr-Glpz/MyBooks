@@ -61,6 +61,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;Exit.
+        /// </summary>
+        public static string exitButton {
+            get {
+                return ResourceManager.GetString("exitButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are You sure you want to close the application?.
+        /// </summary>
+        public static string formClosingMessage {
+            get {
+                return ResourceManager.GetString("formClosingMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string formClosingMessageCaption {
+            get {
+                return ResourceManager.GetString("formClosingMessageCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Login.
         /// </summary>
         public static string loginButton {
@@ -88,7 +115,16 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &amp;Reset.
+        ///   Looks up a localized string similar to &amp;Register.
+        /// </summary>
+        public static string registerButton {
+            get {
+                return ResourceManager.GetString("registerButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re&amp;set.
         /// </summary>
         public static string resetButton {
             get {

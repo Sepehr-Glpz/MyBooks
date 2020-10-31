@@ -29,11 +29,17 @@ namespace MyApplication
             this.resetButton.ForeColor = Infrastructure.Utility.FormTextColor;
             this.resetButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
 
+            this.registerButton.Text = Resources.LoginForm.registerButton;
+            this.registerButton.ForeColor = Infrastructure.Utility.FormTextColor;
+            this.registerButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
 
+            this.exitButton.Text = Resources.LoginForm.exitButton;
+            this.exitButton.ForeColor = Infrastructure.Utility.FormTextColor;
+            this.exitButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
 
-            string culture = 
+            string culture =
                 System.Threading.Thread.CurrentThread.CurrentUICulture.Name.Substring(startIndex: 0, 2);
-            switch(culture.ToUpper())
+            switch (culture.ToUpper())
             {
                 case "FA":
                 case "AR":
@@ -53,17 +59,22 @@ namespace MyApplication
             passwordTextBox.UseSystemPasswordChar = true;
         }
 
+
         private void PasswordVisibleButton_Click(object sender, System.EventArgs e)
         {
-            if (passwordTextBox.UseSystemPasswordChar==true)
+            if (passwordTextBox.UseSystemPasswordChar == true)
             {
                 passwordTextBox.UseSystemPasswordChar = false;
+                passwordTextBox.Focus();
             }
             else
             {
                 passwordTextBox.UseSystemPasswordChar = true;
+                passwordTextBox.Focus();
             }
         }
+
+
 
         private void Button_MouseEnter(object sender, System.EventArgs e)
         {
@@ -71,15 +82,71 @@ namespace MyApplication
             currentButton.BackColor = System.Drawing.Color.LightBlue;
         }
 
+
+
         private void Button_MouseLeave(object sender, System.EventArgs e)
         {
             System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
-            if (currentButton.Name == nameof(this.passwordVisibleButton.Name))
+            if (currentButton.Name == "passwordVisibleButton")
             {
                 currentButton.BackColor = System.Drawing.SystemColors.Window;
                 return;
             }
             currentButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+        }
+
+        public void ResetForm()
+        {
+            this.usernameTextBox.Text = string.Empty;
+            this.passwordTextBox.Text = string.Empty;
+            this.usernameTextBox.Focus();
+        }
+
+        private void ResetButton_Click(object sender, System.EventArgs e)
+        {
+            ResetForm();
+        }
+
+        private void ExitButton_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LoginForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
+        {
+            System.Windows.Forms.DialogResult result = System.Windows.Forms.DialogResult.None;
+            if (RightToLeftLayout == false)
+            {
+                result =
+                      System.Windows.Forms.MessageBox.Show(
+                      text: Resources.LoginForm.formClosingMessage,
+                      caption: Resources.LoginForm.formClosingMessageCaption,
+                      buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+                      icon: System.Windows.Forms.MessageBoxIcon.Question,
+                      defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2);
+            }
+            if (RightToLeftLayout == true)
+            {
+                result =
+                      System.Windows.Forms.MessageBox.Show(
+                          text: Resources.LoginForm.formClosingMessage,
+                          caption: Resources.LoginForm.formClosingMessageCaption,
+                          buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+                          icon: System.Windows.Forms.MessageBoxIcon.Question,
+                          defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2,
+                          options: System.Windows.Forms.MessageBoxOptions.RightAlign |
+                          System.Windows.Forms.MessageBoxOptions.RtlReading);
+            }
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                System.Windows.Forms.Application.Exit();
+                return;
+            }
+            else
+            {
+                e.Cancel = true;
+                return;
+            }
         }
     }
 }

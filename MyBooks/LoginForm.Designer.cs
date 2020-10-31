@@ -35,6 +35,8 @@
             this.passwordVisibleButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
+            this.registerButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameLable
@@ -105,19 +107,47 @@
             // resetButton
             // 
             this.resetButton.BackColor = System.Drawing.Color.Khaki;
-            this.resetButton.Location = new System.Drawing.Point(172, 64);
+            this.resetButton.Location = new System.Drawing.Point(200, 64);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(70, 25);
             this.resetButton.TabIndex = 6;
-            this.resetButton.Text = "&Reset";
+            this.resetButton.Text = "Re&set";
             this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
             this.resetButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.resetButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // registerButton
+            // 
+            this.registerButton.BackColor = System.Drawing.Color.Khaki;
+            this.registerButton.Location = new System.Drawing.Point(304, 64);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(70, 25);
+            this.registerButton.TabIndex = 7;
+            this.registerButton.Text = "&Register";
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.registerButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Khaki;
+            this.exitButton.Location = new System.Drawing.Point(408, 64);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(70, 25);
+            this.exitButton.TabIndex = 8;
+            this.exitButton.Text = "&Exit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.exitButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.exitButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(490, 97);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordVisibleButton);
@@ -130,6 +160,7 @@
             this.MinimumSize = new System.Drawing.Size(510, 140);
             this.Name = "LoginForm";
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,5 +176,7 @@
         private System.Windows.Forms.Button passwordVisibleButton;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }
