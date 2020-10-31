@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;Login.
+        /// </summary>
+        public static string loginButton {
+            get {
+                return ResourceManager.GetString("loginButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string LoginFormText {
@@ -75,6 +84,15 @@ namespace Resources {
         public static string passwordLabel {
             get {
                 return ResourceManager.GetString("passwordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Reset.
+        /// </summary>
+        public static string resetButton {
+            get {
+                return ResourceManager.GetString("resetButton", resourceCulture);
             }
         }
         

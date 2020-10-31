@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="loginButton" xml:space="preserve">
+    <value>&amp;Login</value>
+  </data>
   <data name="LoginFormText" xml:space="preserve">
     <value>Login</value>
   </data>
   <data name="passwordLabel" xml:space="preserve">
     <value>&amp;Password:</value>
+  </data>
+  <data name="resetButton" xml:space="preserve">
+    <value>&amp;Reset</value>
   </data>
   <data name="usernameLabel" xml:space="preserve">
     <value>&amp;Username:</value>

@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="loginButton" xml:space="preserve">
+    <value>&amp;ورود</value>
+  </data>
   <data name="LoginFormText" xml:space="preserve">
     <value>ورود</value>
   </data>
   <data name="passwordLabel" xml:space="preserve">
     <value>&amp;رمز عبور:</value>
+  </data>
+  <data name="resetButton" xml:space="preserve">
+    <value>&amp;بازنشانی</value>
   </data>
   <data name="usernameLabel" xml:space="preserve">
     <value>&amp;نام کاربری:</value>

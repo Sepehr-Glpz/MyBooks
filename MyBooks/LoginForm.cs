@@ -6,7 +6,6 @@ namespace MyApplication
         public LoginForm()
         {
             InitializeComponent();
-           
         }
 
         private void LoginForm_Load(object sender, System.EventArgs e)
@@ -22,6 +21,13 @@ namespace MyApplication
             this.passwordLabel.ForeColor = Infrastructure.Utility.FormTextColor;
             this.passwordLabel.BackColor = Infrastructure.Utility.FormBackcolor;
 
+            this.loginButton.Text = Resources.LoginForm.loginButton;
+            this.loginButton.ForeColor = Infrastructure.Utility.FormTextColor;
+            this.loginButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+
+            this.resetButton.Text = Resources.LoginForm.resetButton;
+            this.resetButton.ForeColor = Infrastructure.Utility.FormTextColor;
+            this.resetButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
 
 
 
@@ -57,6 +63,23 @@ namespace MyApplication
             {
                 passwordTextBox.UseSystemPasswordChar = true;
             }
+        }
+
+        private void Button_MouseEnter(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
+            currentButton.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void Button_MouseLeave(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
+            if (currentButton.Name == nameof(this.passwordVisibleButton.Name))
+            {
+                currentButton.BackColor = System.Drawing.SystemColors.Window;
+                return;
+            }
+            currentButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
         }
     }
 }

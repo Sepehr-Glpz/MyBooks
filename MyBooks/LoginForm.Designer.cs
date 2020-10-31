@@ -33,6 +33,8 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.passwordVisibleButton = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameLable
@@ -85,19 +87,47 @@
             this.passwordVisibleButton.Text = "👁";
             this.passwordVisibleButton.UseVisualStyleBackColor = false;
             this.passwordVisibleButton.Click += new System.EventHandler(this.PasswordVisibleButton_Click);
+            this.passwordVisibleButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.passwordVisibleButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // loginButton
+            // 
+            this.loginButton.BackColor = System.Drawing.Color.Khaki;
+            this.loginButton.Location = new System.Drawing.Point(96, 64);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(70, 25);
+            this.loginButton.TabIndex = 5;
+            this.loginButton.Text = "&Login";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.loginButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // resetButton
+            // 
+            this.resetButton.BackColor = System.Drawing.Color.Khaki;
+            this.resetButton.Location = new System.Drawing.Point(172, 64);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(70, 25);
+            this.resetButton.TabIndex = 6;
+            this.resetButton.Text = "&Reset";
+            this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.resetButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(490, 157);
+            this.ClientSize = new System.Drawing.Size(490, 97);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passwordVisibleButton);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLable);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.MaximumSize = new System.Drawing.Size(810, 200);
-            this.MinimumSize = new System.Drawing.Size(510, 200);
+            this.MaximumSize = new System.Drawing.Size(810, 140);
+            this.MinimumSize = new System.Drawing.Size(510, 140);
             this.Name = "LoginForm";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -113,5 +143,7 @@
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Button passwordVisibleButton;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button resetButton;
     }
 }
