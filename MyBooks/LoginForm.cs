@@ -87,7 +87,7 @@ namespace MyApplication
         private void Button_MouseLeave(object sender, System.EventArgs e)
         {
             System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
-            if (currentButton.Name == "passwordVisibleButton")
+            if (currentButton.Name == passwordVisibleButton.Name)
             {
                 currentButton.BackColor = System.Drawing.SystemColors.Window;
                 return;
@@ -139,6 +139,7 @@ namespace MyApplication
             }
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
+                this.FormClosing -= LoginForm_FormClosing;
                 System.Windows.Forms.Application.Exit();
                 return;
             }
@@ -146,7 +147,8 @@ namespace MyApplication
             {
                 e.Cancel = true;
                 return;
-            }
+            }  
+            
         }
     }
 }
