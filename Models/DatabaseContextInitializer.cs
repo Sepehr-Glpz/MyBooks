@@ -13,7 +13,7 @@ namespace Models
         {
             Book firstBook = new Book()
             {
-                BookName = "Grimoire Electric",
+                BookName = "Magic Grimoire",
                 PublishYear = 2020,
                 WriterName = "UnKnown",
                 Genre = BookGenres.Other,
