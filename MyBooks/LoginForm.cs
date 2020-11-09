@@ -10,6 +10,26 @@ namespace MyApplication
 
         private void LoginForm_Load(object sender, System.EventArgs e)
         {
+
+            string culture =
+                System.Threading.Thread.CurrentThread.CurrentUICulture.Name.Substring(startIndex: 0, 2);
+            switch (culture.ToUpper())
+            {
+                case "FA":
+                case "AR":
+                    {
+                        RightToLeftLayout = true;
+                        RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+                        break;
+                    }
+                default:
+                    {
+                        RightToLeftLayout = false;
+                        RightToLeft = System.Windows.Forms.RightToLeft.No;
+                        break;
+                    }
+            }
+
             this.Text = Resources.LoginForm.LoginFormText;
             this.BackColor = Infrastructure.Utility.FormBackcolor;
 
@@ -37,26 +57,7 @@ namespace MyApplication
             this.exitButton.ForeColor = Infrastructure.Utility.FormTextColor;
             this.exitButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
 
-            string culture =
-                System.Threading.Thread.CurrentThread.CurrentUICulture.Name.Substring(startIndex: 0, 2);
-            switch (culture.ToUpper())
-            {
-                case "FA":
-                case "AR":
-                    {
-                        RightToLeftLayout = true;
-                        RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-                        break;
-                    }
-                default:
-                    {
-                        RightToLeftLayout = false;
-                        RightToLeft = System.Windows.Forms.RightToLeft.No;
-                        break;
-                    }
-            }
-
-            passwordTextBox.UseSystemPasswordChar = true;
+        
         }
 
 
@@ -149,6 +150,11 @@ namespace MyApplication
                 return;
             }  
             
+        }
+
+        private void RegisterButton_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

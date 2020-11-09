@@ -76,6 +76,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(357, 20);
             this.passwordTextBox.TabIndex = 3;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // passwordVisibleButton
             // 
@@ -85,7 +86,7 @@
             this.passwordVisibleButton.Location = new System.Drawing.Point(453, 38);
             this.passwordVisibleButton.Name = "passwordVisibleButton";
             this.passwordVisibleButton.Size = new System.Drawing.Size(25, 20);
-            this.passwordVisibleButton.TabIndex = 4;
+            this.passwordVisibleButton.TabIndex = 8;
             this.passwordVisibleButton.Text = "👁";
             this.passwordVisibleButton.UseVisualStyleBackColor = false;
             this.passwordVisibleButton.Click += new System.EventHandler(this.PasswordVisibleButton_Click);
@@ -98,7 +99,7 @@
             this.loginButton.Location = new System.Drawing.Point(96, 64);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(70, 25);
-            this.loginButton.TabIndex = 5;
+            this.loginButton.TabIndex = 4;
             this.loginButton.Text = "&Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
@@ -110,7 +111,7 @@
             this.resetButton.Location = new System.Drawing.Point(200, 64);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(70, 25);
-            this.resetButton.TabIndex = 6;
+            this.resetButton.TabIndex = 5;
             this.resetButton.Text = "Re&set";
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
@@ -123,9 +124,10 @@
             this.registerButton.Location = new System.Drawing.Point(304, 64);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(70, 25);
-            this.registerButton.TabIndex = 7;
+            this.registerButton.TabIndex = 6;
             this.registerButton.Text = "&Register";
             this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.RegisterButton_Click);
             this.registerButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.registerButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -135,7 +137,7 @@
             this.exitButton.Location = new System.Drawing.Point(408, 64);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(70, 25);
-            this.exitButton.TabIndex = 8;
+            this.exitButton.TabIndex = 7;
             this.exitButton.Text = "&Exit";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
