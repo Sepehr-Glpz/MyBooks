@@ -11,8 +11,8 @@
         private void LanguageForm_Load(object sender, System.EventArgs e)
         {
             this.CenterToScreen();
-            Infrastructure.Utility.FormBackcolor = System.Drawing.Color.LightGreen;
-            Infrastructure.Utility.FormButtonBackColor = System.Drawing.Color.Khaki;
+            Infrastructure.Utility.FormBackcolor = System.Drawing.Color.SkyBlue;
+            Infrastructure.Utility.FormButtonBackColor = System.Drawing.Color.Wheat;
             Infrastructure.Utility.FormTextColor = System.Drawing.SystemColors.ControlText;
         }
 

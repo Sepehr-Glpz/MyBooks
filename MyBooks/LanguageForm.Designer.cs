@@ -49,7 +49,7 @@
             // 
             this.englishButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.englishButton.BackColor = System.Drawing.Color.Khaki;
+            this.englishButton.BackColor = System.Drawing.Color.Wheat;
             this.englishButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.englishButton.ForeColor = System.Drawing.SystemColors.ControlText;
             this.englishButton.Location = new System.Drawing.Point(100, 50);
@@ -64,7 +64,7 @@
             // 
             // persianButton
             // 
-            this.persianButton.BackColor = System.Drawing.Color.Khaki;
+            this.persianButton.BackColor = System.Drawing.Color.Wheat;
             this.persianButton.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.persianButton.Location = new System.Drawing.Point(100, 100);
             this.persianButton.Name = "persianButton";
