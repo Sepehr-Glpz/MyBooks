@@ -35,7 +35,31 @@
             this.usernameLabel.BackColor = Infrastructure.Utility.FormBackcolor;
             this.usernameLabel.ForeColor = Infrastructure.Utility.FormTextColor;
 
+            this.passwordLabel.Text = Resources.RegisterForm.PasswordLabelText;
+            this.passwordLabel.BackColor = Infrastructure.Utility.FormBackcolor;
+            this.passwordLabel.ForeColor = Infrastructure.Utility.FormTextColor;
 
+            this.repeatPasswordLabel.Text = Resources.RegisterForm.RepeatPasswordLabelText;
+            this.repeatPasswordLabel.BackColor = Infrastructure.Utility.FormBackcolor;
+            this.repeatPasswordLabel.ForeColor = Infrastructure.Utility.FormTextColor;
+
+
+        }
+
+        private void PasswordVisibleButton_Click(object sender, System.EventArgs e)
+        {
+            if (passwordTextbox.UseSystemPasswordChar == true && repeatPasswordTextbox.UseSystemPasswordChar == true)
+            {
+                passwordTextbox.UseSystemPasswordChar = false;
+                repeatPasswordTextbox.UseSystemPasswordChar = false;
+                passwordTextbox.Focus();
+            }
+            else
+            {
+                passwordTextbox.UseSystemPasswordChar = true;
+                repeatPasswordTextbox.UseSystemPasswordChar = true;
+                passwordTextbox.Focus();
+            }
         }
     }
 }

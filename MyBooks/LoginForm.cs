@@ -154,7 +154,9 @@ namespace MyApplication
 
         private void RegisterButton_Click(object sender, System.EventArgs e)
         {
-
+            this.ResetForm();
+            this.Hide();
+            Infrastructure.Utility.RegisterForm.Show();
         }
     }
 }

@@ -37,7 +37,18 @@
             }
         }
 
-
+        private static MyApplication.RegisterForm registerForm;
+        public static MyApplication.RegisterForm RegisterForm
+        {
+            get
+            {
+                if (registerForm == null || registerForm.IsDisposed == true)
+                {
+                    registerForm = new MyApplication.RegisterForm();
+                }
+                return registerForm;
+            }
+        }
 
     }
 }

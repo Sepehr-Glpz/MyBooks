@@ -123,6 +123,10 @@
   <data name="RegisterFormText" xml:space="preserve">
     <value>Register</value>
   </data>
+  <data name="RepeatPasswordLabelText" xml:space="preserve">
+    <value>R&amp;epeat
+Password:</value>
+  </data>
   <data name="UsernameLabelText" xml:space="preserve">
     <value>&amp;Username:</value>
   </data>

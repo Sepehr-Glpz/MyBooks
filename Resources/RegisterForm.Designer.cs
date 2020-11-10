@@ -79,6 +79,16 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to R&amp;epeat
+        ///Password:.
+        /// </summary>
+        public static string RepeatPasswordLabelText {
+            get {
+                return ResourceManager.GetString("RepeatPasswordLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Username:.
         /// </summary>
         public static string UsernameLabelText {
