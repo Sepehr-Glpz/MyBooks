@@ -116,7 +116,7 @@ namespace MyApplication
         private void LoginForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
             System.Windows.Forms.DialogResult result = System.Windows.Forms.DialogResult.None;
-            if (RightToLeftLayout == false)
+            if (RightToLeft == System.Windows.Forms.RightToLeft.No)
             {
                 result =
                       System.Windows.Forms.MessageBox.Show(
@@ -126,7 +126,7 @@ namespace MyApplication
                       icon: System.Windows.Forms.MessageBoxIcon.Question,
                       defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2);
             }
-            if (RightToLeftLayout == true)
+            if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
             {
                 result =
                       System.Windows.Forms.MessageBox.Show(

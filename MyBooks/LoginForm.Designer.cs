@@ -95,7 +95,7 @@
             // 
             // loginButton
             // 
-            this.loginButton.BackColor = System.Drawing.Color.Khaki;
+            this.loginButton.BackColor = System.Drawing.Color.Wheat;
             this.loginButton.Location = new System.Drawing.Point(96, 64);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(70, 25);
@@ -107,7 +107,7 @@
             // 
             // resetButton
             // 
-            this.resetButton.BackColor = System.Drawing.Color.Khaki;
+            this.resetButton.BackColor = System.Drawing.Color.Wheat;
             this.resetButton.Location = new System.Drawing.Point(200, 64);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(70, 25);
@@ -120,7 +120,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.BackColor = System.Drawing.Color.Khaki;
+            this.registerButton.BackColor = System.Drawing.Color.Wheat;
             this.registerButton.Location = new System.Drawing.Point(304, 64);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(70, 25);
@@ -133,7 +133,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.BackColor = System.Drawing.Color.Khaki;
+            this.exitButton.BackColor = System.Drawing.Color.Wheat;
             this.exitButton.Location = new System.Drawing.Point(408, 64);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(70, 25);

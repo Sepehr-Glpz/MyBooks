@@ -70,7 +70,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Are You sure you want to close the application?.
+        ///   Looks up a localized string similar to Are You sure that you want to close the application?.
         /// </summary>
         public static string formClosingMessage {
             get {

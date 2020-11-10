@@ -121,7 +121,7 @@
     <value>&amp;Exit</value>
   </data>
   <data name="formClosingMessage" xml:space="preserve">
-    <value>Are You sure you want to close the application?</value>
+    <value>Are You sure that you want to close the application?</value>
   </data>
   <data name="formClosingMessageCaption" xml:space="preserve">
     <value>Warning</value>

@@ -37,6 +37,8 @@
             this.repeatPasswordTextbox = new System.Windows.Forms.TextBox();
             this.registerButton = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -115,7 +117,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.BackColor = System.Drawing.Color.Khaki;
+            this.registerButton.BackColor = System.Drawing.Color.Wheat;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.registerButton.Location = new System.Drawing.Point(96, 122);
             this.registerButton.Name = "registerButton";
@@ -128,7 +130,8 @@
             // 
             // resetButton
             // 
-            this.resetButton.BackColor = System.Drawing.Color.Khaki;
+            this.resetButton.BackColor = System.Drawing.Color.Wheat;
+            this.resetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.resetButton.Location = new System.Drawing.Point(200, 122);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(70, 25);
@@ -139,10 +142,40 @@
             this.resetButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.resetButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
+            // loginButton
+            // 
+            this.loginButton.BackColor = System.Drawing.Color.Wheat;
+            this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.loginButton.Location = new System.Drawing.Point(304, 122);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(70, 25);
+            this.loginButton.TabIndex = 9;
+            this.loginButton.Text = "&Login";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            this.loginButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.loginButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // exitButton
+            // 
+            this.exitButton.BackColor = System.Drawing.Color.Wheat;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.exitButton.Location = new System.Drawing.Point(408, 122);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(70, 25);
+            this.exitButton.TabIndex = 10;
+            this.exitButton.Text = "E&xit";
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.exitButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.exitButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(490, 157);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.repeatPasswordTextbox);
@@ -156,6 +189,7 @@
             this.MinimumSize = new System.Drawing.Size(510, 200);
             this.Name = "RegisterForm";
             this.Text = "Register";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RegisterForm_FormClosing);
             this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,5 +207,7 @@
         private System.Windows.Forms.TextBox repeatPasswordTextbox;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }

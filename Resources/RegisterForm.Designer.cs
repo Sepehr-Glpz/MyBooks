@@ -61,6 +61,42 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E&amp;xit.
+        /// </summary>
+        public static string ExitButtonText {
+            get {
+                return ResourceManager.GetString("ExitButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string FormClosingMessageBoxCaption {
+            get {
+                return ResourceManager.GetString("FormClosingMessageBoxCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure that you want to close the application?.
+        /// </summary>
+        public static string FormClosingMessageBoxText {
+            get {
+                return ResourceManager.GetString("FormClosingMessageBoxText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Login.
+        /// </summary>
+        public static string LoginButtonText {
+            get {
+                return ResourceManager.GetString("LoginButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Password:.
         /// </summary>
         public static string PasswordLabelText {

@@ -50,6 +50,14 @@
             this.resetButton.Text = Resources.RegisterForm.ResetButtonText;
             this.resetButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
             this.resetButton.ForeColor = Infrastructure.Utility.FormTextColor;
+
+            this.loginButton.Text = Resources.RegisterForm.LoginButtonText;
+            this.loginButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+            this.loginButton.ForeColor = Infrastructure.Utility.FormTextColor;
+
+            this.exitButton.Text = Resources.RegisterForm.ExitButtonText;
+            this.exitButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+            this.exitButton.ForeColor = Infrastructure.Utility.FormTextColor;
         }
 
         private void PasswordVisibleButton_Click(object sender, System.EventArgs e)
@@ -95,6 +103,56 @@
             this.passwordTextbox.Text = string.Empty;
             this.repeatPasswordTextbox.Text = string.Empty;
             this.usernameTextbox.Focus();
+        }
+
+        private void LoginButton_Click(object sender, System.EventArgs e)
+        {
+            this.ResetForm();
+            this.Hide();
+            Infrastructure.Utility.LoginForm.Show();
+        }
+
+        private void ExitButton_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void RegisterForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
+        {
+            System.Windows.Forms.DialogResult result = System.Windows.Forms.DialogResult.None;
+            if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+            {
+                result =
+                    System.Windows.Forms.MessageBox.Show(
+                        text: Resources.RegisterForm.FormClosingMessageBoxText,
+                        caption: Resources.RegisterForm.FormClosingMessageBoxCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+                        icon: System.Windows.Forms.MessageBoxIcon.Question,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2,
+                        options: System.Windows.Forms.MessageBoxOptions.RightAlign |
+                        System.Windows.Forms.MessageBoxOptions.RtlReading);
+            }
+            if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+            {
+                result =
+                    System.Windows.Forms.MessageBox.Show(
+                        text: Resources.RegisterForm.FormClosingMessageBoxText,
+                        caption: Resources.RegisterForm.FormClosingMessageBoxCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+                        icon: System.Windows.Forms.MessageBoxIcon.Question,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2);    
+            }
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.FormClosing -= RegisterForm_FormClosing;
+                System.Windows.Forms.Application.Exit();
+                return;
+            }
+            else
+            {
+                e.Cancel = true;
+                return;
+            }
         }
     }
 }
