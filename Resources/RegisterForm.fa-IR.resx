@@ -120,12 +120,18 @@
   <data name="PasswordLabelText" xml:space="preserve">
     <value>&amp;رمز عبور:</value>
   </data>
+  <data name="RegisterButtonText" xml:space="preserve">
+    <value>&amp;ثبت نام</value>
+  </data>
   <data name="RegisterFormText" xml:space="preserve">
     <value>ثبت نام</value>
   </data>
   <data name="RepeatPasswordLabelText" xml:space="preserve">
     <value>&amp;تکرار
 رمز عبور:</value>
+  </data>
+  <data name="ResetButtonText" xml:space="preserve">
+    <value>&amp;بازنشانی</value>
   </data>
   <data name="UsernameLabelText" xml:space="preserve">
     <value>&amp;نام کاربری:</value>

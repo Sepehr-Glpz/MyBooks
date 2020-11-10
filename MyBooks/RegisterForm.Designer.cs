@@ -35,6 +35,8 @@
             this.passwordVisibleButton = new System.Windows.Forms.Button();
             this.repeatPasswordLabel = new System.Windows.Forms.Label();
             this.repeatPasswordTextbox = new System.Windows.Forms.TextBox();
+            this.registerButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // usernameLabel
@@ -78,6 +80,7 @@
             // 
             // passwordVisibleButton
             // 
+            this.passwordVisibleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordVisibleButton.BackColor = System.Drawing.SystemColors.Window;
             this.passwordVisibleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.passwordVisibleButton.Location = new System.Drawing.Point(453, 50);
@@ -87,6 +90,8 @@
             this.passwordVisibleButton.Text = "👁";
             this.passwordVisibleButton.UseVisualStyleBackColor = false;
             this.passwordVisibleButton.Click += new System.EventHandler(this.PasswordVisibleButton_Click);
+            this.passwordVisibleButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.passwordVisibleButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // repeatPasswordLabel
             // 
@@ -100,16 +105,46 @@
             // 
             // repeatPasswordTextbox
             // 
+            this.repeatPasswordTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.repeatPasswordTextbox.Location = new System.Drawing.Point(96, 88);
             this.repeatPasswordTextbox.Name = "repeatPasswordTextbox";
             this.repeatPasswordTextbox.Size = new System.Drawing.Size(382, 20);
             this.repeatPasswordTextbox.TabIndex = 6;
             this.repeatPasswordTextbox.UseSystemPasswordChar = true;
             // 
+            // registerButton
+            // 
+            this.registerButton.BackColor = System.Drawing.Color.Khaki;
+            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.registerButton.Location = new System.Drawing.Point(96, 122);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(70, 25);
+            this.registerButton.TabIndex = 7;
+            this.registerButton.Text = "&Register";
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.registerButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // resetButton
+            // 
+            this.resetButton.BackColor = System.Drawing.Color.Khaki;
+            this.resetButton.Location = new System.Drawing.Point(200, 122);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(70, 25);
+            this.resetButton.TabIndex = 8;
+            this.resetButton.Text = "Re&set";
+            this.resetButton.UseVisualStyleBackColor = false;
+            this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            this.resetButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.resetButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(490, 157);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.registerButton);
             this.Controls.Add(this.repeatPasswordTextbox);
             this.Controls.Add(this.repeatPasswordLabel);
             this.Controls.Add(this.passwordVisibleButton);
@@ -117,6 +152,8 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.usernameTextbox);
             this.Controls.Add(this.usernameLabel);
+            this.MaximumSize = new System.Drawing.Size(910, 200);
+            this.MinimumSize = new System.Drawing.Size(510, 200);
             this.Name = "RegisterForm";
             this.Text = "Register";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
@@ -134,5 +171,7 @@
         private System.Windows.Forms.Button passwordVisibleButton;
         private System.Windows.Forms.Label repeatPasswordLabel;
         private System.Windows.Forms.TextBox repeatPasswordTextbox;
+        private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.Button resetButton;
     }
 }

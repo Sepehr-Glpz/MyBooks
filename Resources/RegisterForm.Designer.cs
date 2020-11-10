@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;Register.
+        /// </summary>
+        public static string RegisterButtonText {
+            get {
+                return ResourceManager.GetString("RegisterButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
         public static string RegisterFormText {
@@ -85,6 +94,15 @@ namespace Resources {
         public static string RepeatPasswordLabelText {
             get {
                 return ResourceManager.GetString("RepeatPasswordLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Re&amp;set.
+        /// </summary>
+        public static string ResetButtonText {
+            get {
+                return ResourceManager.GetString("ResetButtonText", resourceCulture);
             }
         }
         
