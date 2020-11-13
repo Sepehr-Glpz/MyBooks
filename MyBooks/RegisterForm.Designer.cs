@@ -198,6 +198,7 @@
 
         #endregion
 
+        public bool IsHidden;
         private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.TextBox usernameTextbox;
         private System.Windows.Forms.Label passwordLabel;

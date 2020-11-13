@@ -55,7 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameTextBox.Location = new System.Drawing.Point(96, 12);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(382, 20);
+            this.usernameTextBox.Size = new System.Drawing.Size(386, 20);
             this.usernameTextBox.TabIndex = 1;
             // 
             // passwordLabel
@@ -74,7 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordTextBox.Location = new System.Drawing.Point(96, 38);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(357, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(361, 20);
             this.passwordTextBox.TabIndex = 3;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
@@ -83,7 +83,7 @@
             this.passwordVisibleButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordVisibleButton.BackColor = System.Drawing.SystemColors.Window;
             this.passwordVisibleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordVisibleButton.Location = new System.Drawing.Point(453, 38);
+            this.passwordVisibleButton.Location = new System.Drawing.Point(457, 38);
             this.passwordVisibleButton.Name = "passwordVisibleButton";
             this.passwordVisibleButton.Size = new System.Drawing.Size(25, 20);
             this.passwordVisibleButton.TabIndex = 8;
@@ -158,6 +158,7 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLable);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.MaximumSize = new System.Drawing.Size(810, 140);
             this.MinimumSize = new System.Drawing.Size(510, 140);
             this.Name = "LoginForm";
@@ -171,6 +172,7 @@
 
         #endregion
 
+        public bool IsHidden;
         private System.Windows.Forms.Label usernameLable;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label passwordLabel;

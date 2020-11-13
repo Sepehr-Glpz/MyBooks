@@ -6,7 +6,22 @@ namespace MyApplication
         public LoginForm()
         {
             InitializeComponent();
+            IsHidden = false;
         }
+
+        public new void Show()
+        {
+            base.Show();
+            IsHidden = false;
+            this.CenterToScreen();
+        }
+
+        public new void Hide()
+        {
+            base.Hide();
+            IsHidden = true;
+        }
+
 
         private void LoginForm_Load(object sender, System.EventArgs e)
         {
@@ -115,6 +130,11 @@ namespace MyApplication
 
         private void LoginForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
+            if(IsHidden == true)
+            {
+                return;
+            }
+
             System.Windows.Forms.DialogResult result = System.Windows.Forms.DialogResult.None;
             if (RightToLeft == System.Windows.Forms.RightToLeft.No)
             {
