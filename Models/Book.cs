@@ -45,7 +45,7 @@
 
         }
         [System.ComponentModel.DataAnnotations.Schema.
-            Column(name:"Name")]
+            Column(name:"Book Name")]
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.LocalBookName))]

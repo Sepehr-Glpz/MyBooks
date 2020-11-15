@@ -102,6 +102,7 @@
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "&Login";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
             this.loginButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.loginButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -147,7 +148,7 @@
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(490, 97);
+            this.ClientSize = new System.Drawing.Size(494, 101);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.resetButton);

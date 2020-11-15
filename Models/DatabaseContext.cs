@@ -4,8 +4,12 @@
     {
         static DatabaseContext()
         {
-            System.Data.Entity.Database.
-                SetInitializer(new DatabaseContextInitializerBeforeFirstRelease());
+            //System.Data.Entity.Database.
+            //  SetInitializer(new DatabaseContextInitializerBeforeFirstRelease());
+
+            System.Data.Entity.Database.SetInitializer
+                      (new System.Data.Entity.MigrateDatabaseToLatestVersion
+                           <DatabaseContext, Migrations.Configuration>());
         }
         public DatabaseContext() : base()
         {

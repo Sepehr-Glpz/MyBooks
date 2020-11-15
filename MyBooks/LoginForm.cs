@@ -178,5 +178,11 @@ namespace MyApplication
             this.Hide();
             Infrastructure.Utility.RegisterForm.Show();
         }
+
+        private void LoginButton_Click(object sender, System.EventArgs e)
+        {
+            Models.DatabaseContext databaseContext = new Models.DatabaseContext();
+            var people = databaseContext.Users.Any();
+        }
     }
 }
