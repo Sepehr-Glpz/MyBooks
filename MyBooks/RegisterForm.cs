@@ -1,4 +1,5 @@
-﻿namespace MyApplication
+﻿using System.Linq;
+namespace MyApplication
 {
     public partial class RegisterForm : Infrastructure.BaseForm
     {
@@ -22,6 +23,7 @@
             IsHidden = true;
         }
 
+        private Models.DatabaseContext databaseContext;
 
         private void RegisterForm_Load(object sender, System.EventArgs e)
         {
@@ -173,6 +175,157 @@
                 e.Cancel = true;
                 return;
             }
+        }
+
+        private void RegisterButton_Click(object sender, System.EventArgs e)
+        {
+            usernameTextbox.Text=usernameTextbox.Text.Trim();
+            passwordTextbox.Text = passwordTextbox.Text.Trim();
+            repeatPasswordTextbox.Text = repeatPasswordTextbox.Text.Trim();
+            string result = string.Empty;
+            if (string.IsNullOrWhiteSpace(usernameTextbox.Text) == true)
+            {
+                result += Resources.RegisterForm.UsernameTextboxEmptyError;
+                result += System.Environment.NewLine;
+            }
+            if (string.IsNullOrWhiteSpace(passwordTextbox.Text))
+            {
+                result += Resources.RegisterForm.PasswordTextboxEmptyError;
+                result += System.Environment.NewLine;
+            }
+            if (string.IsNullOrWhiteSpace(repeatPasswordTextbox.Text)==true 
+                && string.IsNullOrWhiteSpace(passwordTextbox.Text)==false)
+            {
+                result += Resources.RegisterForm.RepeatPasswordTextboxEmptyError;
+                result += System.Environment.NewLine;
+            }
+            if (string.IsNullOrWhiteSpace(usernameTextbox.Text)==false && usernameTextbox.Text.Length < 3 
+                || usernameTextbox.Text.Length > 20)
+            {
+                result += Resources.RegisterForm.UsernameTextboxLengthError;
+                result += System.Environment.NewLine;
+            }
+            if (string.IsNullOrWhiteSpace(passwordTextbox.Text) == false && passwordTextbox.Text.Length < 5 
+                || passwordTextbox.Text.Length > 25)
+            {
+                result += Resources.RegisterForm.PasswordTextboxLengthError;
+                result += System.Environment.NewLine;
+            }
+            if (string.IsNullOrWhiteSpace(passwordTextbox.Text)==false 
+                && string.IsNullOrWhiteSpace(repeatPasswordTextbox.Text)==false
+                && passwordTextbox.Text != repeatPasswordTextbox.Text)
+            {
+                result += Resources.RegisterForm.RepeatPasswordTextboxError;
+                result += System.Environment.NewLine;
+            }
+            if (usernameTextbox.Text.Contains(" ") == true || passwordTextbox.Text.Contains(" ")==true)
+            {
+                result += Resources.RegisterForm.TextboxWhitespaceError;
+                result += System.Environment.NewLine;
+            }
+            if (string.IsNullOrEmpty(result) != true)
+            {
+                if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+                {
+                    System.Windows.Forms.MessageBox.Show(text: result,
+                        caption: Resources.RegisterForm.ErrorMessageboxCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                        icon: System.Windows.Forms.MessageBoxIcon.Error);
+                }
+                if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                {
+                    System.Windows.Forms.MessageBox.Show(text: result,
+                        caption: Resources.RegisterForm.ErrorMessageboxCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                        icon: System.Windows.Forms.MessageBoxIcon.Error,
+                        options: System.Windows.Forms.MessageBoxOptions.RightAlign 
+                        | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                }
+                usernameTextbox.Focus();
+                return;
+            }
+            try
+            {
+                databaseContext = new Models.DatabaseContext();
+                bool userExists = databaseContext.Users
+                    .Where(current => current.Username.ToLower() == usernameTextbox.Text.ToLower())
+                    .Any();
+                if (userExists == true)
+                {
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.RegisterForm.UserExistsError,
+                            caption: Resources.RegisterForm.FormClosingMessageBoxCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Warning);
+                    }
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.RegisterForm.UserExistsError,
+                            caption: Resources.RegisterForm.FormClosingMessageBoxCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Warning,
+                            options: System.Windows.Forms.MessageBoxOptions.RightAlign 
+                            | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                    }
+                    usernameTextbox.Focus();
+                    return;
+                }
+                if (userExists == false)
+                {
+                    Models.User newUser = new Models.User()
+                    {
+                        Username = usernameTextbox.Text,
+                        Password = passwordTextbox.Text,
+                        IsActive = true,
+                        IsAdmin = false,
+                    };
+                    databaseContext.Users.Add(newUser);
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.RegisterForm.RegisterSuccessfulMessage,
+                            caption: Resources.RegisterForm.MessageboxCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Information);
+                    }
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.RegisterForm.RegisterSuccessfulMessage,
+                            caption: Resources.RegisterForm.MessageboxCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Information,
+                            options: System.Windows.Forms.MessageBoxOptions.RightAlign
+                            | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                    }
+                    Infrastructure.Utility.AuthenticatedUser = newUser;
+                    this.ResetForm();
+                    this.Hide();
+
+                    ///////////
+
+                }
+            }
+            catch(System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show($"Unexpected Error:{ex.Message}",
+                    caption: "ERROR", buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                    icon: System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+                    databaseContext = null;
+                }
+            }
+
         }
     }
 }

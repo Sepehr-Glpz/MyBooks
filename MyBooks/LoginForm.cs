@@ -197,13 +197,15 @@ namespace MyApplication
                 errorResult += Resources.LoginForm.PasswordTextboxErrorMessage;
                 errorResult += System.Environment.NewLine;
             }
-            if (usernameTextBox.Text.Length >= 1 && usernameTextBox.Text.Length < 3 || usernameTextBox.Text.Length > 20)
+            if (string.IsNullOrWhiteSpace(usernameTextBox.Text)==false && usernameTextBox.Text.Length < 3 
+                || usernameTextBox.Text.Length > 20)
                 
             {
                 errorResult += Resources.LoginForm.UsernameTextboxLengthError;
                 errorResult += System.Environment.NewLine;
             }
-            if (passwordTextBox.Text.Length >= 1 && passwordTextBox.Text.Length < 5 || passwordTextBox.Text.Length > 25)
+            if (string.IsNullOrWhiteSpace(passwordTextBox.Text)==false && passwordTextBox.Text.Length < 5 
+                || passwordTextBox.Text.Length > 25)
                 
             {
                 errorResult += Resources.LoginForm.PasswordTextboxLengthError;
@@ -218,22 +220,23 @@ namespace MyApplication
             {
                 if (this.RightToLeft == System.Windows.Forms.RightToLeft.No)
                 {
-                    System.Windows.Forms.MessageBox.Show(errorResult,
-                        caption: Resources.LoginForm.formClosingMessageCaption,
+                    System.Windows.Forms.MessageBox.Show(text: errorResult,
+                        caption: Resources.LoginForm.ErrorMessageboxCaption,
                         buttons: System.Windows.Forms.MessageBoxButtons.OK,
                         icon: System.Windows.Forms.MessageBoxIcon.Warning,
                         defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1);
                 }
                 if (this.RightToLeft == System.Windows.Forms.RightToLeft.Yes)
                 {
-                    System.Windows.Forms.MessageBox.Show(errorResult,
-                        caption: Resources.LoginForm.formClosingMessageCaption,
+                    System.Windows.Forms.MessageBox.Show(text: errorResult,
+                        caption: Resources.LoginForm.ErrorMessageboxCaption,
                         buttons: System.Windows.Forms.MessageBoxButtons.OK,
                         icon: System.Windows.Forms.MessageBoxIcon.Warning,
                         defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
                         options: System.Windows.Forms.MessageBoxOptions.RightAlign |
                         System.Windows.Forms.MessageBoxOptions.RtlReading);
                 }
+                usernameTextBox.Focus();
                 return;
             }
 
@@ -250,7 +253,7 @@ namespace MyApplication
                     if (this.RightToLeft == System.Windows.Forms.RightToLeft.No)
                     {
                         System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.UserNotFoundError,
-                            caption: Resources.LoginForm.formClosingMessageCaption,
+                            caption: Resources.LoginForm.ErrorMessageboxCaption,
                             buttons: System.Windows.Forms.MessageBoxButtons.OK,
                             defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
                             icon: System.Windows.Forms.MessageBoxIcon.Error);
@@ -258,7 +261,7 @@ namespace MyApplication
                     if (this.RightToLeft == System.Windows.Forms.RightToLeft.Yes)
                     {
                         System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.UserNotFoundError,
-                            caption: Resources.LoginForm.formClosingMessageCaption,
+                            caption: Resources.LoginForm.ErrorMessageboxCaption,
                             buttons: System.Windows.Forms.MessageBoxButtons.OK,
                             defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
                             icon: System.Windows.Forms.MessageBoxIcon.Error,
@@ -266,28 +269,58 @@ namespace MyApplication
                             | System.Windows.Forms.MessageBoxOptions.RtlReading);
                     }
                     usernameTextBox.Focus();
+                    return;
                 }
-                if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+                if (foundUser.IsActive == false)
                 {
-                    System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.LoginSuccessfulMessage,
-                        caption: Resources.LoginForm.MessageboxCaption,
-                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
-                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
-                        icon: System.Windows.Forms.MessageBoxIcon.Information);
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.UserNotActiveError,
+                            caption: Resources.LoginForm.formClosingMessageCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Warning);
+                    }
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.UserNotActiveError,
+                            caption: Resources.LoginForm.formClosingMessageCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Warning,
+                            options: System.Windows.Forms.MessageBoxOptions.RightAlign
+                            | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                    }
+                    usernameTextBox.Focus();
+                    return;
                 }
-                if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                if (foundUser.IsActive == true)
                 {
-                    System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.LoginSuccessfulMessage,
-                        caption: Resources.LoginForm.MessageboxCaption,
-                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
-                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
-                        icon: System.Windows.Forms.MessageBoxIcon.Information,
-                        options: System.Windows.Forms.MessageBoxOptions.RightAlign
-                        | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.LoginSuccessfulMessage,
+                            caption: Resources.LoginForm.MessageboxCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Information);
+                    }
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.LoginSuccessfulMessage,
+                            caption: Resources.LoginForm.MessageboxCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Information,
+                            options: System.Windows.Forms.MessageBoxOptions.RightAlign
+                            | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                    }
+                    Infrastructure.Utility.AuthenticatedUser = foundUser;
+                    this.ResetForm();
+                    this.Hide();
+
+                    ////////
+
                 }
-                Infrastructure.Utility.AuthenticatedUser = foundUser;
-                this.ResetForm();
-                this.Hide();
             }
             catch(System.Exception ex)
             {
@@ -300,6 +333,7 @@ namespace MyApplication
                 if (databaseContext != null)
                 {
                     databaseContext.Dispose();
+                    databaseContext = null;
                 }
             }
 

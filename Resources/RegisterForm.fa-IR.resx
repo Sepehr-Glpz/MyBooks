@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ErrorMessageboxCaption" xml:space="preserve">
+    <value>خطا</value>
+  </data>
   <data name="ExitButtonText" xml:space="preserve">
     <value>&amp;خروج</value>
   </data>
@@ -129,8 +132,17 @@
   <data name="LoginButtonText" xml:space="preserve">
     <value>&amp;ورود</value>
   </data>
+  <data name="MessageboxCaption" xml:space="preserve">
+    <value>پیام</value>
+  </data>
   <data name="PasswordLabelText" xml:space="preserve">
     <value>&amp;رمز عبور:</value>
+  </data>
+  <data name="PasswordTextboxEmptyError" xml:space="preserve">
+    <value>لطفا برای ثبت نام, رمز عبور خود را وارد کرده!</value>
+  </data>
+  <data name="PasswordTextboxLengthError" xml:space="preserve">
+    <value>رمز عبور شما نمیتواند کوتاه تر از 5 یا درازتر از 25 حرف باشد!</value>
   </data>
   <data name="RegisterButtonText" xml:space="preserve">
     <value>&amp;ثبت نام</value>
@@ -138,14 +150,36 @@
   <data name="RegisterFormText" xml:space="preserve">
     <value>ثبت نام</value>
   </data>
+  <data name="RegisterSuccessfulMessage" xml:space="preserve">
+    <value>ثبت نام با موفقیت انجام شد!
+امیدواریم که رمز عبورتان را از یاد نبرید.</value>
+  </data>
   <data name="RepeatPasswordLabelText" xml:space="preserve">
     <value>&amp;تکرار
 رمز عبور:</value>
   </data>
+  <data name="RepeatPasswordTextboxEmptyError" xml:space="preserve">
+    <value>لطفا رمز عبور خود را دوباره برای اعتبار سنجی وارد کنید!</value>
+  </data>
+  <data name="RepeatPasswordTextboxError" xml:space="preserve">
+    <value>شما رمز عبور خود را به درستی تکرار نکرده اید! لطفا تلاشی مجدد کنید</value>
+  </data>
   <data name="ResetButtonText" xml:space="preserve">
     <value>&amp;بازنشانی</value>
   </data>
+  <data name="TextboxWhitespaceError" xml:space="preserve">
+    <value>نام کاربری/رمز عبور نمیتوانند دارای فضا های خالی باشند!</value>
+  </data>
+  <data name="UserExistsError" xml:space="preserve">
+    <value>کاربری با نام کاربری مشابه وجود دارد! لطفا نام کاربری دیگری برگذینید!</value>
+  </data>
   <data name="UsernameLabelText" xml:space="preserve">
     <value>&amp;نام کاربری:</value>
+  </data>
+  <data name="UsernameTextboxEmptyError" xml:space="preserve">
+    <value>لطفا برای ثبت نام, نام کاربری خود را وارد کرده!</value>
+  </data>
+  <data name="UsernameTextboxLengthError" xml:space="preserve">
+    <value>نام کاربری شما نمیتواند کوتاه تر از 3 یا درازتر از 20 حرف باشد!</value>
   </data>
 </root>

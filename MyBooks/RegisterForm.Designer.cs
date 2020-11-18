@@ -88,7 +88,7 @@
             this.passwordVisibleButton.Location = new System.Drawing.Point(453, 50);
             this.passwordVisibleButton.Name = "passwordVisibleButton";
             this.passwordVisibleButton.Size = new System.Drawing.Size(25, 20);
-            this.passwordVisibleButton.TabIndex = 4;
+            this.passwordVisibleButton.TabIndex = 10;
             this.passwordVisibleButton.Text = "👁";
             this.passwordVisibleButton.UseVisualStyleBackColor = false;
             this.passwordVisibleButton.Click += new System.EventHandler(this.PasswordVisibleButton_Click);
@@ -102,7 +102,7 @@
             this.repeatPasswordLabel.Location = new System.Drawing.Point(12, 76);
             this.repeatPasswordLabel.Name = "repeatPasswordLabel";
             this.repeatPasswordLabel.Size = new System.Drawing.Size(76, 32);
-            this.repeatPasswordLabel.TabIndex = 5;
+            this.repeatPasswordLabel.TabIndex = 4;
             this.repeatPasswordLabel.Text = "R&epeat\r\nPassword:";
             // 
             // repeatPasswordTextbox
@@ -112,7 +112,7 @@
             this.repeatPasswordTextbox.Location = new System.Drawing.Point(96, 88);
             this.repeatPasswordTextbox.Name = "repeatPasswordTextbox";
             this.repeatPasswordTextbox.Size = new System.Drawing.Size(382, 20);
-            this.repeatPasswordTextbox.TabIndex = 6;
+            this.repeatPasswordTextbox.TabIndex = 5;
             this.repeatPasswordTextbox.UseSystemPasswordChar = true;
             // 
             // registerButton
@@ -122,9 +122,10 @@
             this.registerButton.Location = new System.Drawing.Point(96, 122);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(70, 25);
-            this.registerButton.TabIndex = 7;
+            this.registerButton.TabIndex = 6;
             this.registerButton.Text = "&Register";
             this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.RegisterButton_Click);
             this.registerButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.registerButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
@@ -135,7 +136,7 @@
             this.resetButton.Location = new System.Drawing.Point(200, 122);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(70, 25);
-            this.resetButton.TabIndex = 8;
+            this.resetButton.TabIndex = 7;
             this.resetButton.Text = "Re&set";
             this.resetButton.UseVisualStyleBackColor = false;
             this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
@@ -149,7 +150,7 @@
             this.loginButton.Location = new System.Drawing.Point(304, 122);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(70, 25);
-            this.loginButton.TabIndex = 9;
+            this.loginButton.TabIndex = 8;
             this.loginButton.Text = "&Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.LoginButton_Click);
@@ -163,7 +164,7 @@
             this.exitButton.Location = new System.Drawing.Point(408, 122);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(70, 25);
-            this.exitButton.TabIndex = 10;
+            this.exitButton.TabIndex = 9;
             this.exitButton.Text = "E&xit";
             this.exitButton.UseVisualStyleBackColor = false;
             this.exitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -173,7 +174,7 @@
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(490, 157);
+            this.ClientSize = new System.Drawing.Size(494, 161);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.resetButton);

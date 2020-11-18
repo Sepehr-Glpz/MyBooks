@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string ErrorMessageboxCaption {
+            get {
+                return ResourceManager.GetString("ErrorMessageboxCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Exit.
         /// </summary>
         public static string exitButton {
@@ -169,6 +178,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your username or password cannot contain empty spaces!.
         /// </summary>
         public static string TextboxWhitespaceError {
@@ -201,6 +219,16 @@ namespace Resources {
         public static string UsernameTextboxLengthError {
             get {
                 return ResourceManager.GetString("UsernameTextboxLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This account has been deactivated by an admin!
+        ///Please contact Costumer Support for more information..
+        /// </summary>
+        public static string UserNotActiveError {
+            get {
+                return ResourceManager.GetString("UserNotActiveError", resourceCulture);
             }
         }
         

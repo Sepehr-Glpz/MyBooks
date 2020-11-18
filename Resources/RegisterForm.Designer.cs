@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string ErrorMessageboxCaption {
+            get {
+                return ResourceManager.GetString("ErrorMessageboxCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to E&amp;xit.
         /// </summary>
         public static string ExitButtonText {
@@ -97,11 +106,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string MessageboxCaption {
+            get {
+                return ResourceManager.GetString("MessageboxCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Password:.
         /// </summary>
         public static string PasswordLabelText {
             get {
                 return ResourceManager.GetString("PasswordLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter your password to register!.
+        /// </summary>
+        public static string PasswordTextboxEmptyError {
+            get {
+                return ResourceManager.GetString("PasswordTextboxEmptyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password cannot be shorter than 5 or longer than 25 characters!.
+        /// </summary>
+        public static string PasswordTextboxLengthError {
+            get {
+                return ResourceManager.GetString("PasswordTextboxLengthError", resourceCulture);
             }
         }
         
@@ -124,12 +160,40 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Registeration Successful!
+        ///we hope you don&apos;t forget your password..
+        /// </summary>
+        public static string RegisterSuccessfulMessage {
+            get {
+                return ResourceManager.GetString("RegisterSuccessfulMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to R&amp;epeat
         ///Password:.
         /// </summary>
         public static string RepeatPasswordLabelText {
             get {
                 return ResourceManager.GetString("RepeatPasswordLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter your password again for validation!.
+        /// </summary>
+        public static string RepeatPasswordTextboxEmptyError {
+            get {
+                return ResourceManager.GetString("RepeatPasswordTextboxEmptyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have not re-entered your password correctly! please try again.
+        /// </summary>
+        public static string RepeatPasswordTextboxError {
+            get {
+                return ResourceManager.GetString("RepeatPasswordTextboxError", resourceCulture);
             }
         }
         
@@ -143,11 +207,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Username/Password cannot contain empty spaces!.
+        /// </summary>
+        public static string TextboxWhitespaceError {
+            get {
+                return ResourceManager.GetString("TextboxWhitespaceError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A user with that username already exists! please choose another username!.
+        /// </summary>
+        public static string UserExistsError {
+            get {
+                return ResourceManager.GetString("UserExistsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Username:.
         /// </summary>
         public static string UsernameLabelText {
             get {
                 return ResourceManager.GetString("UsernameLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter your username to register!.
+        /// </summary>
+        public static string UsernameTextboxEmptyError {
+            get {
+                return ResourceManager.GetString("UsernameTextboxEmptyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your username cannot be shorter than 3 or longer than 20 characters!.
+        /// </summary>
+        public static string UsernameTextboxLengthError {
+            get {
+                return ResourceManager.GetString("UsernameTextboxLengthError", resourceCulture);
             }
         }
     }
