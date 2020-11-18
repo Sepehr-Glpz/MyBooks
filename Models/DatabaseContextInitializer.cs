@@ -31,14 +31,27 @@ namespace Models
                 IsAdmin = true,
                 IsSysAdmin = true,
             };
+            User dummy = new User()
+            {
+                Username = "DumyUser",
+                Password = "123456",
+                Description = "Just a test dummy",
+                IsActive = false,
+                IsAdmin = false,
+                IsSysAdmin = false,
+            };
             firstBook.OwnerUser = firstUser;
             firstBook.OwnerUserId = firstUser.Id;
             firstUser.FullName.FirstName = "Sepehr";
             firstUser.FullName.LastName = "golpazir";
             firstUser.Books = new System.Collections.Generic.List<Book>();
             firstUser.Books.Add(firstBook);
+            dummy.FullName.FirstName = "sir dummy";
+            dummy.FullName.LastName = "The great";
+            dummy.Books = new System.Collections.Generic.List<Book>();
             databaseContext.Users.Add(firstUser);
             databaseContext.Books.Add(firstBook);
+            databaseContext.Users.Add(dummy);
             databaseContext.SaveChanges();
         }
 

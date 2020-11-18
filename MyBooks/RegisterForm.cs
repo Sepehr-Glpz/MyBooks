@@ -285,6 +285,7 @@ namespace MyApplication
                         IsAdmin = false,
                     };
                     databaseContext.Users.Add(newUser);
+                    databaseContext.SaveChanges();
                     if (RightToLeft == System.Windows.Forms.RightToLeft.No)
                     {
                         System.Windows.Forms.MessageBox.Show(text: Resources.RegisterForm.RegisterSuccessfulMessage,
