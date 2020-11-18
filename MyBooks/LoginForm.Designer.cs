@@ -54,6 +54,7 @@
             this.usernameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameTextBox.Location = new System.Drawing.Point(96, 12);
+            this.usernameTextBox.MaxLength = 20;
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(386, 20);
             this.usernameTextBox.TabIndex = 1;
@@ -73,6 +74,7 @@
             this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordTextBox.Location = new System.Drawing.Point(96, 38);
+            this.passwordTextBox.MaxLength = 25;
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(361, 20);
             this.passwordTextBox.TabIndex = 3;
@@ -159,7 +161,6 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.usernameLable);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.MaximumSize = new System.Drawing.Size(810, 140);
             this.MinimumSize = new System.Drawing.Size(510, 140);
             this.Name = "LoginForm";

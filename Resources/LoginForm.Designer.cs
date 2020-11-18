@@ -106,11 +106,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You Have successfully logged in!.
+        /// </summary>
+        public static string LoginSuccessfulMessage {
+            get {
+                return ResourceManager.GetString("LoginSuccessfulMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string MessageboxCaption {
+            get {
+                return ResourceManager.GetString("MessageboxCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Password:.
         /// </summary>
         public static string passwordLabel {
             get {
                 return ResourceManager.GetString("passwordLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter your password!.
+        /// </summary>
+        public static string PasswordTextboxErrorMessage {
+            get {
+                return ResourceManager.GetString("PasswordTextboxErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password cannot be shorter than 5 or longer than 25 characters!.
+        /// </summary>
+        public static string PasswordTextboxLengthError {
+            get {
+                return ResourceManager.GetString("PasswordTextboxLengthError", resourceCulture);
             }
         }
         
@@ -133,11 +169,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Your username or password cannot contain empty spaces!.
+        /// </summary>
+        public static string TextboxWhitespaceError {
+            get {
+                return ResourceManager.GetString("TextboxWhitespaceError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Username:.
         /// </summary>
         public static string usernameLabel {
             get {
                 return ResourceManager.GetString("usernameLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please Enter your username!.
+        /// </summary>
+        public static string UsernameTextboxErrorMessage {
+            get {
+                return ResourceManager.GetString("UsernameTextboxErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your username cannot be shorter than 3 or longer than 20 characters!.
+        /// </summary>
+        public static string UsernameTextboxLengthError {
+            get {
+                return ResourceManager.GetString("UsernameTextboxLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Username/Password is incorrect!.
+        /// </summary>
+        public static string UserNotFoundError {
+            get {
+                return ResourceManager.GetString("UserNotFoundError", resourceCulture);
             }
         }
     }

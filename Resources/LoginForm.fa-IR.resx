@@ -132,8 +132,20 @@
   <data name="LoginFormText" xml:space="preserve">
     <value>ورود</value>
   </data>
+  <data name="LoginSuccessfulMessage" xml:space="preserve">
+    <value>شما با موفقیت وارد شدید!</value>
+  </data>
+  <data name="MessageboxCaption" xml:space="preserve">
+    <value>پیام</value>
+  </data>
   <data name="passwordLabel" xml:space="preserve">
     <value>&amp;رمز عبور:</value>
+  </data>
+  <data name="PasswordTextboxErrorMessage" xml:space="preserve">
+    <value>لطفا رمز عبور خود را وارد کنید!</value>
+  </data>
+  <data name="PasswordTextboxLengthError" xml:space="preserve">
+    <value>رمز عبور شما نمیتواند کوتاه تر از 5 یا دراز تر از 25 حرف باشد!</value>
   </data>
   <data name="registerButton" xml:space="preserve">
     <value>&amp;ثبت نام</value>
@@ -141,7 +153,19 @@
   <data name="resetButton" xml:space="preserve">
     <value>&amp;بازنشانی</value>
   </data>
+  <data name="TextboxWhitespaceError" xml:space="preserve">
+    <value>نام کاربری یا رمز عبور نمیتواند شامل فضا های خالی باشد!</value>
+  </data>
   <data name="usernameLabel" xml:space="preserve">
     <value>&amp;نام کاربری:</value>
+  </data>
+  <data name="UsernameTextboxErrorMessage" xml:space="preserve">
+    <value>لطفا نام کاربری خود را وارد کنید!</value>
+  </data>
+  <data name="UsernameTextboxLengthError" xml:space="preserve">
+    <value>نام کاربری شما نمیتواند کوتاه تر از 3 حرف یا دراز تر از 20 حرف باشد!</value>
+  </data>
+  <data name="UserNotFoundError" xml:space="preserve">
+    <value>نام کاربری/رمز عبور شما اشتباه میباشد!</value>
   </data>
 </root>

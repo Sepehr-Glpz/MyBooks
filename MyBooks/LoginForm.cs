@@ -22,6 +22,8 @@ namespace MyApplication
             IsHidden = true;
         }
 
+        private Models.DatabaseContext databaseContext;
+
 
         private void LoginForm_Load(object sender, System.EventArgs e)
         {
@@ -72,7 +74,7 @@ namespace MyApplication
             this.exitButton.ForeColor = Infrastructure.Utility.FormTextColor;
             this.exitButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
 
-        
+
         }
 
 
@@ -130,7 +132,7 @@ namespace MyApplication
 
         private void LoginForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
-            if(IsHidden == true)
+            if (IsHidden == true)
             {
                 return;
             }
@@ -168,8 +170,8 @@ namespace MyApplication
             {
                 e.Cancel = true;
                 return;
-            }  
-            
+            }
+
         }
 
         private void RegisterButton_Click(object sender, System.EventArgs e)
@@ -181,8 +183,129 @@ namespace MyApplication
 
         private void LoginButton_Click(object sender, System.EventArgs e)
         {
-            Models.DatabaseContext databaseContext = new Models.DatabaseContext();
-            var people = databaseContext.Users.Any();
+            usernameTextBox.Text = usernameTextBox.Text.Trim();
+            passwordTextBox.Text = passwordTextBox.Text.Trim();
+            string errorResult = string.Empty;
+            if (string.IsNullOrWhiteSpace(usernameTextBox.Text) == true)
+            {
+                errorResult += Resources.LoginForm.UsernameTextboxErrorMessage;
+                errorResult += System.Environment.NewLine;
+            }
+            if (string.IsNullOrWhiteSpace(passwordTextBox.Text) == true)
+            {
+                
+                errorResult += Resources.LoginForm.PasswordTextboxErrorMessage;
+                errorResult += System.Environment.NewLine;
+            }
+            if (usernameTextBox.Text.Length >= 1 && usernameTextBox.Text.Length < 3 || usernameTextBox.Text.Length > 20)
+                
+            {
+                errorResult += Resources.LoginForm.UsernameTextboxLengthError;
+                errorResult += System.Environment.NewLine;
+            }
+            if (passwordTextBox.Text.Length >= 1 && passwordTextBox.Text.Length < 5 || passwordTextBox.Text.Length > 25)
+                
+            {
+                errorResult += Resources.LoginForm.PasswordTextboxLengthError;
+                errorResult += System.Environment.NewLine;
+            }
+            if (usernameTextBox.Text.Contains(" ") || passwordTextBox.Text.Contains(" "))
+            {
+                errorResult += Resources.LoginForm.TextboxWhitespaceError;
+                errorResult += System.Environment.NewLine;
+            }
+            if (string.IsNullOrEmpty(errorResult) != true)
+            {
+                if (this.RightToLeft == System.Windows.Forms.RightToLeft.No)
+                {
+                    System.Windows.Forms.MessageBox.Show(errorResult,
+                        caption: Resources.LoginForm.formClosingMessageCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                        icon: System.Windows.Forms.MessageBoxIcon.Warning,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1);
+                }
+                if (this.RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                {
+                    System.Windows.Forms.MessageBox.Show(errorResult,
+                        caption: Resources.LoginForm.formClosingMessageCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                        icon: System.Windows.Forms.MessageBoxIcon.Warning,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                        options: System.Windows.Forms.MessageBoxOptions.RightAlign |
+                        System.Windows.Forms.MessageBoxOptions.RtlReading);
+                }
+                return;
+            }
+
+            
+            try
+            {
+                databaseContext = new Models.DatabaseContext();
+                var foundUser = databaseContext.Users
+                    .Where(current => current.Username.ToLower() == usernameTextBox.Text.ToLower())
+                    .Where(current => current.Password == passwordTextBox.Text)
+                    .FirstOrDefault();
+                if (foundUser == null)
+                {
+                    if (this.RightToLeft == System.Windows.Forms.RightToLeft.No)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.UserNotFoundError,
+                            caption: Resources.LoginForm.formClosingMessageCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Error);
+                    }
+                    if (this.RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                    {
+                        System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.UserNotFoundError,
+                            caption: Resources.LoginForm.formClosingMessageCaption,
+                            buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                            defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                            icon: System.Windows.Forms.MessageBoxIcon.Error,
+                            options: System.Windows.Forms.MessageBoxOptions.RightAlign 
+                            | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                    }
+                    usernameTextBox.Focus();
+                }
+                if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+                {
+                    System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.LoginSuccessfulMessage,
+                        caption: Resources.LoginForm.MessageboxCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                        icon: System.Windows.Forms.MessageBoxIcon.Information);
+                }
+                if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                {
+                    System.Windows.Forms.MessageBox.Show(text: Resources.LoginForm.LoginSuccessfulMessage,
+                        caption: Resources.LoginForm.MessageboxCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                        icon: System.Windows.Forms.MessageBoxIcon.Information,
+                        options: System.Windows.Forms.MessageBoxOptions.RightAlign
+                        | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                }
+                Infrastructure.Utility.AuthenticatedUser = foundUser;
+                this.ResetForm();
+                this.Hide();
+            }
+            catch(System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show($"Unexpected Error:{ex.Message}",
+                    caption: "ERROR", buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                    icon: System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+                }
+            }
+
+
+
+
         }
     }
 }

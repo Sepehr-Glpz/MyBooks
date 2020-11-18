@@ -132,8 +132,20 @@
   <data name="LoginFormText" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="LoginSuccessfulMessage" xml:space="preserve">
+    <value>You Have successfully logged in!</value>
+  </data>
+  <data name="MessageboxCaption" xml:space="preserve">
+    <value>Message</value>
+  </data>
   <data name="passwordLabel" xml:space="preserve">
     <value>&amp;Password:</value>
+  </data>
+  <data name="PasswordTextboxErrorMessage" xml:space="preserve">
+    <value>Please Enter your password!</value>
+  </data>
+  <data name="PasswordTextboxLengthError" xml:space="preserve">
+    <value>Your password cannot be shorter than 5 or longer than 25 characters!</value>
   </data>
   <data name="registerButton" xml:space="preserve">
     <value>&amp;Register</value>
@@ -141,7 +153,19 @@
   <data name="resetButton" xml:space="preserve">
     <value>Re&amp;set</value>
   </data>
+  <data name="TextboxWhitespaceError" xml:space="preserve">
+    <value>Your username or password cannot contain empty spaces!</value>
+  </data>
   <data name="usernameLabel" xml:space="preserve">
     <value>&amp;Username:</value>
+  </data>
+  <data name="UsernameTextboxErrorMessage" xml:space="preserve">
+    <value>Please Enter your username!</value>
+  </data>
+  <data name="UsernameTextboxLengthError" xml:space="preserve">
+    <value>Your username cannot be shorter than 3 or longer than 20 characters!</value>
+  </data>
+  <data name="UserNotFoundError" xml:space="preserve">
+    <value>Your Username/Password is incorrect!</value>
   </data>
 </root>
