@@ -123,7 +123,7 @@
                 string result = FullName.ToString();
                 if (string.IsNullOrEmpty(result) == true)
                 {
-                    result = "Undefined";
+                    result = string.Empty;
                 }
                 return result;
             }
@@ -135,7 +135,7 @@
             get
             {
                 string result = $"Username: {Username}";
-                if (DisplayFullName != "Undefined")
+                if (DisplayFullName != string.Empty)
                 {
                     result = $"{result}- Fullname: {DisplayFullName}";
                 }

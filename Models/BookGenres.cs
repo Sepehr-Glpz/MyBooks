@@ -10,6 +10,7 @@
        Historical=32,
        Religious=64,
        Horror=128,
-       Other=256,
+       Scientific = 256,
+       Other = 512,
     }
 }

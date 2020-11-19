@@ -45,10 +45,7 @@ namespace MyApplication
             this.Text = Resources.MainForm.MainFormText;
             this.BackColor = Infrastructure.Utility.FormBackcolor;
 
-
-
-
-
+           
         }
     }
 }

@@ -37,6 +37,7 @@
 
                 Property(current => current.OwnerUserId)
                      .IsOptional();
+                    
             }
         }
         #endregion /Configuration
@@ -80,7 +81,7 @@
             Range(type: typeof(int), minimum: "0", maximum: "10000",
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.PublishYearRangeError))]
-        public int PublishYear { get; set; }
+        public int? PublishYear { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.
             Column(name:"Book Genre")]
@@ -124,8 +125,41 @@
         [System.ComponentModel.DataAnnotations.
             Display(ResourceType = typeof(Resources.DataDictionary),
             Name = nameof(Resources.DataDictionary.OwnerUserId))]
-        public System.Guid OwnerUserId { get; set; }
-
+        public System.Guid? OwnerUserId { get; set; }
+        
+        [System.ComponentModel.DataAnnotations.Schema.NotMapped]
+        public string ListDisplayName
+        {
+            get
+            {
+                string result;
+                result = $"Name: {BookName}- ";
+                result += $"Genre: {System.Enum.GetName(typeof(BookGenres),Genre)}- ";
+                result += $"Type: {System.Enum.GetName(typeof(BookType), BookType)}- ";
+                if(string.IsNullOrEmpty(WriterName) == false)
+                {
+                    result += $"Author: {WriterName}- ";
+                }
+                if (PublishYear != null)
+                {
+                    result += $"Year: {PublishYear}- ";
+                }
+                if (OwnerUser != null)
+                {
+                    if (string.IsNullOrEmpty(OwnerUser.DisplayFullName)==false)
+                    {
+                        result += $"Owner: {OwnerUser.DisplayFullName}- ";
+                    }
+                    if (string.IsNullOrEmpty(OwnerUser.DisplayFullName) == true)
+                    {
+                        result += $"Owner: {OwnerUser.Username}- ";
+                    }
+                }
+                result = result.Trim();
+                result = result.TrimEnd('-');
+                return result;
+            }
+        }
 
     }
 }

@@ -22,6 +22,12 @@ namespace Models
                 $"The first ever book in the database, owned by the system admin,{System.Environment.NewLine}" +
                 $"grants the power to rule all other books and users.",
             };
+            Book testBook = new Book()
+            {
+                BookName = "Testing Manual",
+                Genre = BookGenres.Scientific,
+                BookType = BookType.Other,
+            }; 
             User firstUser = new User()
             {
                 Username = "sepiGgaming",
@@ -52,6 +58,7 @@ namespace Models
             databaseContext.Users.Add(firstUser);
             databaseContext.Books.Add(firstBook);
             databaseContext.Users.Add(dummy);
+            databaseContext.Books.Add(testBook);
             databaseContext.SaveChanges();
         }
 
