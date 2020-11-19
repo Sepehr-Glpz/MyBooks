@@ -308,7 +308,7 @@ namespace MyApplication
                     this.ResetForm();
                     this.Hide();
 
-                    ///////////
+                    Infrastructure.Utility.MainForm.Show();
 
                 }
             }

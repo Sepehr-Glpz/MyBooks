@@ -50,5 +50,18 @@
             }
         }
 
+        private static MyApplication.MainForm mainForm;
+        public static MyApplication.MainForm MainForm
+        {
+            get
+            {
+                if (mainForm == null || mainForm.IsDisposed == true)
+                {
+                    mainForm = new MyApplication.MainForm();
+                }
+                return mainForm;
+            }
+        }
+
     }
 }
