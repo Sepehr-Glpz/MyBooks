@@ -37,9 +37,11 @@ namespace MyApplication
             this.toolStripUserOption = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripUserUpdateItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripUserChangePassItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSettingOptions = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSettingItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripAdminOptions = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSettingOption = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripColorSettingItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripAdminOption = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripAdminUsersItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripAdminBooksItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLogoutItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripExitItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,8 +74,6 @@ namespace MyApplication
             this.lastPageButton = new System.Windows.Forms.Button();
             this.nextPageButton = new System.Windows.Forms.Button();
             this.previousPageButton = new System.Windows.Forms.Button();
-            this.toolStripAdminUsersItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripAdminBooksItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userOptionsMenuStrip.SuspendLayout();
             this.messageStatusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -112,8 +112,8 @@ namespace MyApplication
             this.toolStripUserUpdateItem,
             this.toolStripUserChangePassItem});
             this.toolStripUserOption.Name = "toolStripUserOption";
-            this.toolStripUserOption.Size = new System.Drawing.Size(87, 20);
-            this.toolStripUserOption.Text = "&User Options";
+            this.toolStripUserOption.Size = new System.Drawing.Size(82, 20);
+            this.toolStripUserOption.Text = "&User Setting";
             // 
             // toolStripUserUpdateItem
             // 
@@ -127,28 +127,40 @@ namespace MyApplication
             this.toolStripUserChangePassItem.Size = new System.Drawing.Size(195, 22);
             this.toolStripUserChangePassItem.Text = "Change Your Password";
             // 
-            // toolStripSettingOptions
+            // toolStripSettingOption
             // 
-            this.toolStripSettingOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSettingItem});
-            this.toolStripSettingOptions.Name = "toolStripSettingOptions";
-            this.toolStripSettingOptions.Size = new System.Drawing.Size(56, 20);
-            this.toolStripSettingOptions.Text = "S&etting";
+            this.toolStripSettingOption.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripColorSettingItem});
+            this.toolStripSettingOption.Name = "toolStripSettingOption";
+            this.toolStripSettingOption.Size = new System.Drawing.Size(61, 20);
+            this.toolStripSettingOption.Text = "S&ettings";
             // 
-            // toolStripSettingItem
+            // toolStripColorSettingItem
             // 
-            this.toolStripSettingItem.Name = "toolStripSettingItem";
-            this.toolStripSettingItem.Size = new System.Drawing.Size(180, 22);
-            this.toolStripSettingItem.Text = "Personalize Colours";
+            this.toolStripColorSettingItem.Name = "toolStripColorSettingItem";
+            this.toolStripColorSettingItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripColorSettingItem.Text = "Personalize Colours";
             // 
-            // toolStripAdminOptions
+            // toolStripAdminOption
             // 
-            this.toolStripAdminOptions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripAdminOption.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripAdminUsersItem,
             this.toolStripAdminBooksItem});
-            this.toolStripAdminOptions.Name = "toolStripAdminOptions";
-            this.toolStripAdminOptions.Size = new System.Drawing.Size(55, 20);
-            this.toolStripAdminOptions.Text = "&Admin";
+            this.toolStripAdminOption.Name = "toolStripAdminOption";
+            this.toolStripAdminOption.Size = new System.Drawing.Size(55, 20);
+            this.toolStripAdminOption.Text = "&Admin";
+            // 
+            // toolStripAdminUsersItem
+            // 
+            this.toolStripAdminUsersItem.Name = "toolStripAdminUsersItem";
+            this.toolStripAdminUsersItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripAdminUsersItem.Text = "Manage Users";
+            // 
+            // toolStripAdminBooksItem
+            // 
+            this.toolStripAdminBooksItem.Name = "toolStripAdminBooksItem";
+            this.toolStripAdminBooksItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripAdminBooksItem.Text = "Manage Books";
             // 
             // exitToolStripMenuItem
             // 
@@ -176,8 +188,8 @@ namespace MyApplication
             this.userOptionsMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripBooksOption,
             this.toolStripUserOption,
-            this.toolStripSettingOptions,
-            this.toolStripAdminOptions,
+            this.toolStripSettingOption,
+            this.toolStripAdminOption,
             this.exitToolStripMenuItem});
             this.userOptionsMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.userOptionsMenuStrip.Name = "userOptionsMenuStrip";
@@ -235,6 +247,7 @@ namespace MyApplication
             // searchByNameTextbox
             // 
             this.searchByNameTextbox.Location = new System.Drawing.Point(120, 35);
+            this.searchByNameTextbox.MaxLength = 25;
             this.searchByNameTextbox.Name = "searchByNameTextbox";
             this.searchByNameTextbox.Size = new System.Drawing.Size(254, 21);
             this.searchByNameTextbox.TabIndex = 7;
@@ -260,6 +273,7 @@ namespace MyApplication
             // searchByAuthorTextbox
             // 
             this.searchByAuthorTextbox.Location = new System.Drawing.Point(120, 75);
+            this.searchByAuthorTextbox.MaxLength = 20;
             this.searchByAuthorTextbox.Name = "searchByAuthorTextbox";
             this.searchByAuthorTextbox.Size = new System.Drawing.Size(254, 21);
             this.searchByAuthorTextbox.TabIndex = 10;
@@ -267,6 +281,7 @@ namespace MyApplication
             // yearFromTextbox
             // 
             this.yearFromTextbox.Location = new System.Drawing.Point(162, 111);
+            this.yearFromTextbox.MaxLength = 4;
             this.yearFromTextbox.Name = "yearFromTextbox";
             this.yearFromTextbox.Size = new System.Drawing.Size(80, 21);
             this.yearFromTextbox.TabIndex = 11;
@@ -301,6 +316,7 @@ namespace MyApplication
             // yearToTextbox
             // 
             this.yearToTextbox.Location = new System.Drawing.Point(278, 111);
+            this.yearToTextbox.MaxLength = 5;
             this.yearToTextbox.Name = "yearToTextbox";
             this.yearToTextbox.Size = new System.Drawing.Size(96, 21);
             this.yearToTextbox.TabIndex = 15;
@@ -321,6 +337,7 @@ namespace MyApplication
             this.genresComboBox.Location = new System.Drawing.Point(119, 147);
             this.genresComboBox.Name = "genresComboBox";
             this.genresComboBox.Size = new System.Drawing.Size(255, 23);
+            this.genresComboBox.Sorted = true;
             this.genresComboBox.TabIndex = 17;
             // 
             // searchByBookTypeLabel
@@ -339,6 +356,7 @@ namespace MyApplication
             this.comboBox1.Location = new System.Drawing.Point(142, 183);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(232, 23);
+            this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 19;
             // 
             // searchByOwnerUsernameLabel
@@ -353,6 +371,7 @@ namespace MyApplication
             // searchByOwnerUsernameTextbox
             // 
             this.searchByOwnerUsernameTextbox.Location = new System.Drawing.Point(191, 219);
+            this.searchByOwnerUsernameTextbox.MaxLength = 20;
             this.searchByOwnerUsernameTextbox.Name = "searchByOwnerUsernameTextbox";
             this.searchByOwnerUsernameTextbox.Size = new System.Drawing.Size(183, 21);
             this.searchByOwnerUsernameTextbox.TabIndex = 21;
@@ -437,18 +456,6 @@ namespace MyApplication
             this.previousPageButton.Text = "Previous Page";
             this.previousPageButton.UseVisualStyleBackColor = true;
             // 
-            // toolStripAdminUsersItem
-            // 
-            this.toolStripAdminUsersItem.Name = "toolStripAdminUsersItem";
-            this.toolStripAdminUsersItem.Size = new System.Drawing.Size(180, 22);
-            this.toolStripAdminUsersItem.Text = "Manage Users";
-            // 
-            // toolStripAdminBooksItem
-            // 
-            this.toolStripAdminBooksItem.Name = "toolStripAdminBooksItem";
-            this.toolStripAdminBooksItem.Size = new System.Drawing.Size(180, 22);
-            this.toolStripAdminBooksItem.Text = "Manage Books";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -506,8 +513,8 @@ namespace MyApplication
         private bool IsHidden;
         private System.Windows.Forms.ToolStripMenuItem toolStripBooksOption;
         private System.Windows.Forms.ToolStripMenuItem toolStripUserOption;
-        private System.Windows.Forms.ToolStripMenuItem toolStripSettingOptions;
-        private System.Windows.Forms.ToolStripMenuItem toolStripAdminOptions;
+        private System.Windows.Forms.ToolStripMenuItem toolStripSettingOption;
+        private System.Windows.Forms.ToolStripMenuItem toolStripAdminOption;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.MenuStrip userOptionsMenuStrip;
         private System.Windows.Forms.ToolStripStatusLabel userWelcomeMessageLabel;
@@ -535,7 +542,7 @@ namespace MyApplication
         private System.Windows.Forms.ToolStripMenuItem toolStripBookOwnItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripUserUpdateItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripUserChangePassItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripSettingItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripColorSettingItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripLogoutItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripExitItem;
         private System.Windows.Forms.Label pageLabel;

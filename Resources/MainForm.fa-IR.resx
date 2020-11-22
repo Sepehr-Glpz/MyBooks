@@ -117,7 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ExitToolStripMenuItemText" xml:space="preserve">
+    <value>&amp;خروج</value>
+  </data>
   <data name="MainFormText" xml:space="preserve">
     <value>مدیریت کتابخانه کتاب ها</value>
+  </data>
+  <data name="ToolStripAdminBooksItemText" xml:space="preserve">
+    <value>مدیریت کتاب ها</value>
+  </data>
+  <data name="ToolStripAdminOptionText" xml:space="preserve">
+    <value>&amp;ادمین</value>
+  </data>
+  <data name="ToolStripAdminUsersItemText" xml:space="preserve">
+    <value>مدیریت کاربران</value>
+  </data>
+  <data name="ToolStripBookAddItemText" xml:space="preserve">
+    <value>اضافه کردن کتاب جدید</value>
+  </data>
+  <data name="ToolStripBookManageItemText" xml:space="preserve">
+    <value>مدیریت کتاب های من</value>
+  </data>
+  <data name="ToolStripBookOwnItemText" xml:space="preserve">
+    <value>اکتساب کتاب بی مالک</value>
+  </data>
+  <data name="ToolStripBooksOptionText" xml:space="preserve">
+    <value>&amp;کتاب ها</value>
+  </data>
+  <data name="ToolStripColorSettingItem" xml:space="preserve">
+    <value>شخصی سازی رنگ ها</value>
+  </data>
+  <data name="ToolStripExitItemText" xml:space="preserve">
+    <value>خروج از برنامه</value>
+  </data>
+  <data name="ToolStripLogoutItemText" xml:space="preserve">
+    <value>خروج از حساب کاربری</value>
+  </data>
+  <data name="ToolStripSettingOptionText" xml:space="preserve">
+    <value>تن&amp;ظیمات</value>
+  </data>
+  <data name="ToolStripUserChangePassItemText" xml:space="preserve">
+    <value>تغییر رمز عبور</value>
+  </data>
+  <data name="ToolStripUserOptionText" xml:space="preserve">
+    <value>&amp;تنظیمات کاربری</value>
+  </data>
+  <data name="ToolStripUserUpdateItemText" xml:space="preserve">
+    <value>به روز رسانی حساب کاربری</value>
+  </data>
+  <data name="UserWelcomeMessageText" xml:space="preserve">
+    <value>سلام {0}! شما به عنوان {1} وارد شده اید</value>
   </data>
 </root>

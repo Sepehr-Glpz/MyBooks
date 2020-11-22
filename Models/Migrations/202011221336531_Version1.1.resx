@@ -117,55 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ExitToolStripMenuItemText" xml:space="preserve">
-    <value>E&amp;xit</value>
+  <data name="Target" xml:space="preserve">
+    <value>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</value>
   </data>
-  <data name="MainFormText" xml:space="preserve">
-    <value>Book Library Management</value>
-  </data>
-  <data name="ToolStripAdminBooksItemText" xml:space="preserve">
-    <value>Manage Books</value>
-  </data>
-  <data name="ToolStripAdminOptionText" xml:space="preserve">
-    <value>&amp;Admin</value>
-  </data>
-  <data name="ToolStripAdminUsersItemText" xml:space="preserve">
-    <value>Manage Users</value>
-  </data>
-  <data name="ToolStripBookAddItemText" xml:space="preserve">
-    <value>Add A New Book</value>
-  </data>
-  <data name="ToolStripBookManageItemText" xml:space="preserve">
-    <value>Manage Your Books</value>
-  </data>
-  <data name="ToolStripBookOwnItemText" xml:space="preserve">
-    <value>Own Unwanted Book</value>
-  </data>
-  <data name="ToolStripBooksOptionText" xml:space="preserve">
-    <value>&amp;Books</value>
-  </data>
-  <data name="ToolStripColorSettingItem" xml:space="preserve">
-    <value>Personalize Colours</value>
-  </data>
-  <data name="ToolStripExitItemText" xml:space="preserve">
-    <value>Exit Application</value>
-  </data>
-  <data name="ToolStripLogoutItemText" xml:space="preserve">
-    <value>Log Out</value>
-  </data>
-  <data name="ToolStripSettingOptionText" xml:space="preserve">
-    <value>S&amp;ettings</value>
-  </data>
-  <data name="ToolStripUserChangePassItemText" xml:space="preserve">
-    <value>Change Your Password</value>
-  </data>
-  <data name="ToolStripUserOptionText" xml:space="preserve">
-    <value>&amp;User Setting</value>
-  </data>
-  <data name="ToolStripUserUpdateItemText" xml:space="preserve">
-    <value>Update Your Profile</value>
-  </data>
-  <data name="UserWelcomeMessageText" xml:space="preserve">
-    <value>Welcome {0}! You are logged in as {1}</value>
+  <data name="DefaultSchema" xml:space="preserve">
+    <value>dbo</value>
   </data>
 </root>

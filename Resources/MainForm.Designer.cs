@@ -61,11 +61,155 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to E&amp;xit.
+        /// </summary>
+        public static string ExitToolStripMenuItemText {
+            get {
+                return ResourceManager.GetString("ExitToolStripMenuItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book Library Management.
         /// </summary>
         public static string MainFormText {
             get {
                 return ResourceManager.GetString("MainFormText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Books.
+        /// </summary>
+        public static string ToolStripAdminBooksItemText {
+            get {
+                return ResourceManager.GetString("ToolStripAdminBooksItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Admin.
+        /// </summary>
+        public static string ToolStripAdminOptionText {
+            get {
+                return ResourceManager.GetString("ToolStripAdminOptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Users.
+        /// </summary>
+        public static string ToolStripAdminUsersItemText {
+            get {
+                return ResourceManager.GetString("ToolStripAdminUsersItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add A New Book.
+        /// </summary>
+        public static string ToolStripBookAddItemText {
+            get {
+                return ResourceManager.GetString("ToolStripBookAddItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Manage Your Books.
+        /// </summary>
+        public static string ToolStripBookManageItemText {
+            get {
+                return ResourceManager.GetString("ToolStripBookManageItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Own Unwanted Book.
+        /// </summary>
+        public static string ToolStripBookOwnItemText {
+            get {
+                return ResourceManager.GetString("ToolStripBookOwnItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Books.
+        /// </summary>
+        public static string ToolStripBooksOptionText {
+            get {
+                return ResourceManager.GetString("ToolStripBooksOptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personalize Colours.
+        /// </summary>
+        public static string ToolStripColorSettingItem {
+            get {
+                return ResourceManager.GetString("ToolStripColorSettingItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit Application.
+        /// </summary>
+        public static string ToolStripExitItemText {
+            get {
+                return ResourceManager.GetString("ToolStripExitItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log Out.
+        /// </summary>
+        public static string ToolStripLogoutItemText {
+            get {
+                return ResourceManager.GetString("ToolStripLogoutItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to S&amp;ettings.
+        /// </summary>
+        public static string ToolStripSettingOptionText {
+            get {
+                return ResourceManager.GetString("ToolStripSettingOptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Your Password.
+        /// </summary>
+        public static string ToolStripUserChangePassItemText {
+            get {
+                return ResourceManager.GetString("ToolStripUserChangePassItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;User Setting.
+        /// </summary>
+        public static string ToolStripUserOptionText {
+            get {
+                return ResourceManager.GetString("ToolStripUserOptionText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Your Profile.
+        /// </summary>
+        public static string ToolStripUserUpdateItemText {
+            get {
+                return ResourceManager.GetString("ToolStripUserUpdateItemText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome {0}! You are logged in as {1}.
+        /// </summary>
+        public static string UserWelcomeMessageText {
+            get {
+                return ResourceManager.GetString("UserWelcomeMessageText", resourceCulture);
             }
         }
     }

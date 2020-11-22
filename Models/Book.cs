@@ -16,7 +16,7 @@
                      .WillCascadeOnDelete(false);
 
                 Property(current => current.BookName)
-                    .HasMaxLength(20)
+                    .HasMaxLength(25)
                     .IsVariableLength()
                     .IsUnicode();
 
@@ -55,7 +55,7 @@
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.NameRequiredError))]
         [System.ComponentModel.DataAnnotations.
-            StringLength(maximumLength: 20, MinimumLength = 2,
+            StringLength(maximumLength: 25, MinimumLength = 2,
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.NameLengthError))]
         public string BookName { get; set; }
