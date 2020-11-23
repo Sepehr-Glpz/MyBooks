@@ -59,6 +59,17 @@ namespace Models
             databaseContext.Books.Add(firstBook);
             databaseContext.Users.Add(dummy);
             databaseContext.Books.Add(testBook);
+            for (int index = 0; index <500; index++)
+            {
+                Book dumbook = new Book()
+                {
+                    BookName = $"Dummy Book code: {index}",
+                    BookType = BookType.Other,
+                    Genre = BookGenres.Other,
+                };
+                databaseContext.Books.Add(dumbook);
+            }
+
             databaseContext.SaveChanges();
         }
 

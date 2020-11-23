@@ -234,6 +234,7 @@ namespace MyApplication
             this.showAllBooksButton.TabIndex = 17;
             this.showAllBooksButton.Text = "Show A&ll Books";
             this.showAllBooksButton.UseVisualStyleBackColor = true;
+            this.showAllBooksButton.Click += new System.EventHandler(this.ShowAllBooksButton_Click);
             // 
             // searchByNameLabel
             // 
@@ -425,6 +426,7 @@ namespace MyApplication
             this.firstPageButton.TabIndex = 18;
             this.firstPageButton.Text = "First Page";
             this.firstPageButton.UseVisualStyleBackColor = true;
+            this.firstPageButton.Click += new System.EventHandler(this.PageButton_Click);
             // 
             // lastPageButton
             // 
@@ -435,6 +437,7 @@ namespace MyApplication
             this.lastPageButton.TabIndex = 21;
             this.lastPageButton.Text = "Last Page";
             this.lastPageButton.UseVisualStyleBackColor = true;
+            this.lastPageButton.Click += new System.EventHandler(this.PageButton_Click);
             // 
             // nextPageButton
             // 
@@ -445,6 +448,7 @@ namespace MyApplication
             this.nextPageButton.TabIndex = 20;
             this.nextPageButton.Text = "Next Page";
             this.nextPageButton.UseVisualStyleBackColor = true;
+            this.nextPageButton.Click += new System.EventHandler(this.PageButton_Click);
             // 
             // previousPageButton
             // 
@@ -455,6 +459,7 @@ namespace MyApplication
             this.previousPageButton.TabIndex = 19;
             this.previousPageButton.Text = "Previous Page";
             this.previousPageButton.UseVisualStyleBackColor = true;
+            this.previousPageButton.Click += new System.EventHandler(this.PageButton_Click);
             // 
             // MainForm
             // 

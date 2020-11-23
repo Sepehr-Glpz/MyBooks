@@ -21,6 +21,12 @@ namespace MyApplication
             IsHidden = true;
         }
 
+        protected int PageSize { get; set; }
+
+        protected int PageIndex { get; set; }
+
+        private Models.DatabaseContext databaseContext;
+
         public void UpdateForm()
         {
             this.toolStripAdminOption.Visible = Infrastructure.Utility.AuthenticatedUser.IsAdmin;
@@ -101,6 +107,9 @@ namespace MyApplication
                     {
                         RightToLeftLayout = true;
                         RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+                        displayBooksListbox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                        genresComboBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+                        bookTypeCombobox.RightToLeft = System.Windows.Forms.RightToLeft.No;
                         break;
                     }
                 default:
@@ -126,55 +135,55 @@ namespace MyApplication
             #region Form Language Setting
 
             this.Text = Resources.MainForm.MainFormText;
-            
+
             this.toolStripBooksOption.Text = Resources.MainForm.ToolStripBooksOptionText;
-            
+
             this.toolStripBookAddItem.Text = Resources.MainForm.ToolStripBookAddItemText;
-            
+
             this.toolStripBookManageItem.Text = Resources.MainForm.ToolStripBookManageItemText;
-            
+
             this.toolStripBookOwnItem.Text = Resources.MainForm.ToolStripBookOwnItemText;
-            
+
             this.toolStripUserOption.Text = Resources.MainForm.ToolStripUserOptionText;
-            
+
             this.toolStripUserUpdateItem.Text = Resources.MainForm.ToolStripUserUpdateItemText;
-            
+
             this.toolStripUserChangePassItem.Text = Resources.MainForm.ToolStripUserChangePassItemText;
-            
+
             this.toolStripSettingOption.Text = Resources.MainForm.ToolStripSettingOptionText;
-            
+
             this.toolStripColorSettingItem.Text = Resources.MainForm.ToolStripColorSettingItem;
-            
+
             this.toolStripAdminOption.Text = Resources.MainForm.ToolStripAdminOptionText;
-            
+
             this.toolStripAdminUsersItem.Text = Resources.MainForm.ToolStripAdminUsersItemText;
-            
+
             this.toolStripAdminBooksItem.Text = Resources.MainForm.ToolStripAdminBooksItemText;
-            
+
             this.exitToolStripMenuItem.Text = Resources.MainForm.ExitToolStripMenuItemText;
-            
+
             this.toolStripLogoutItem.Text = Resources.MainForm.ToolStripLogoutItemText;
-            
+
             this.toolStripExitItem.Text = Resources.MainForm.ToolStripExitItemText;
-                      
+
             this.searchByNameLabel.Text = Resources.MainForm.SearchByNameLabelText;
-            
+
             this.searchByAuthorLabel.Text = Resources.MainForm.SearchByAuthorLabelText;
-           
+
             this.searchByYearLabel.Text = Resources.MainForm.SearchByYearLabelText;
-            
+
             this.yearFromLabel.Text = Resources.MainForm.YearFromLabelText;
-            
+
             this.yearToLabel.Text = Resources.MainForm.YearToLabelText;
-            
+
             this.searchByGenreLabel.Text = Resources.MainForm.SearchByGenreLabelText;
-            
+
             this.searchByBookTypeLabel.Text = Resources.MainForm.SearchByBookTypeLabelText;
-            
+
             this.searchByOwnerUsernameLabel.Text = Resources.MainForm.SearchByOwnerUsernameLabelText;
-            
+
             this.searchBookButton.Text = Resources.MainForm.SearchBookButtonText;
-            
+
             this.pageLabel.Text = Resources.MainForm.PageLabelText;
 
             this.showAllBooksButton.Text = Resources.MainForm.ShowAllBooksButtonText;
@@ -189,7 +198,7 @@ namespace MyApplication
 
             #endregion /Form Language Setting
 
-            
+            PageIndex = 0;
 
         }
 
@@ -198,6 +207,108 @@ namespace MyApplication
             if ((((e.KeyChar >= '0') && (e.KeyChar <= '9')) || (e.KeyChar == 8)) == false)
             {
                 e.Handled = true;
+            }
+        }
+
+        private void ShowAllBooksButton_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                databaseContext = new Models.DatabaseContext();
+
+                var books = databaseContext.Books.ToList();
+                DisplayBooks(books);
+
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show($"Unexpected Error:{ex.Message}",
+                    caption: "ERROR", buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                    icon: System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+                    databaseContext = null;
+                }
+            }
+        }
+
+        private void DisplayBooks(System.Collections.Generic.List<Models.Book> Books)
+        {
+            PageSize = (displayBooksListbox.Height / displayBooksListbox.ItemHeight);
+
+            pageIndexLabel.Text = (PageIndex + 1).ToString();
+            pageLastPageLabel.Text = (GetLastPageIndex(Books) + 1).ToString();
+
+            var books = Books
+                .OrderBy(current => current.BookName)
+                .Skip(PageIndex * PageSize)
+                .Take(PageSize)
+                .ToList();
+
+            displayBooksListbox.DataSource = null;
+            displayBooksListbox.DisplayMember = nameof(Models.Book.ListDisplayName);
+            displayBooksListbox.ValueMember = nameof(Models.Book.Id);
+            displayBooksListbox.DataSource = books;
+
+        }
+
+        private int GetCountryCount(System.Collections.Generic.List<Models.Book> Books)
+        {
+            int count =
+                Books
+                .Count();
+
+            return count;
+        }
+
+        private int GetLastPageIndex(System.Collections.Generic.List<Models.Book> Books)
+        {
+            int count =
+                GetCountryCount(Books);
+
+            if (count % PageSize == 0)
+            {
+                return (count / PageSize) - 1;
+            }
+            else
+            {
+                return count / PageSize;
+            }
+        }
+
+        private void PageButton_Click(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
+            switch (currentButton.Name)
+            {
+                case "firstPageButton":
+                    {
+
+
+                        break;
+                    }
+                case "previousPageButton":
+                    {
+
+
+                        break;
+                    }
+                case "nextPageButton":
+                    {
+
+
+                        break;
+                    }
+                case "lastPageButton":
+                    {
+
+
+                        break;
+                    }
             }
         }
     }
