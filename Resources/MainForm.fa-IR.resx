@@ -120,8 +120,47 @@
   <data name="ExitToolStripMenuItemText" xml:space="preserve">
     <value>&amp;خروج</value>
   </data>
+  <data name="FirstPageButtonText" xml:space="preserve">
+    <value>صفحه اول</value>
+  </data>
+  <data name="LastPageButtonText" xml:space="preserve">
+    <value>صفحه آخر</value>
+  </data>
   <data name="MainFormText" xml:space="preserve">
     <value>مدیریت کتابخانه کتاب ها</value>
+  </data>
+  <data name="NextPageButtonText" xml:space="preserve">
+    <value>صفحه بعدی</value>
+  </data>
+  <data name="PageLabelText" xml:space="preserve">
+    <value>صفحه:</value>
+  </data>
+  <data name="PreviousPageButtonText" xml:space="preserve">
+    <value>صفحه قبلی</value>
+  </data>
+  <data name="SearchBookButtonText" xml:space="preserve">
+    <value>&amp;جستجو</value>
+  </data>
+  <data name="SearchByAuthorLabelText" xml:space="preserve">
+    <value>جستجو با نام ن&amp;ویسنده:</value>
+  </data>
+  <data name="SearchByBookTypeLabelText" xml:space="preserve">
+    <value>جستجو با نو&amp;ع کتاب:</value>
+  </data>
+  <data name="SearchByGenreLabelText" xml:space="preserve">
+    <value>جستجو با &amp;ژانر:</value>
+  </data>
+  <data name="SearchByNameLabelText" xml:space="preserve">
+    <value>جستجو با &amp;نام کتاب:</value>
+  </data>
+  <data name="SearchByOwnerUsernameLabelText" xml:space="preserve">
+    <value>جستجو با نام کابری &amp;صاحب:</value>
+  </data>
+  <data name="SearchByYearLabelText" xml:space="preserve">
+    <value>جستجو با &amp;سال انتشار:</value>
+  </data>
+  <data name="ShowAllBooksButtonText" xml:space="preserve">
+    <value>نمایش ت&amp;مام کتاب ها</value>
   </data>
   <data name="ToolStripAdminBooksItemText" xml:space="preserve">
     <value>مدیریت کتاب ها</value>
@@ -167,5 +206,11 @@
   </data>
   <data name="UserWelcomeMessageText" xml:space="preserve">
     <value>سلام {0}! شما به عنوان {1} وارد شده اید</value>
+  </data>
+  <data name="YearFromLabelText" xml:space="preserve">
+    <value>از</value>
+  </data>
+  <data name="YearToLabelText" xml:space="preserve">
+    <value>تا</value>
   </data>
 </root>

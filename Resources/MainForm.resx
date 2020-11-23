@@ -120,8 +120,47 @@
   <data name="ExitToolStripMenuItemText" xml:space="preserve">
     <value>E&amp;xit</value>
   </data>
+  <data name="FirstPageButtonText" xml:space="preserve">
+    <value>First Page</value>
+  </data>
+  <data name="LastPageButtonText" xml:space="preserve">
+    <value>Last Page</value>
+  </data>
   <data name="MainFormText" xml:space="preserve">
     <value>Book Library Management</value>
+  </data>
+  <data name="NextPageButtonText" xml:space="preserve">
+    <value>Next Page</value>
+  </data>
+  <data name="PageLabelText" xml:space="preserve">
+    <value>Page:</value>
+  </data>
+  <data name="PreviousPageButtonText" xml:space="preserve">
+    <value>Previous Page</value>
+  </data>
+  <data name="SearchBookButtonText" xml:space="preserve">
+    <value>&amp;Search</value>
+  </data>
+  <data name="SearchByAuthorLabelText" xml:space="preserve">
+    <value>Search By Aut&amp;hor:</value>
+  </data>
+  <data name="SearchByBookTypeLabelText" xml:space="preserve">
+    <value>Search By Book Ty&amp;pe:</value>
+  </data>
+  <data name="SearchByGenreLabelText" xml:space="preserve">
+    <value>Search By &amp;Genre:</value>
+  </data>
+  <data name="SearchByNameLabelText" xml:space="preserve">
+    <value>Search By &amp;Name:</value>
+  </data>
+  <data name="SearchByOwnerUsernameLabelText" xml:space="preserve">
+    <value>Search By O&amp;wner Username:</value>
+  </data>
+  <data name="SearchByYearLabelText" xml:space="preserve">
+    <value>Search By &amp;Year:</value>
+  </data>
+  <data name="ShowAllBooksButtonText" xml:space="preserve">
+    <value>Show A&amp;ll Books</value>
   </data>
   <data name="ToolStripAdminBooksItemText" xml:space="preserve">
     <value>Manage Books</value>
@@ -167,5 +206,11 @@
   </data>
   <data name="UserWelcomeMessageText" xml:space="preserve">
     <value>Welcome {0}! You are logged in as {1}</value>
+  </data>
+  <data name="YearFromLabelText" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="YearToLabelText" xml:space="preserve">
+    <value>To</value>
   </data>
 </root>

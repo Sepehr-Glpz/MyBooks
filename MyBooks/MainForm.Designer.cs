@@ -50,7 +50,7 @@ namespace MyApplication
             this.messageStatusStrip = new System.Windows.Forms.StatusStrip();
             this.displayBooksListbox = new System.Windows.Forms.ListBox();
             this.showAllBooksButton = new System.Windows.Forms.Button();
-            this.searchTextboxLabel = new System.Windows.Forms.Label();
+            this.searchByNameLabel = new System.Windows.Forms.Label();
             this.searchByNameTextbox = new System.Windows.Forms.TextBox();
             this.searchBookButton = new System.Windows.Forms.Button();
             this.searchByAuthorLabel = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@ namespace MyApplication
             this.searchByGenreLabel = new System.Windows.Forms.Label();
             this.genresComboBox = new System.Windows.Forms.ComboBox();
             this.searchByBookTypeLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bookTypeCombobox = new System.Windows.Forms.ComboBox();
             this.searchByOwnerUsernameLabel = new System.Windows.Forms.Label();
             this.searchByOwnerUsernameTextbox = new System.Windows.Forms.TextBox();
             this.pageLabel = new System.Windows.Forms.Label();
@@ -138,7 +138,7 @@ namespace MyApplication
             // toolStripColorSettingItem
             // 
             this.toolStripColorSettingItem.Name = "toolStripColorSettingItem";
-            this.toolStripColorSettingItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripColorSettingItem.Size = new System.Drawing.Size(177, 22);
             this.toolStripColorSettingItem.Text = "Personalize Colours";
             // 
             // toolStripAdminOption
@@ -153,13 +153,13 @@ namespace MyApplication
             // toolStripAdminUsersItem
             // 
             this.toolStripAdminUsersItem.Name = "toolStripAdminUsersItem";
-            this.toolStripAdminUsersItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripAdminUsersItem.Size = new System.Drawing.Size(152, 22);
             this.toolStripAdminUsersItem.Text = "Manage Users";
             // 
             // toolStripAdminBooksItem
             // 
             this.toolStripAdminBooksItem.Name = "toolStripAdminBooksItem";
-            this.toolStripAdminBooksItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripAdminBooksItem.Size = new System.Drawing.Size(152, 22);
             this.toolStripAdminBooksItem.Text = "Manage Books";
             // 
             // exitToolStripMenuItem
@@ -174,13 +174,13 @@ namespace MyApplication
             // toolStripLogoutItem
             // 
             this.toolStripLogoutItem.Name = "toolStripLogoutItem";
-            this.toolStripLogoutItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripLogoutItem.Size = new System.Drawing.Size(156, 22);
             this.toolStripLogoutItem.Text = "Log Out";
             // 
             // toolStripExitItem
             // 
             this.toolStripExitItem.Name = "toolStripExitItem";
-            this.toolStripExitItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripExitItem.Size = new System.Drawing.Size(156, 22);
             this.toolStripExitItem.Text = "Exit Application";
             // 
             // userOptionsMenuStrip
@@ -194,7 +194,7 @@ namespace MyApplication
             this.userOptionsMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.userOptionsMenuStrip.Name = "userOptionsMenuStrip";
             this.userOptionsMenuStrip.Size = new System.Drawing.Size(764, 24);
-            this.userOptionsMenuStrip.TabIndex = 2;
+            this.userOptionsMenuStrip.TabIndex = 0;
             this.userOptionsMenuStrip.Text = "---";
             // 
             // userWelcomeMessageLabel
@@ -210,7 +210,7 @@ namespace MyApplication
             this.messageStatusStrip.Location = new System.Drawing.Point(0, 319);
             this.messageStatusStrip.Name = "messageStatusStrip";
             this.messageStatusStrip.Size = new System.Drawing.Size(764, 22);
-            this.messageStatusStrip.TabIndex = 1;
+            this.messageStatusStrip.TabIndex = 27;
             this.messageStatusStrip.Text = "statusStrip1";
             // 
             // displayBooksListbox
@@ -224,25 +224,25 @@ namespace MyApplication
             this.displayBooksListbox.Location = new System.Drawing.Point(380, 27);
             this.displayBooksListbox.Name = "displayBooksListbox";
             this.displayBooksListbox.Size = new System.Drawing.Size(384, 289);
-            this.displayBooksListbox.TabIndex = 3;
+            this.displayBooksListbox.TabIndex = 22;
             // 
             // showAllBooksButton
             // 
             this.showAllBooksButton.Location = new System.Drawing.Point(274, 246);
             this.showAllBooksButton.Name = "showAllBooksButton";
             this.showAllBooksButton.Size = new System.Drawing.Size(100, 25);
-            this.showAllBooksButton.TabIndex = 5;
+            this.showAllBooksButton.TabIndex = 17;
             this.showAllBooksButton.Text = "Show A&ll Books";
             this.showAllBooksButton.UseVisualStyleBackColor = true;
             // 
-            // searchTextboxLabel
+            // searchByNameLabel
             // 
-            this.searchTextboxLabel.AutoSize = true;
-            this.searchTextboxLabel.Location = new System.Drawing.Point(11, 38);
-            this.searchTextboxLabel.Name = "searchTextboxLabel";
-            this.searchTextboxLabel.Size = new System.Drawing.Size(102, 15);
-            this.searchTextboxLabel.TabIndex = 6;
-            this.searchTextboxLabel.Text = "Search By &Name:";
+            this.searchByNameLabel.AutoSize = true;
+            this.searchByNameLabel.Location = new System.Drawing.Point(11, 38);
+            this.searchByNameLabel.Name = "searchByNameLabel";
+            this.searchByNameLabel.Size = new System.Drawing.Size(102, 15);
+            this.searchByNameLabel.TabIndex = 1;
+            this.searchByNameLabel.Text = "Search By &Name:";
             // 
             // searchByNameTextbox
             // 
@@ -250,14 +250,14 @@ namespace MyApplication
             this.searchByNameTextbox.MaxLength = 25;
             this.searchByNameTextbox.Name = "searchByNameTextbox";
             this.searchByNameTextbox.Size = new System.Drawing.Size(254, 21);
-            this.searchByNameTextbox.TabIndex = 7;
+            this.searchByNameTextbox.TabIndex = 2;
             // 
             // searchBookButton
             // 
             this.searchBookButton.Location = new System.Drawing.Point(12, 246);
             this.searchBookButton.Name = "searchBookButton";
             this.searchBookButton.Size = new System.Drawing.Size(75, 25);
-            this.searchBookButton.TabIndex = 8;
+            this.searchBookButton.TabIndex = 16;
             this.searchBookButton.Text = "&Search";
             this.searchBookButton.UseVisualStyleBackColor = true;
             // 
@@ -267,7 +267,7 @@ namespace MyApplication
             this.searchByAuthorLabel.Location = new System.Drawing.Point(11, 78);
             this.searchByAuthorLabel.Name = "searchByAuthorLabel";
             this.searchByAuthorLabel.Size = new System.Drawing.Size(103, 15);
-            this.searchByAuthorLabel.TabIndex = 9;
+            this.searchByAuthorLabel.TabIndex = 3;
             this.searchByAuthorLabel.Text = "Search By Aut&hor:";
             // 
             // searchByAuthorTextbox
@@ -276,7 +276,7 @@ namespace MyApplication
             this.searchByAuthorTextbox.MaxLength = 20;
             this.searchByAuthorTextbox.Name = "searchByAuthorTextbox";
             this.searchByAuthorTextbox.Size = new System.Drawing.Size(254, 21);
-            this.searchByAuthorTextbox.TabIndex = 10;
+            this.searchByAuthorTextbox.TabIndex = 4;
             // 
             // yearFromTextbox
             // 
@@ -284,7 +284,8 @@ namespace MyApplication
             this.yearFromTextbox.MaxLength = 4;
             this.yearFromTextbox.Name = "yearFromTextbox";
             this.yearFromTextbox.Size = new System.Drawing.Size(80, 21);
-            this.yearFromTextbox.TabIndex = 11;
+            this.yearFromTextbox.TabIndex = 7;
+            this.yearFromTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YearTextbox_KeyPress);
             // 
             // searchByYearLabel
             // 
@@ -292,7 +293,7 @@ namespace MyApplication
             this.searchByYearLabel.Location = new System.Drawing.Point(11, 114);
             this.searchByYearLabel.Name = "searchByYearLabel";
             this.searchByYearLabel.Size = new System.Drawing.Size(93, 15);
-            this.searchByYearLabel.TabIndex = 12;
+            this.searchByYearLabel.TabIndex = 5;
             this.searchByYearLabel.Text = "Search By &Year:";
             // 
             // yearFromLabel
@@ -301,7 +302,7 @@ namespace MyApplication
             this.yearFromLabel.Location = new System.Drawing.Point(117, 114);
             this.yearFromLabel.Name = "yearFromLabel";
             this.yearFromLabel.Size = new System.Drawing.Size(39, 15);
-            this.yearFromLabel.TabIndex = 13;
+            this.yearFromLabel.TabIndex = 6;
             this.yearFromLabel.Text = "&From:";
             // 
             // yearToLabel
@@ -310,7 +311,7 @@ namespace MyApplication
             this.yearToLabel.Location = new System.Drawing.Point(248, 114);
             this.yearToLabel.Name = "yearToLabel";
             this.yearToLabel.Size = new System.Drawing.Size(24, 15);
-            this.yearToLabel.TabIndex = 14;
+            this.yearToLabel.TabIndex = 8;
             this.yearToLabel.Text = "&To:";
             // 
             // yearToTextbox
@@ -319,7 +320,8 @@ namespace MyApplication
             this.yearToTextbox.MaxLength = 5;
             this.yearToTextbox.Name = "yearToTextbox";
             this.yearToTextbox.Size = new System.Drawing.Size(96, 21);
-            this.yearToTextbox.TabIndex = 15;
+            this.yearToTextbox.TabIndex = 9;
+            this.yearToTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YearTextbox_KeyPress);
             // 
             // searchByGenreLabel
             // 
@@ -327,7 +329,7 @@ namespace MyApplication
             this.searchByGenreLabel.Location = new System.Drawing.Point(11, 150);
             this.searchByGenreLabel.Name = "searchByGenreLabel";
             this.searchByGenreLabel.Size = new System.Drawing.Size(102, 15);
-            this.searchByGenreLabel.TabIndex = 16;
+            this.searchByGenreLabel.TabIndex = 10;
             this.searchByGenreLabel.Text = "Search By &Genre:";
             // 
             // genresComboBox
@@ -337,8 +339,7 @@ namespace MyApplication
             this.genresComboBox.Location = new System.Drawing.Point(119, 147);
             this.genresComboBox.Name = "genresComboBox";
             this.genresComboBox.Size = new System.Drawing.Size(255, 23);
-            this.genresComboBox.Sorted = true;
-            this.genresComboBox.TabIndex = 17;
+            this.genresComboBox.TabIndex = 11;
             // 
             // searchByBookTypeLabel
             // 
@@ -346,18 +347,17 @@ namespace MyApplication
             this.searchByBookTypeLabel.Location = new System.Drawing.Point(11, 186);
             this.searchByBookTypeLabel.Name = "searchByBookTypeLabel";
             this.searchByBookTypeLabel.Size = new System.Drawing.Size(125, 15);
-            this.searchByBookTypeLabel.TabIndex = 18;
+            this.searchByBookTypeLabel.TabIndex = 12;
             this.searchByBookTypeLabel.Text = "Search By Book Ty&pe:";
             // 
-            // comboBox1
+            // bookTypeCombobox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(142, 183);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 23);
-            this.comboBox1.Sorted = true;
-            this.comboBox1.TabIndex = 19;
+            this.bookTypeCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bookTypeCombobox.FormattingEnabled = true;
+            this.bookTypeCombobox.Location = new System.Drawing.Point(142, 183);
+            this.bookTypeCombobox.Name = "bookTypeCombobox";
+            this.bookTypeCombobox.Size = new System.Drawing.Size(232, 23);
+            this.bookTypeCombobox.TabIndex = 13;
             // 
             // searchByOwnerUsernameLabel
             // 
@@ -365,7 +365,7 @@ namespace MyApplication
             this.searchByOwnerUsernameLabel.Location = new System.Drawing.Point(11, 222);
             this.searchByOwnerUsernameLabel.Name = "searchByOwnerUsernameLabel";
             this.searchByOwnerUsernameLabel.Size = new System.Drawing.Size(174, 15);
-            this.searchByOwnerUsernameLabel.TabIndex = 20;
+            this.searchByOwnerUsernameLabel.TabIndex = 14;
             this.searchByOwnerUsernameLabel.Text = "Search By O&wner\'s Username:";
             // 
             // searchByOwnerUsernameTextbox
@@ -374,7 +374,7 @@ namespace MyApplication
             this.searchByOwnerUsernameTextbox.MaxLength = 20;
             this.searchByOwnerUsernameTextbox.Name = "searchByOwnerUsernameTextbox";
             this.searchByOwnerUsernameTextbox.Size = new System.Drawing.Size(183, 21);
-            this.searchByOwnerUsernameTextbox.TabIndex = 21;
+            this.searchByOwnerUsernameTextbox.TabIndex = 15;
             // 
             // pageLabel
             // 
@@ -422,7 +422,7 @@ namespace MyApplication
             this.firstPageButton.Location = new System.Drawing.Point(12, 277);
             this.firstPageButton.Name = "firstPageButton";
             this.firstPageButton.Size = new System.Drawing.Size(75, 25);
-            this.firstPageButton.TabIndex = 27;
+            this.firstPageButton.TabIndex = 18;
             this.firstPageButton.Text = "First Page";
             this.firstPageButton.UseVisualStyleBackColor = true;
             // 
@@ -432,7 +432,7 @@ namespace MyApplication
             this.lastPageButton.Location = new System.Drawing.Point(299, 277);
             this.lastPageButton.Name = "lastPageButton";
             this.lastPageButton.Size = new System.Drawing.Size(75, 25);
-            this.lastPageButton.TabIndex = 28;
+            this.lastPageButton.TabIndex = 21;
             this.lastPageButton.Text = "Last Page";
             this.lastPageButton.UseVisualStyleBackColor = true;
             // 
@@ -442,7 +442,7 @@ namespace MyApplication
             this.nextPageButton.Location = new System.Drawing.Point(210, 277);
             this.nextPageButton.Name = "nextPageButton";
             this.nextPageButton.Size = new System.Drawing.Size(75, 25);
-            this.nextPageButton.TabIndex = 29;
+            this.nextPageButton.TabIndex = 20;
             this.nextPageButton.Text = "Next Page";
             this.nextPageButton.UseVisualStyleBackColor = true;
             // 
@@ -452,7 +452,7 @@ namespace MyApplication
             this.previousPageButton.Location = new System.Drawing.Point(96, 277);
             this.previousPageButton.Name = "previousPageButton";
             this.previousPageButton.Size = new System.Drawing.Size(100, 25);
-            this.previousPageButton.TabIndex = 30;
+            this.previousPageButton.TabIndex = 19;
             this.previousPageButton.Text = "Previous Page";
             this.previousPageButton.UseVisualStyleBackColor = true;
             // 
@@ -472,7 +472,7 @@ namespace MyApplication
             this.Controls.Add(this.pageLabel);
             this.Controls.Add(this.searchByOwnerUsernameTextbox);
             this.Controls.Add(this.searchByOwnerUsernameLabel);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.bookTypeCombobox);
             this.Controls.Add(this.searchByBookTypeLabel);
             this.Controls.Add(this.genresComboBox);
             this.Controls.Add(this.searchByGenreLabel);
@@ -485,7 +485,7 @@ namespace MyApplication
             this.Controls.Add(this.searchByAuthorLabel);
             this.Controls.Add(this.searchBookButton);
             this.Controls.Add(this.searchByNameTextbox);
-            this.Controls.Add(this.searchTextboxLabel);
+            this.Controls.Add(this.searchByNameLabel);
             this.Controls.Add(this.showAllBooksButton);
             this.Controls.Add(this.displayBooksListbox);
             this.Controls.Add(this.messageStatusStrip);
@@ -521,7 +521,7 @@ namespace MyApplication
         private System.Windows.Forms.StatusStrip messageStatusStrip;
         private System.Windows.Forms.ListBox displayBooksListbox;
         private System.Windows.Forms.Button showAllBooksButton;
-        private System.Windows.Forms.Label searchTextboxLabel;
+        private System.Windows.Forms.Label searchByNameLabel;
         private System.Windows.Forms.TextBox searchByNameTextbox;
         private System.Windows.Forms.Button searchBookButton;
         private System.Windows.Forms.Label searchByAuthorLabel;
@@ -534,7 +534,7 @@ namespace MyApplication
         private System.Windows.Forms.Label searchByGenreLabel;
         private System.Windows.Forms.ComboBox genresComboBox;
         private System.Windows.Forms.Label searchByBookTypeLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox bookTypeCombobox;
         private System.Windows.Forms.Label searchByOwnerUsernameLabel;
         private System.Windows.Forms.TextBox searchByOwnerUsernameTextbox;
         private System.Windows.Forms.ToolStripMenuItem toolStripBookAddItem;

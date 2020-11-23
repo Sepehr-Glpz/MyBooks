@@ -70,11 +70,128 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First Page.
+        /// </summary>
+        public static string FirstPageButtonText {
+            get {
+                return ResourceManager.GetString("FirstPageButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Page.
+        /// </summary>
+        public static string LastPageButtonText {
+            get {
+                return ResourceManager.GetString("LastPageButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book Library Management.
         /// </summary>
         public static string MainFormText {
             get {
                 return ResourceManager.GetString("MainFormText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Next Page.
+        /// </summary>
+        public static string NextPageButtonText {
+            get {
+                return ResourceManager.GetString("NextPageButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Page:.
+        /// </summary>
+        public static string PageLabelText {
+            get {
+                return ResourceManager.GetString("PageLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Previous Page.
+        /// </summary>
+        public static string PreviousPageButtonText {
+            get {
+                return ResourceManager.GetString("PreviousPageButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Search.
+        /// </summary>
+        public static string SearchBookButtonText {
+            get {
+                return ResourceManager.GetString("SearchBookButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By Aut&amp;hor:.
+        /// </summary>
+        public static string SearchByAuthorLabelText {
+            get {
+                return ResourceManager.GetString("SearchByAuthorLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By Book Ty&amp;pe:.
+        /// </summary>
+        public static string SearchByBookTypeLabelText {
+            get {
+                return ResourceManager.GetString("SearchByBookTypeLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By &amp;Genre:.
+        /// </summary>
+        public static string SearchByGenreLabelText {
+            get {
+                return ResourceManager.GetString("SearchByGenreLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By &amp;Name:.
+        /// </summary>
+        public static string SearchByNameLabelText {
+            get {
+                return ResourceManager.GetString("SearchByNameLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By O&amp;wner Username:.
+        /// </summary>
+        public static string SearchByOwnerUsernameLabelText {
+            get {
+                return ResourceManager.GetString("SearchByOwnerUsernameLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By &amp;Year:.
+        /// </summary>
+        public static string SearchByYearLabelText {
+            get {
+                return ResourceManager.GetString("SearchByYearLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show A&amp;ll Books.
+        /// </summary>
+        public static string ShowAllBooksButtonText {
+            get {
+                return ResourceManager.GetString("ShowAllBooksButtonText", resourceCulture);
             }
         }
         
@@ -210,6 +327,24 @@ namespace Resources {
         public static string UserWelcomeMessageText {
             get {
                 return ResourceManager.GetString("UserWelcomeMessageText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string YearFromLabelText {
+            get {
+                return ResourceManager.GetString("YearFromLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string YearToLabelText {
+            get {
+                return ResourceManager.GetString("YearToLabelText", resourceCulture);
             }
         }
     }
