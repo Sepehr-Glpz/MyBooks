@@ -7,6 +7,7 @@ namespace MyApplication
         {
             InitializeComponent();
             IsHidden = false;
+            CurrentBooks = new System.Collections.Generic.List<Models.Book>();
         }
 
         public new void Show()
@@ -24,6 +25,8 @@ namespace MyApplication
         protected int PageSize { get; set; }
 
         protected int PageIndex { get; set; }
+
+        private System.Collections.Generic.List<Models.Book> CurrentBooks { get; set; }
 
         private Models.DatabaseContext databaseContext;
 
@@ -93,6 +96,8 @@ namespace MyApplication
             this.nextPageButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
             this.lastPageButton.ForeColor = Infrastructure.Utility.FormTextColor;
             this.lastPageButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+            this.resetButton.ForeColor = Infrastructure.Utility.FormTextColor;
+            this.resetButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
         }
         #endregion /UpdateFormColors()
 
@@ -196,6 +201,8 @@ namespace MyApplication
 
             this.lastPageButton.Text = Resources.MainForm.LastPageButtonText;
 
+            this.resetButton.Text = Resources.MainForm.ResetButtonText;
+
             #endregion /Form Language Setting
 
             PageIndex = 0;
@@ -216,8 +223,10 @@ namespace MyApplication
             {
                 databaseContext = new Models.DatabaseContext();
 
-                var books = databaseContext.Books.ToList();
-                DisplayBooks(books);
+                this.CurrentBooks = databaseContext.Books
+                    .ToList();
+
+                DisplayBooks(CurrentBooks);
 
             }
             catch (System.Exception ex)
@@ -287,29 +296,223 @@ namespace MyApplication
             {
                 case "firstPageButton":
                     {
-
-
+                        if (CurrentBooks.Count != 0)
+                        {
+                            PageIndex = 0;
+                            DisplayBooks(CurrentBooks);
+                        }
                         break;
                     }
                 case "previousPageButton":
                     {
-
-
+                        if (CurrentBooks.Count != 0)
+                        {
+                            if (PageIndex > 0)
+                            {
+                                PageIndex--;
+                                DisplayBooks(CurrentBooks);
+                            }
+                        }
                         break;
                     }
                 case "nextPageButton":
                     {
-
+                        if (CurrentBooks.Count != 0)
+                        {
+                            if (PageIndex < GetLastPageIndex(CurrentBooks))
+                            {
+                                PageIndex++;
+                                DisplayBooks(CurrentBooks);
+                            }
+                        }
 
                         break;
                     }
                 case "lastPageButton":
                     {
-
+                        if (CurrentBooks.Count != 0)
+                        {
+                            PageIndex = GetLastPageIndex(CurrentBooks);
+                            DisplayBooks(CurrentBooks);
+                        }
 
                         break;
                     }
+                default:
+                    {
+                        return;
+                    }
             }
+        }
+
+        private void SearchBookButton_Click(object sender, System.EventArgs e)
+        {
+            searchByNameTextbox.Text = searchByNameTextbox.Text.Trim();
+            while (searchByNameTextbox.Text.Contains("  ") == true)
+            {
+                searchByNameTextbox.Text = searchByNameTextbox.Text.Replace("  ", " ");
+            }
+            searchByAuthorTextbox.Text = searchByAuthorTextbox.Text.Trim();
+            while (searchByAuthorTextbox.Text.Contains("  ") == true)
+            {
+                searchByAuthorTextbox.Text = searchByAuthorTextbox.Text.Replace("  ", " ");
+            }
+            foreach (char item in yearFromTextbox.Text)
+            {
+                if (char.IsLetter(item) == true)
+                {
+                    yearFromTextbox.Text = string.Empty;
+                    break;
+                }
+            }
+            foreach (char item in yearToTextbox.Text)
+            {
+                if (char.IsLetter(item))
+                {
+                    yearToTextbox.Text = string.Empty;
+                    break;
+                }
+            }
+            searchByOwnerUsernameTextbox.Text = searchByOwnerUsernameTextbox.Text.Trim();
+            while (searchByOwnerUsernameTextbox.Text.Contains("  ") == true)
+            {
+                searchByOwnerUsernameTextbox.Text = searchByOwnerUsernameTextbox.Text.Replace("  ", " ");
+            }
+
+            try
+            {
+                databaseContext = new Models.DatabaseContext();
+
+                var data = databaseContext.Books.AsQueryable();
+
+                if (string.IsNullOrWhiteSpace(searchByOwnerUsernameTextbox.Text) == false)
+                {
+                    data = databaseContext.Books
+                        .Where(current => current.OwnerUser.Username.ToLower()
+                        .Contains(searchByOwnerUsernameTextbox.Text.ToLower()))
+                        .AsQueryable();
+                }
+                if (string.IsNullOrWhiteSpace(searchByNameTextbox.Text) == false)
+                {
+                    data = data.Where(current => current.BookName.ToLower()
+                    .Contains(searchByNameTextbox.Text.ToLower()));
+                }
+                if (string.IsNullOrWhiteSpace(yearFromTextbox.Text) == false)
+                {
+                    int yearFrom = System.Convert.ToInt32(yearFromTextbox.Text);
+                    data = data.Where(current => current.PublishYear >= yearFrom);
+                }
+                if (string.IsNullOrWhiteSpace(yearToTextbox.Text) == false && yearToTextbox.Text != yearFromTextbox.Text)
+                {
+                    int yearTo = System.Convert.ToInt32(yearToTextbox.Text);
+                    data = data.Where(current => current.PublishYear <= yearTo);
+                }
+                string comboboxGenre = genresComboBox.SelectedItem as string;
+                if (string.IsNullOrEmpty(comboboxGenre) == false)
+                {
+                    Models.BookGenres selectedGenre =
+                        (Models.BookGenres)System.Enum.Parse(typeof(Models.BookGenres), comboboxGenre);
+                    data = data.Where(current => current.Genre == selectedGenre);
+                }
+                string comboboxBookType = bookTypeCombobox.SelectedItem as string;
+                if (string.IsNullOrEmpty(comboboxBookType) == false)
+                {
+                    Models.BookType selectedType =
+                        (Models.BookType)System.Enum.Parse(typeof(Models.BookType), comboboxBookType);
+                    data = data.Where(current => current.BookType == selectedType);
+                }
+
+                data = data.OrderBy(current => current.BookName);
+
+                CurrentBooks = data.ToList();
+
+                PageIndex = 0;
+
+                DisplayBooks(CurrentBooks);
+
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show($"Unexpected Error:{ex.Message}",
+                    caption: "ERROR", buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                    icon: System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+                    databaseContext = null;
+                }
+            }
+        }
+
+        private void ResetButton_Click(object sender, System.EventArgs e)
+        {
+            searchByNameTextbox.Text = string.Empty;
+            searchByAuthorTextbox.Text = string.Empty;
+            searchByOwnerUsernameTextbox.Text = string.Empty;
+            genresComboBox.SelectedItem = null;
+            bookTypeCombobox.SelectedItem = null;
+            yearFromTextbox.Text = string.Empty;
+            yearToTextbox.Text = string.Empty;
+            pageIndexLabel.Text = "0";
+            pageLastPageLabel.Text = "0";
+            displayBooksListbox.DataSource = null;
+            searchByNameTextbox.Focus();
+        }
+
+        private void Button_MouseEnter(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
+            currentButton.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void Button_MouseLeave(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
+            currentButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+        }
+
+        private void MainForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
+        {
+            if (IsHidden == true)
+            {
+                return;
+            }
+            System.Windows.Forms.DialogResult result = System.Windows.Forms.DialogResult.None;
+            if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+            {
+                result =
+                    System.Windows.Forms.MessageBox.Show(text: Resources.MainForm.FormClosingMessage,
+                    caption: Resources.MainForm.FormClosingMessageCaption,
+                    buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+                    icon: System.Windows.Forms.MessageBoxIcon.Question,
+                    defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2);
+            }
+            if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+            {
+                result =
+                     System.Windows.Forms.MessageBox.Show(text: Resources.MainForm.FormClosingMessage,
+                     caption: Resources.MainForm.FormClosingMessageCaption,
+                     buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+                     icon: System.Windows.Forms.MessageBoxIcon.Question,
+                     defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2,
+                     options: System.Windows.Forms.MessageBoxOptions.RightAlign
+                     | System.Windows.Forms.MessageBoxOptions.RtlReading);
+            }
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.FormClosing -= MainForm_FormClosing;
+                System.Windows.Forms.Application.Exit();
+                return;
+            }
+            else
+            {
+                e.Cancel = true;
+                return;
+            }
+
         }
     }
 }

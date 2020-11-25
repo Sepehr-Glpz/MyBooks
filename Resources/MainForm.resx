@@ -123,6 +123,12 @@
   <data name="FirstPageButtonText" xml:space="preserve">
     <value>First Page</value>
   </data>
+  <data name="FormClosingMessage" xml:space="preserve">
+    <value>Are You sure that you want to exit the application?</value>
+  </data>
+  <data name="FormClosingMessageCaption" xml:space="preserve">
+    <value>Message</value>
+  </data>
   <data name="LastPageButtonText" xml:space="preserve">
     <value>Last Page</value>
   </data>
@@ -137,6 +143,9 @@
   </data>
   <data name="PreviousPageButtonText" xml:space="preserve">
     <value>Previous Page</value>
+  </data>
+  <data name="ResetButtonText" xml:space="preserve">
+    <value>&amp;Reset</value>
   </data>
   <data name="SearchBookButtonText" xml:space="preserve">
     <value>&amp;Search</value>

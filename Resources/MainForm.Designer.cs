@@ -79,6 +79,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are You sure that you want to exit the application?.
+        /// </summary>
+        public static string FormClosingMessage {
+            get {
+                return ResourceManager.GetString("FormClosingMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string FormClosingMessageCaption {
+            get {
+                return ResourceManager.GetString("FormClosingMessageCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Last Page.
         /// </summary>
         public static string LastPageButtonText {
@@ -120,6 +138,15 @@ namespace Resources {
         public static string PreviousPageButtonText {
             get {
                 return ResourceManager.GetString("PreviousPageButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Reset.
+        /// </summary>
+        public static string ResetButtonText {
+            get {
+                return ResourceManager.GetString("ResetButtonText", resourceCulture);
             }
         }
         

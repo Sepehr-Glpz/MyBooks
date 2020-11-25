@@ -133,27 +133,16 @@
             get
             {
                 string result;
-                result = $"Name: {BookName}- ";
-                result += $"Genre: {System.Enum.GetName(typeof(BookGenres),Genre)}- ";
-                result += $"Type: {System.Enum.GetName(typeof(BookType), BookType)}- ";
+                result = $"Name: {BookName} - ";
+                result += $"Genre: {System.Enum.GetName(typeof(BookGenres),Genre)} - ";
+                result += $"Type: {System.Enum.GetName(typeof(BookType), BookType)} - ";
                 if(string.IsNullOrEmpty(WriterName) == false)
                 {
-                    result += $"Author: {WriterName}- ";
+                    result += $"Author: {WriterName} - ";
                 }
                 if (PublishYear != null)
                 {
-                    result += $"Year: {PublishYear}- ";
-                }
-                if (OwnerUser != null)
-                {
-                    if (string.IsNullOrEmpty(OwnerUser.DisplayFullName)==false)
-                    {
-                        result += $"Owner: {OwnerUser.DisplayFullName}- ";
-                    }
-                    if (string.IsNullOrEmpty(OwnerUser.DisplayFullName) == true)
-                    {
-                        result += $"Owner: {OwnerUser.Username}- ";
-                    }
+                    result += $"Year: {PublishYear} - ";
                 }
                 result = result.Trim();
                 result = result.TrimEnd('-');

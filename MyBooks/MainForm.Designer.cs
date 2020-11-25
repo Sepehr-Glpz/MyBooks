@@ -74,6 +74,7 @@ namespace MyApplication
             this.lastPageButton = new System.Windows.Forms.Button();
             this.nextPageButton = new System.Windows.Forms.Button();
             this.previousPageButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             this.userOptionsMenuStrip.SuspendLayout();
             this.messageStatusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -207,7 +208,7 @@ namespace MyApplication
             // 
             this.messageStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.userWelcomeMessageLabel});
-            this.messageStatusStrip.Location = new System.Drawing.Point(0, 319);
+            this.messageStatusStrip.Location = new System.Drawing.Point(0, 349);
             this.messageStatusStrip.Name = "messageStatusStrip";
             this.messageStatusStrip.Size = new System.Drawing.Size(764, 22);
             this.messageStatusStrip.TabIndex = 27;
@@ -223,7 +224,7 @@ namespace MyApplication
             this.displayBooksListbox.ItemHeight = 15;
             this.displayBooksListbox.Location = new System.Drawing.Point(380, 27);
             this.displayBooksListbox.Name = "displayBooksListbox";
-            this.displayBooksListbox.Size = new System.Drawing.Size(384, 289);
+            this.displayBooksListbox.Size = new System.Drawing.Size(384, 319);
             this.displayBooksListbox.TabIndex = 22;
             // 
             // showAllBooksButton
@@ -235,6 +236,8 @@ namespace MyApplication
             this.showAllBooksButton.Text = "Show A&ll Books";
             this.showAllBooksButton.UseVisualStyleBackColor = true;
             this.showAllBooksButton.Click += new System.EventHandler(this.ShowAllBooksButton_Click);
+            this.showAllBooksButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.showAllBooksButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // searchByNameLabel
             // 
@@ -261,6 +264,9 @@ namespace MyApplication
             this.searchBookButton.TabIndex = 16;
             this.searchBookButton.Text = "&Search";
             this.searchBookButton.UseVisualStyleBackColor = true;
+            this.searchBookButton.Click += new System.EventHandler(this.SearchBookButton_Click);
+            this.searchBookButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.searchBookButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // searchByAuthorLabel
             // 
@@ -381,7 +387,7 @@ namespace MyApplication
             // 
             this.pageLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pageLabel.AutoSize = true;
-            this.pageLabel.Location = new System.Drawing.Point(93, 251);
+            this.pageLabel.Location = new System.Drawing.Point(93, 281);
             this.pageLabel.Name = "pageLabel";
             this.pageLabel.Size = new System.Drawing.Size(39, 15);
             this.pageLabel.TabIndex = 23;
@@ -391,7 +397,7 @@ namespace MyApplication
             // 
             this.pageIndexLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pageIndexLabel.AutoSize = true;
-            this.pageIndexLabel.Location = new System.Drawing.Point(159, 251);
+            this.pageIndexLabel.Location = new System.Drawing.Point(159, 281);
             this.pageIndexLabel.Name = "pageIndexLabel";
             this.pageIndexLabel.Size = new System.Drawing.Size(15, 15);
             this.pageIndexLabel.TabIndex = 24;
@@ -401,7 +407,7 @@ namespace MyApplication
             // 
             this.pageDeviderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pageDeviderLabel.AutoSize = true;
-            this.pageDeviderLabel.Location = new System.Drawing.Point(195, 251);
+            this.pageDeviderLabel.Location = new System.Drawing.Point(195, 281);
             this.pageDeviderLabel.Name = "pageDeviderLabel";
             this.pageDeviderLabel.Size = new System.Drawing.Size(10, 15);
             this.pageDeviderLabel.TabIndex = 25;
@@ -411,7 +417,7 @@ namespace MyApplication
             // 
             this.pageLastPageLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pageLastPageLabel.AutoSize = true;
-            this.pageLastPageLabel.Location = new System.Drawing.Point(227, 251);
+            this.pageLastPageLabel.Location = new System.Drawing.Point(227, 281);
             this.pageLastPageLabel.Name = "pageLastPageLabel";
             this.pageLastPageLabel.Size = new System.Drawing.Size(15, 15);
             this.pageLastPageLabel.TabIndex = 26;
@@ -420,53 +426,74 @@ namespace MyApplication
             // firstPageButton
             // 
             this.firstPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.firstPageButton.Location = new System.Drawing.Point(12, 277);
+            this.firstPageButton.Location = new System.Drawing.Point(12, 307);
             this.firstPageButton.Name = "firstPageButton";
             this.firstPageButton.Size = new System.Drawing.Size(75, 25);
             this.firstPageButton.TabIndex = 18;
             this.firstPageButton.Text = "First Page";
             this.firstPageButton.UseVisualStyleBackColor = true;
             this.firstPageButton.Click += new System.EventHandler(this.PageButton_Click);
+            this.firstPageButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.firstPageButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // lastPageButton
             // 
             this.lastPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lastPageButton.Location = new System.Drawing.Point(299, 277);
+            this.lastPageButton.Location = new System.Drawing.Point(299, 307);
             this.lastPageButton.Name = "lastPageButton";
             this.lastPageButton.Size = new System.Drawing.Size(75, 25);
             this.lastPageButton.TabIndex = 21;
             this.lastPageButton.Text = "Last Page";
             this.lastPageButton.UseVisualStyleBackColor = true;
             this.lastPageButton.Click += new System.EventHandler(this.PageButton_Click);
+            this.lastPageButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.lastPageButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // nextPageButton
             // 
             this.nextPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.nextPageButton.Location = new System.Drawing.Point(210, 277);
+            this.nextPageButton.Location = new System.Drawing.Point(210, 307);
             this.nextPageButton.Name = "nextPageButton";
             this.nextPageButton.Size = new System.Drawing.Size(75, 25);
             this.nextPageButton.TabIndex = 20;
             this.nextPageButton.Text = "Next Page";
             this.nextPageButton.UseVisualStyleBackColor = true;
             this.nextPageButton.Click += new System.EventHandler(this.PageButton_Click);
+            this.nextPageButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.nextPageButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // previousPageButton
             // 
             this.previousPageButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.previousPageButton.Location = new System.Drawing.Point(96, 277);
+            this.previousPageButton.Location = new System.Drawing.Point(96, 307);
             this.previousPageButton.Name = "previousPageButton";
             this.previousPageButton.Size = new System.Drawing.Size(100, 25);
             this.previousPageButton.TabIndex = 19;
             this.previousPageButton.Text = "Previous Page";
             this.previousPageButton.UseVisualStyleBackColor = true;
             this.previousPageButton.Click += new System.EventHandler(this.PageButton_Click);
+            this.previousPageButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.previousPageButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(142, 246);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 25);
+            this.resetButton.TabIndex = 29;
+            this.resetButton.Text = "&Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            this.resetButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.resetButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(764, 341);
+            this.ClientSize = new System.Drawing.Size(764, 371);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.previousPageButton);
             this.Controls.Add(this.nextPageButton);
             this.Controls.Add(this.lastPageButton);
@@ -499,10 +526,11 @@ namespace MyApplication
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.userOptionsMenuStrip;
-            this.MinimumSize = new System.Drawing.Size(580, 380);
+            this.MinimumSize = new System.Drawing.Size(580, 410);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Book Library Management";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.userOptionsMenuStrip.ResumeLayout(false);
             this.userOptionsMenuStrip.PerformLayout();
@@ -560,5 +588,6 @@ namespace MyApplication
         private System.Windows.Forms.Button previousPageButton;
         private System.Windows.Forms.ToolStripMenuItem toolStripAdminUsersItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripAdminBooksItem;
+        private System.Windows.Forms.Button resetButton;
     }
 }

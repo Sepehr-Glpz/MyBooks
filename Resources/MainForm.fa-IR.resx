@@ -123,6 +123,12 @@
   <data name="FirstPageButtonText" xml:space="preserve">
     <value>صفحه اول</value>
   </data>
+  <data name="FormClosingMessage" xml:space="preserve">
+    <value>آیا به خروج از برنامه اطمینان دارید؟</value>
+  </data>
+  <data name="FormClosingMessageCaption" xml:space="preserve">
+    <value>پیام</value>
+  </data>
   <data name="LastPageButtonText" xml:space="preserve">
     <value>صفحه آخر</value>
   </data>
@@ -137,6 +143,9 @@
   </data>
   <data name="PreviousPageButtonText" xml:space="preserve">
     <value>صفحه قبلی</value>
+  </data>
+  <data name="ResetButtonText" xml:space="preserve">
+    <value>&amp;بازنشانی</value>
   </data>
   <data name="SearchBookButtonText" xml:space="preserve">
     <value>&amp;جستجو</value>
