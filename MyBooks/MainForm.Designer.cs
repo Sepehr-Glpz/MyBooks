@@ -94,6 +94,7 @@ namespace MyApplication
             this.toolStripBookAddItem.Name = "toolStripBookAddItem";
             this.toolStripBookAddItem.Size = new System.Drawing.Size(186, 22);
             this.toolStripBookAddItem.Text = "Add a New Book";
+            this.toolStripBookAddItem.Click += new System.EventHandler(this.ToolStripBookAddItem_Click);
             // 
             // toolStripBookManageItem
             // 

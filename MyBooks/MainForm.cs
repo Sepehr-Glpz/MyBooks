@@ -514,5 +514,15 @@ namespace MyApplication
             }
 
         }
+        private AddBookForm addBookForm;
+        private void ToolStripBookAddItem_Click(object sender, System.EventArgs e)
+        {
+            if (addBookForm == null || addBookForm.IsDisposed == true)
+            {
+                addBookForm = new AddBookForm();
+            }
+            addBookForm.Show();
+            this.Enabled = false;
+        }
     }
 }
