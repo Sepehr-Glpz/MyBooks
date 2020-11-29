@@ -291,6 +291,7 @@ namespace MyApplication
             this.yearFromTextbox.Location = new System.Drawing.Point(162, 111);
             this.yearFromTextbox.MaxLength = 4;
             this.yearFromTextbox.Name = "yearFromTextbox";
+            this.yearFromTextbox.ShortcutsEnabled = false;
             this.yearFromTextbox.Size = new System.Drawing.Size(80, 21);
             this.yearFromTextbox.TabIndex = 7;
             this.yearFromTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YearTextbox_KeyPress);
@@ -327,6 +328,7 @@ namespace MyApplication
             this.yearToTextbox.Location = new System.Drawing.Point(278, 111);
             this.yearToTextbox.MaxLength = 5;
             this.yearToTextbox.Name = "yearToTextbox";
+            this.yearToTextbox.ShortcutsEnabled = false;
             this.yearToTextbox.Size = new System.Drawing.Size(96, 21);
             this.yearToTextbox.TabIndex = 9;
             this.yearToTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YearTextbox_KeyPress);

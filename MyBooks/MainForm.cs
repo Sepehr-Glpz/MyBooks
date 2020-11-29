@@ -504,6 +504,11 @@ namespace MyApplication
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 this.FormClosing -= MainForm_FormClosing;
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+                    databaseContext = null;
+                }
                 System.Windows.Forms.Application.Exit();
                 return;
             }

@@ -117,7 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddBookButtonText" xml:space="preserve">
+    <value>Add Book</value>
+  </data>
+  <data name="BookAddedMessage" xml:space="preserve">
+    <value>You Have successfully added a new book!</value>
+  </data>
+  <data name="BookAddMessage" xml:space="preserve">
+    <value>Are You sure that you want to add this book?</value>
+  </data>
+  <data name="BookexistMessage" xml:space="preserve">
+    <value>A book with a similar name already exists!</value>
+  </data>
+  <data name="BookNameLabelText" xml:space="preserve">
+    <value>&amp;Book Name:</value>
+  </data>
+  <data name="BooknameLengthError" xml:space="preserve">
+    <value>The Book's name must be between 2 - 25 characters!</value>
+  </data>
+  <data name="BooknameTextBoxError" xml:space="preserve">
+    <value>You Need to enter a Name for the book!</value>
+  </data>
+  <data name="BookTypeLabelText" xml:space="preserve">
+    <value>Book &amp;Type:</value>
+  </data>
+  <data name="DescriptionLabelText" xml:space="preserve">
+    <value>&amp;Description:</value>
+  </data>
   <data name="FormText" xml:space="preserve">
     <value>Add a new book</value>
+  </data>
+  <data name="GenreLabelText" xml:space="preserve">
+    <value>&amp;Genre:</value>
+  </data>
+  <data name="MessageboxCaptionError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="MessageBoxCaptionMessage" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MessageBoxCaptionQuestion" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="OwnerLabelText" xml:space="preserve">
+    <value>&amp;Owner:</value>
+  </data>
+  <data name="ResetButtonText" xml:space="preserve">
+    <value>&amp;Reset</value>
+  </data>
+  <data name="WriterNameLabelText" xml:space="preserve">
+    <value>&amp;Author:</value>
+  </data>
+  <data name="WriternameLengthError" xml:space="preserve">
+    <value>The Authors name must be between 3 - 20 characters!</value>
+  </data>
+  <data name="YearError" xml:space="preserve">
+    <value>The publish year can only be between 0 - 10000!</value>
+  </data>
+  <data name="YearLabelText" xml:space="preserve">
+    <value>&amp;Publish Year:</value>
   </data>
 </root>

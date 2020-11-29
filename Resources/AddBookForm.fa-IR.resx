@@ -117,7 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddBookButtonText" xml:space="preserve">
+    <value>اضافه کردن کتاب</value>
+  </data>
+  <data name="BookAddedMessage" xml:space="preserve">
+    <value>شما با موفقیت کتاب جدیدی ثبت کردید!</value>
+  </data>
+  <data name="BookAddMessage" xml:space="preserve">
+    <value>آیا به اظافه کردن این کتاب اطمینان دارید؟</value>
+  </data>
+  <data name="BookexistMessage" xml:space="preserve">
+    <value>کتابی با نام مشابه در حال حاضر وجود دارد!</value>
+  </data>
+  <data name="BookNameLabelText" xml:space="preserve">
+    <value>نام &amp;کتاب:</value>
+  </data>
+  <data name="BooknameLengthError" xml:space="preserve">
+    <value>نام کتاب باید بین 2-25 کاراکتر باشد!</value>
+  </data>
+  <data name="BooknameTextBoxError" xml:space="preserve">
+    <value>لطفا یک اسم برای کتاب وارد کرده!</value>
+  </data>
+  <data name="BookTypeLabelText" xml:space="preserve">
+    <value>نو&amp;ع کتاب:</value>
+  </data>
+  <data name="DescriptionLabelText" xml:space="preserve">
+    <value>&amp;توضیح:</value>
+  </data>
   <data name="FormText" xml:space="preserve">
     <value>اضافه کردن کتاب جدید</value>
+  </data>
+  <data name="GenreLabelText" xml:space="preserve">
+    <value>&amp;ژانر:</value>
+  </data>
+  <data name="MessageboxCaptionError" xml:space="preserve">
+    <value>خطا</value>
+  </data>
+  <data name="MessageBoxCaptionMessage" xml:space="preserve">
+    <value>پیام</value>
+  </data>
+  <data name="MessageBoxCaptionQuestion" xml:space="preserve">
+    <value>سوال</value>
+  </data>
+  <data name="OwnerLabelText" xml:space="preserve">
+    <value>&amp;صاحب:</value>
+  </data>
+  <data name="ResetButtonText" xml:space="preserve">
+    <value>با&amp;زنشانی</value>
+  </data>
+  <data name="WriterNameLabelText" xml:space="preserve">
+    <value>&amp;نویسنده:</value>
+  </data>
+  <data name="WriternameLengthError" xml:space="preserve">
+    <value>نام نویسنده باید بین 3 - 20 کاراکتر باشد!</value>
+  </data>
+  <data name="YearError" xml:space="preserve">
+    <value>سال نشر فقط میتواند بین 0 - 10000 باشد!</value>
+  </data>
+  <data name="YearLabelText" xml:space="preserve">
+    <value>&amp;سال نشر:</value>
   </data>
 </root>
