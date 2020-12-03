@@ -529,5 +529,19 @@ namespace MyApplication
             addBookForm.Show();
             this.Enabled = false;
         }
+
+        private void DisplayBooksListbox_DoubleClick(object sender, System.EventArgs e)
+        {
+            if (displayBooksListbox.SelectedItem is Models.Book)
+            {
+                Models.Book selectedBook = displayBooksListbox.SelectedItem as Models.Book;
+                DisplayBookForm displayBookForm = new DisplayBookForm()
+                {
+                    SelectedBook = selectedBook,
+                };
+                this.Enabled = false;
+                displayBookForm.Show();
+            }
+        }
     }
 }

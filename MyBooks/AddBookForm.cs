@@ -271,15 +271,24 @@ namespace MyApplication
                 {
                     newBook.PublishYear = System.Convert.ToInt32(yearTextbox.Text);
                 }
-                if (selectedUsername == Infrastructure.Utility.AuthenticatedUser.Username)
+
+                Models.User existingUser =
+                    databaseContext.Users
+                    .Where(current => current.Username == selectedUsername)
+                    .FirstOrDefault();
+
+                if (existingUser != null)
                 {
-                    newBook.OwnerUser = Infrastructure.Utility.AuthenticatedUser;
-                    newBook.OwnerUserId = Infrastructure.Utility.AuthenticatedUser.Id;
+                    newBook.OwnerUser = existingUser;
+                    newBook.OwnerUserId = existingUser.Id;
+                    newBook.OwnerUser.Books.Add(newBook);
                 }
+
                 if (string.IsNullOrWhiteSpace(descriptionTextbox.Text)==false)
                 {
                     newBook.Description = descriptionTextbox.Text;
                 }
+
                 databaseContext.Books.Add(newBook);
                 databaseContext.SaveChanges();
                 if (RightToLeft == System.Windows.Forms.RightToLeft.No)

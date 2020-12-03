@@ -227,6 +227,7 @@ namespace MyApplication
             this.displayBooksListbox.Name = "displayBooksListbox";
             this.displayBooksListbox.Size = new System.Drawing.Size(384, 319);
             this.displayBooksListbox.TabIndex = 22;
+            this.displayBooksListbox.DoubleClick += new System.EventHandler(this.DisplayBooksListbox_DoubleClick);
             // 
             // showAllBooksButton
             // 
