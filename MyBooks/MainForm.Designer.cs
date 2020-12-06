@@ -101,6 +101,7 @@ namespace MyApplication
             this.toolStripBookManageItem.Name = "toolStripBookManageItem";
             this.toolStripBookManageItem.Size = new System.Drawing.Size(186, 22);
             this.toolStripBookManageItem.Text = "Manage Your Books";
+            this.toolStripBookManageItem.Click += new System.EventHandler(this.ToolStripBookManageItem_Click);
             // 
             // toolStripBookOwnItem
             // 

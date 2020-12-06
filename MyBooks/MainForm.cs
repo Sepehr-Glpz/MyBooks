@@ -543,5 +543,17 @@ namespace MyApplication
                 displayBookForm.Show();
             }
         }
+
+        private ManageBookForm manageBookForm;
+        private void ToolStripBookManageItem_Click(object sender, System.EventArgs e)
+        {
+            if (manageBookForm == null || manageBookForm.IsDisposed == true)
+            {
+                manageBookForm = new ManageBookForm();
+            }
+            this.Enabled = false;
+            manageBookForm.Show();
+            
+        }
     }
 }

@@ -91,6 +91,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainForm.fa-IR.resx</DependentUpon>
     </Compile>
+    <Compile Include="ManageBookForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageBookForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBookForm.fa-IR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageBookForm.fa-IR.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -143,6 +153,14 @@
     <EmbeddedResource Include="MainForm.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MainForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBookForm.fa-IR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageBookForm.fa-IR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBookForm.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageBookForm.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.fa-IR.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -102,7 +102,7 @@ namespace MyApplication
             this.descriptionTextbox.ReadOnly = true;
             this.descriptionTextbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.descriptionTextbox.Size = new System.Drawing.Size(484, 115);
-            this.descriptionTextbox.TabIndex = 4;
+            this.descriptionTextbox.TabIndex = 15;
             // 
             // descriptionLabel
             // 
@@ -111,7 +111,7 @@ namespace MyApplication
             this.descriptionLabel.Location = new System.Drawing.Point(12, 126);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(83, 17);
-            this.descriptionLabel.TabIndex = 5;
+            this.descriptionLabel.TabIndex = 14;
             this.descriptionLabel.Text = "Description:";
             // 
             // bookGenreLabel
@@ -121,7 +121,7 @@ namespace MyApplication
             this.bookGenreLabel.Location = new System.Drawing.Point(12, 47);
             this.bookGenreLabel.Name = "bookGenreLabel";
             this.bookGenreLabel.Size = new System.Drawing.Size(52, 17);
-            this.bookGenreLabel.TabIndex = 6;
+            this.bookGenreLabel.TabIndex = 4;
             this.bookGenreLabel.Text = "Genre:";
             // 
             // bookGenreTextbox
@@ -134,7 +134,7 @@ namespace MyApplication
             this.bookGenreTextbox.Name = "bookGenreTextbox";
             this.bookGenreTextbox.ReadOnly = true;
             this.bookGenreTextbox.Size = new System.Drawing.Size(100, 21);
-            this.bookGenreTextbox.TabIndex = 7;
+            this.bookGenreTextbox.TabIndex = 5;
             // 
             // bookTypeLabel
             // 
@@ -144,7 +144,7 @@ namespace MyApplication
             this.bookTypeLabel.Location = new System.Drawing.Point(176, 47);
             this.bookTypeLabel.Name = "bookTypeLabel";
             this.bookTypeLabel.Size = new System.Drawing.Size(80, 17);
-            this.bookTypeLabel.TabIndex = 8;
+            this.bookTypeLabel.TabIndex = 6;
             this.bookTypeLabel.Text = "Book Type:";
             // 
             // bookTypeTextbox
@@ -156,7 +156,7 @@ namespace MyApplication
             this.bookTypeTextbox.Name = "bookTypeTextbox";
             this.bookTypeTextbox.ReadOnly = true;
             this.bookTypeTextbox.Size = new System.Drawing.Size(90, 21);
-            this.bookTypeTextbox.TabIndex = 9;
+            this.bookTypeTextbox.TabIndex = 7;
             // 
             // ownerUsernameLabel
             // 
@@ -203,7 +203,7 @@ namespace MyApplication
             this.returnButton.Location = new System.Drawing.Point(397, 118);
             this.returnButton.Name = "returnButton";
             this.returnButton.Size = new System.Drawing.Size(75, 25);
-            this.returnButton.TabIndex = 14;
+            this.returnButton.TabIndex = 16;
             this.returnButton.Text = "Return";
             this.returnButton.UseVisualStyleBackColor = true;
             this.returnButton.Click += new System.EventHandler(this.ReturnButton_Click);
@@ -216,7 +216,7 @@ namespace MyApplication
             this.yearLabel.Location = new System.Drawing.Point(358, 46);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(55, 35);
-            this.yearLabel.TabIndex = 15;
+            this.yearLabel.TabIndex = 8;
             this.yearLabel.Text = "Publish Year:";
             // 
             // yearTextbox
@@ -227,7 +227,7 @@ namespace MyApplication
             this.yearTextbox.Name = "yearTextbox";
             this.yearTextbox.ReadOnly = true;
             this.yearTextbox.Size = new System.Drawing.Size(53, 21);
-            this.yearTextbox.TabIndex = 16;
+            this.yearTextbox.TabIndex = 9;
             // 
             // DisplayBookForm
             // 

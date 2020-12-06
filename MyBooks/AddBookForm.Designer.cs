@@ -64,7 +64,7 @@ namespace MyApplication
             this.descriptionTextbox.MaxLength = 1024;
             this.descriptionTextbox.Name = "descriptionTextbox";
             this.descriptionTextbox.Size = new System.Drawing.Size(259, 166);
-            this.descriptionTextbox.TabIndex = 1;
+            this.descriptionTextbox.TabIndex = 13;
             this.descriptionTextbox.Text = "";
             // 
             // descriptionLabel
@@ -74,7 +74,7 @@ namespace MyApplication
             this.descriptionLabel.Location = new System.Drawing.Point(367, 9);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(72, 15);
-            this.descriptionLabel.TabIndex = 2;
+            this.descriptionLabel.TabIndex = 12;
             this.descriptionLabel.Text = "Description:";
             // 
             // bookNameTextbox
@@ -85,7 +85,7 @@ namespace MyApplication
             this.bookNameTextbox.MaxLength = 25;
             this.bookNameTextbox.Name = "bookNameTextbox";
             this.bookNameTextbox.Size = new System.Drawing.Size(268, 21);
-            this.bookNameTextbox.TabIndex = 3;
+            this.bookNameTextbox.TabIndex = 1;
             // 
             // writerNameLabel
             // 
@@ -94,7 +94,7 @@ namespace MyApplication
             this.writerNameLabel.Location = new System.Drawing.Point(12, 42);
             this.writerNameLabel.Name = "writerNameLabel";
             this.writerNameLabel.Size = new System.Drawing.Size(49, 16);
-            this.writerNameLabel.TabIndex = 4;
+            this.writerNameLabel.TabIndex = 2;
             this.writerNameLabel.Text = "Author:";
             // 
             // writerNameTextbox
@@ -105,7 +105,7 @@ namespace MyApplication
             this.writerNameTextbox.MaxLength = 20;
             this.writerNameTextbox.Name = "writerNameTextbox";
             this.writerNameTextbox.Size = new System.Drawing.Size(346, 21);
-            this.writerNameTextbox.TabIndex = 5;
+            this.writerNameTextbox.TabIndex = 3;
             // 
             // yearLabel
             // 
@@ -113,7 +113,7 @@ namespace MyApplication
             this.yearLabel.Location = new System.Drawing.Point(4, 69);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(79, 15);
-            this.yearLabel.TabIndex = 6;
+            this.yearLabel.TabIndex = 4;
             this.yearLabel.Text = "Publish Year:";
             // 
             // yearTextbox
@@ -123,7 +123,7 @@ namespace MyApplication
             this.yearTextbox.Name = "yearTextbox";
             this.yearTextbox.ShortcutsEnabled = false;
             this.yearTextbox.Size = new System.Drawing.Size(97, 21);
-            this.yearTextbox.TabIndex = 7;
+            this.yearTextbox.TabIndex = 5;
             this.yearTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YearTextbox_KeyPress);
             // 
             // genreLabel
@@ -133,7 +133,7 @@ namespace MyApplication
             this.genreLabel.Location = new System.Drawing.Point(196, 69);
             this.genreLabel.Name = "genreLabel";
             this.genreLabel.Size = new System.Drawing.Size(48, 16);
-            this.genreLabel.TabIndex = 8;
+            this.genreLabel.TabIndex = 6;
             this.genreLabel.Text = "Genre:";
             // 
             // genresCombobox
@@ -145,7 +145,7 @@ namespace MyApplication
             this.genresCombobox.Location = new System.Drawing.Point(250, 66);
             this.genresCombobox.Name = "genresCombobox";
             this.genresCombobox.Size = new System.Drawing.Size(189, 23);
-            this.genresCombobox.TabIndex = 9;
+            this.genresCombobox.TabIndex = 7;
             // 
             // ownerLabel
             // 
@@ -153,7 +153,7 @@ namespace MyApplication
             this.ownerLabel.Location = new System.Drawing.Point(4, 96);
             this.ownerLabel.Name = "ownerLabel";
             this.ownerLabel.Size = new System.Drawing.Size(77, 15);
-            this.ownerLabel.TabIndex = 10;
+            this.ownerLabel.TabIndex = 8;
             this.ownerLabel.Text = "Book Owner:";
             // 
             // ownerCombobox
@@ -165,7 +165,7 @@ namespace MyApplication
             this.ownerCombobox.Location = new System.Drawing.Point(93, 93);
             this.ownerCombobox.Name = "ownerCombobox";
             this.ownerCombobox.Size = new System.Drawing.Size(97, 23);
-            this.ownerCombobox.TabIndex = 11;
+            this.ownerCombobox.TabIndex = 9;
             // 
             // bookTypeLabel
             // 
@@ -174,7 +174,7 @@ namespace MyApplication
             this.bookTypeLabel.Location = new System.Drawing.Point(196, 98);
             this.bookTypeLabel.Name = "bookTypeLabel";
             this.bookTypeLabel.Size = new System.Drawing.Size(67, 15);
-            this.bookTypeLabel.TabIndex = 12;
+            this.bookTypeLabel.TabIndex = 10;
             this.bookTypeLabel.Text = "Book Type:";
             // 
             // bookTypeCombobox
@@ -185,7 +185,7 @@ namespace MyApplication
             this.bookTypeCombobox.Location = new System.Drawing.Point(269, 95);
             this.bookTypeCombobox.Name = "bookTypeCombobox";
             this.bookTypeCombobox.Size = new System.Drawing.Size(170, 23);
-            this.bookTypeCombobox.TabIndex = 13;
+            this.bookTypeCombobox.TabIndex = 11;
             // 
             // addBookButton
             // 

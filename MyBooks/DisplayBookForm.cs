@@ -139,6 +139,7 @@ namespace MyApplication
         private void DisplayBookForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
             Infrastructure.Utility.MainForm.Enabled = true;
+            this.Dispose();
         }
 
         private void Button_MouseEnter(object sender, System.EventArgs e)

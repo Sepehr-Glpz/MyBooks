@@ -117,109 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ExitToolStripMenuItemText" xml:space="preserve">
-    <value>&amp;خروج</value>
-  </data>
-  <data name="FirstPageButtonText" xml:space="preserve">
-    <value>صفحه اول</value>
-  </data>
-  <data name="FormClosingMessage" xml:space="preserve">
-    <value>آیا به خروج از برنامه اطمینان دارید؟</value>
-  </data>
-  <data name="FormClosingMessageCaption" xml:space="preserve">
-    <value>پیام</value>
-  </data>
-  <data name="LastPageButtonText" xml:space="preserve">
-    <value>صفحه آخر</value>
-  </data>
-  <data name="MainFormText" xml:space="preserve">
-    <value>مدیریت کتابخانه کتاب ها</value>
-  </data>
-  <data name="NextPageButtonText" xml:space="preserve">
-    <value>صفحه بعدی</value>
-  </data>
-  <data name="PageLabelText" xml:space="preserve">
-    <value>صفحه:</value>
-  </data>
-  <data name="PreviousPageButtonText" xml:space="preserve">
-    <value>صفحه قبلی</value>
-  </data>
-  <data name="ResetButtonText" xml:space="preserve">
-    <value>&amp;بازنشانی</value>
-  </data>
-  <data name="SearchBookButtonText" xml:space="preserve">
-    <value>&amp;جستجو</value>
-  </data>
-  <data name="SearchByAuthorLabelText" xml:space="preserve">
-    <value>جستجو با نام ن&amp;ویسنده:</value>
-  </data>
-  <data name="SearchByBookTypeLabelText" xml:space="preserve">
-    <value>جستجو با نو&amp;ع کتاب:</value>
-  </data>
-  <data name="SearchByGenreLabelText" xml:space="preserve">
-    <value>جستجو با &amp;ژانر:</value>
-  </data>
-  <data name="SearchByNameLabelText" xml:space="preserve">
-    <value>جستجو با &amp;نام کتاب:</value>
-  </data>
-  <data name="SearchByOwnerUsernameLabelText" xml:space="preserve">
-    <value>جستجو با نام کابری &amp;صاحب:</value>
-  </data>
-  <data name="SearchByYearLabelText" xml:space="preserve">
-    <value>جستجو با &amp;سال انتشار:</value>
-  </data>
-  <data name="ShowAllBooksButtonText" xml:space="preserve">
-    <value>نمایش ت&amp;مام کتاب ها</value>
-  </data>
-  <data name="ToolStripAdminBooksItemText" xml:space="preserve">
-    <value>مدیریت کتاب ها</value>
-  </data>
-  <data name="ToolStripAdminOptionText" xml:space="preserve">
-    <value>&amp;ادمین</value>
-  </data>
-  <data name="ToolStripAdminUsersItemText" xml:space="preserve">
-    <value>مدیریت کاربران</value>
-  </data>
-  <data name="ToolStripBookAddItemText" xml:space="preserve">
-    <value>اضافه کردن کتاب جدید</value>
-  </data>
-  <data name="ToolStripBookManageItemText" xml:space="preserve">
-    <value>مدیریت کتاب های شخصی</value>
-  </data>
-  <data name="ToolStripBookOwnItemText" xml:space="preserve">
-    <value>اکتساب کتاب بی مالک</value>
-  </data>
-  <data name="ToolStripBooksOptionText" xml:space="preserve">
-    <value>&amp;کتاب ها</value>
-  </data>
-  <data name="ToolStripColorSettingItem" xml:space="preserve">
-    <value>شخصی سازی رنگ ها</value>
-  </data>
-  <data name="ToolStripExitItemText" xml:space="preserve">
-    <value>خروج از برنامه</value>
-  </data>
-  <data name="ToolStripLogoutItemText" xml:space="preserve">
-    <value>خروج از حساب کاربری</value>
-  </data>
-  <data name="ToolStripSettingOptionText" xml:space="preserve">
-    <value>تن&amp;ظیمات</value>
-  </data>
-  <data name="ToolStripUserChangePassItemText" xml:space="preserve">
-    <value>تغییر رمز عبور</value>
-  </data>
-  <data name="ToolStripUserOptionText" xml:space="preserve">
-    <value>&amp;تنظیمات کاربری</value>
-  </data>
-  <data name="ToolStripUserUpdateItemText" xml:space="preserve">
-    <value>به روز رسانی حساب کاربری</value>
-  </data>
-  <data name="UserWelcomeMessageText" xml:space="preserve">
-    <value>سلام {0}! شما به عنوان {1} وارد شده اید</value>
-  </data>
-  <data name="YearFromLabelText" xml:space="preserve">
-    <value>از</value>
-  </data>
-  <data name="YearToLabelText" xml:space="preserve">
-    <value>تا</value>
-  </data>
+  <metadata name="userBooksListbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="descriptionTextbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="descriptionLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bookNameLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bookNameTextbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="writerNameTextbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="writerNameLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="yearTextbox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="yearLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="genreLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="genreCombobox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bookTypeLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="bookTypeCombobox.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="saveButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="returnButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="deleteButton.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
