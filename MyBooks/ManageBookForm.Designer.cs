@@ -58,7 +58,8 @@ namespace MyApplication
             this.userBooksListbox.Name = "userBooksListbox";
             this.userBooksListbox.ScrollAlwaysVisible = true;
             this.userBooksListbox.Size = new System.Drawing.Size(330, 261);
-            this.userBooksListbox.TabIndex = 0;
+            this.userBooksListbox.TabIndex = 15;
+            this.userBooksListbox.SelectedIndexChanged += new System.EventHandler(this.UserBooksListbox_SelectedIndexChanged);
             // 
             // descriptionTextbox
             // 
@@ -70,7 +71,7 @@ namespace MyApplication
             this.descriptionTextbox.MaxLength = 1024;
             this.descriptionTextbox.Name = "descriptionTextbox";
             this.descriptionTextbox.Size = new System.Drawing.Size(354, 114);
-            this.descriptionTextbox.TabIndex = 1;
+            this.descriptionTextbox.TabIndex = 11;
             this.descriptionTextbox.Text = "";
             // 
             // descriptionLabel
@@ -82,7 +83,7 @@ namespace MyApplication
             this.descriptionLabel.Location = new System.Drawing.Point(336, 129);
             this.descriptionLabel.Name = "descriptionLabel";
             this.descriptionLabel.Size = new System.Drawing.Size(72, 15);
-            this.descriptionLabel.TabIndex = 2;
+            this.descriptionLabel.TabIndex = 10;
             this.descriptionLabel.Text = "Des&cription:";
             // 
             // bookNameLabel
@@ -92,7 +93,7 @@ namespace MyApplication
             this.bookNameLabel.Location = new System.Drawing.Point(336, 13);
             this.bookNameLabel.Name = "bookNameLabel";
             this.bookNameLabel.Size = new System.Drawing.Size(75, 15);
-            this.bookNameLabel.TabIndex = 3;
+            this.bookNameLabel.TabIndex = 0;
             this.bookNameLabel.Text = "Book &Name:";
             // 
             // bookNameTextbox
@@ -103,7 +104,7 @@ namespace MyApplication
             this.bookNameTextbox.MaxLength = 30;
             this.bookNameTextbox.Name = "bookNameTextbox";
             this.bookNameTextbox.Size = new System.Drawing.Size(255, 20);
-            this.bookNameTextbox.TabIndex = 4;
+            this.bookNameTextbox.TabIndex = 1;
             // 
             // writerNameTextbox
             // 
@@ -113,7 +114,7 @@ namespace MyApplication
             this.writerNameTextbox.MaxLength = 30;
             this.writerNameTextbox.Name = "writerNameTextbox";
             this.writerNameTextbox.Size = new System.Drawing.Size(255, 20);
-            this.writerNameTextbox.TabIndex = 5;
+            this.writerNameTextbox.TabIndex = 3;
             // 
             // writerNameLabel
             // 
@@ -122,7 +123,7 @@ namespace MyApplication
             this.writerNameLabel.Location = new System.Drawing.Point(363, 39);
             this.writerNameLabel.Name = "writerNameLabel";
             this.writerNameLabel.Size = new System.Drawing.Size(45, 15);
-            this.writerNameLabel.TabIndex = 6;
+            this.writerNameLabel.TabIndex = 2;
             this.writerNameLabel.Text = "&Author:";
             // 
             // yearTextbox
@@ -133,7 +134,7 @@ namespace MyApplication
             this.yearTextbox.Name = "yearTextbox";
             this.yearTextbox.ShortcutsEnabled = false;
             this.yearTextbox.Size = new System.Drawing.Size(70, 21);
-            this.yearTextbox.TabIndex = 7;
+            this.yearTextbox.TabIndex = 5;
             this.yearTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.YearTextbox_KeyPress);
             // 
             // yearLabel
@@ -143,7 +144,7 @@ namespace MyApplication
             this.yearLabel.Location = new System.Drawing.Point(332, 67);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(79, 15);
-            this.yearLabel.TabIndex = 8;
+            this.yearLabel.TabIndex = 4;
             this.yearLabel.Text = "Publish &Year:";
             // 
             // genreLabel
@@ -153,7 +154,7 @@ namespace MyApplication
             this.genreLabel.Location = new System.Drawing.Point(493, 67);
             this.genreLabel.Name = "genreLabel";
             this.genreLabel.Size = new System.Drawing.Size(44, 15);
-            this.genreLabel.TabIndex = 9;
+            this.genreLabel.TabIndex = 6;
             this.genreLabel.Text = "&Genre:";
             // 
             // genreCombobox
@@ -165,7 +166,7 @@ namespace MyApplication
             this.genreCombobox.Location = new System.Drawing.Point(543, 66);
             this.genreCombobox.Name = "genreCombobox";
             this.genreCombobox.Size = new System.Drawing.Size(129, 21);
-            this.genreCombobox.TabIndex = 10;
+            this.genreCombobox.TabIndex = 7;
             // 
             // bookTypeLabel
             // 
@@ -174,7 +175,7 @@ namespace MyApplication
             this.bookTypeLabel.Location = new System.Drawing.Point(341, 94);
             this.bookTypeLabel.Name = "bookTypeLabel";
             this.bookTypeLabel.Size = new System.Drawing.Size(67, 15);
-            this.bookTypeLabel.TabIndex = 11;
+            this.bookTypeLabel.TabIndex = 8;
             this.bookTypeLabel.Text = "Book &Type:";
             // 
             // bookTypeCombobox
@@ -184,7 +185,7 @@ namespace MyApplication
             this.bookTypeCombobox.Location = new System.Drawing.Point(417, 93);
             this.bookTypeCombobox.Name = "bookTypeCombobox";
             this.bookTypeCombobox.Size = new System.Drawing.Size(120, 21);
-            this.bookTypeCombobox.TabIndex = 12;
+            this.bookTypeCombobox.TabIndex = 9;
             // 
             // saveButton
             // 
@@ -192,9 +193,12 @@ namespace MyApplication
             this.saveButton.Location = new System.Drawing.Point(417, 118);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(90, 23);
-            this.saveButton.TabIndex = 13;
+            this.saveButton.TabIndex = 12;
             this.saveButton.Text = "&Save Changes";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            this.saveButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.saveButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // returnButton
             // 
@@ -205,6 +209,9 @@ namespace MyApplication
             this.returnButton.TabIndex = 14;
             this.returnButton.Text = "R&eturn";
             this.returnButton.UseVisualStyleBackColor = true;
+            this.returnButton.Click += new System.EventHandler(this.ReturnButton_Click);
+            this.returnButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.returnButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // deleteButton
             // 
@@ -212,9 +219,12 @@ namespace MyApplication
             this.deleteButton.Location = new System.Drawing.Point(513, 118);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
-            this.deleteButton.TabIndex = 15;
+            this.deleteButton.TabIndex = 13;
             this.deleteButton.Text = "&Delete";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            this.deleteButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.deleteButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // ManageBookForm
             // 

@@ -61,11 +61,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have successfully deleted this book!.
+        /// </summary>
+        public static string BookDeletedMessage {
+            get {
+                return ResourceManager.GetString("BookDeletedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book &amp;Name:.
         /// </summary>
         public static string BookNameLabelText {
             get {
                 return ResourceManager.GetString("BookNameLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You have not changed the book!.
+        /// </summary>
+        public static string BookNotChangedError {
+            get {
+                return ResourceManager.GetString("BookNotChangedError", resourceCulture);
             }
         }
         
@@ -79,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to save these changes?.
+        /// </summary>
+        public static string ChangeBookQuestion {
+            get {
+                return ResourceManager.GetString("ChangeBookQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Delete.
         /// </summary>
         public static string DeleteButtonText {
@@ -88,11 +115,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are You sure you want to delete this book?.
+        /// </summary>
+        public static string DeleteQuestion {
+            get {
+                return ResourceManager.GetString("DeleteQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Description cannot be longer than 1024 characters!.
+        /// </summary>
+        public static string DescriptionError {
+            get {
+                return ResourceManager.GetString("DescriptionError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Des&amp;cription:.
         /// </summary>
         public static string DescriptionLabelText {
             get {
                 return ResourceManager.GetString("DescriptionLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Need to give a name for the book!.
+        /// </summary>
+        public static string EmptyNameError {
+            get {
+                return ResourceManager.GetString("EmptyNameError", resourceCulture);
             }
         }
         
@@ -115,6 +169,51 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string MessageboxErrorCaption {
+            get {
+                return ResourceManager.GetString("MessageboxErrorCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string MessageboxQuestionCaption {
+            get {
+                return ResourceManager.GetString("MessageboxQuestionCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string MessageBoxWarningCaption {
+            get {
+                return ResourceManager.GetString("MessageBoxWarningCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The books name must be between 2-25 characters!.
+        /// </summary>
+        public static string NameLengthError {
+            get {
+                return ResourceManager.GetString("NameLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A book with this name already exists!.
+        /// </summary>
+        public static string NewBookExistsError {
+            get {
+                return ResourceManager.GetString("NewBookExistsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to R&amp;eturn.
         /// </summary>
         public static string ReturnButtonText {
@@ -133,11 +232,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You Have successfully saved your changes!.
+        /// </summary>
+        public static string SuccessMessage {
+            get {
+                return ResourceManager.GetString("SuccessMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &amp;Author:.
         /// </summary>
         public static string WriterNameLabelText {
             get {
                 return ResourceManager.GetString("WriterNameLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Author&apos;s name must be between 3-20 characters!.
+        /// </summary>
+        public static string WriterNameLengthError {
+            get {
+                return ResourceManager.GetString("WriterNameLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The publish year must be between 0-10000!.
+        /// </summary>
+        public static string YearError {
+            get {
+                return ResourceManager.GetString("YearError", resourceCulture);
             }
         }
         

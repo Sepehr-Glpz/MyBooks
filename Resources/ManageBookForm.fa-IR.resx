@@ -117,17 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BookDeletedMessage" xml:space="preserve">
+    <value>شما با موفقیت این کتاب را حذف کردید!</value>
+  </data>
   <data name="BookNameLabelText" xml:space="preserve">
     <value>&amp;نام کتاب:</value>
+  </data>
+  <data name="BookNotChangedError" xml:space="preserve">
+    <value>شما تغییری در کتاب اعمال نکرده اید!</value>
   </data>
   <data name="BookTypeLabelText" xml:space="preserve">
     <value>نو&amp;ع کتاب:</value>
   </data>
+  <data name="ChangeBookQuestion" xml:space="preserve">
+    <value>آیا به اعمال این تغییرات اطمینان دارید؟</value>
+  </data>
   <data name="DeleteButtonText" xml:space="preserve">
     <value>&amp;حذف</value>
   </data>
+  <data name="DeleteQuestion" xml:space="preserve">
+    <value>آیا به حذف کردن این کتاب اطمینان دارید؟</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>توضیحات نمیتواند طولانی تر از 1024 کاراکتر باشد!</value>
+  </data>
   <data name="DescriptionLabelText" xml:space="preserve">
     <value>تو&amp;ضیحات:</value>
+  </data>
+  <data name="EmptyNameError" xml:space="preserve">
+    <value>شما باید نامی برای کتاب وارد کنید!</value>
   </data>
   <data name="FormText" xml:space="preserve">
     <value>مدیریت کتاب های شخصی</value>
@@ -135,14 +153,38 @@
   <data name="GenreLabelText" xml:space="preserve">
     <value>&amp;ژانر:</value>
   </data>
+  <data name="MessageboxErrorCaption" xml:space="preserve">
+    <value>خطا</value>
+  </data>
+  <data name="MessageboxQuestionCaption" xml:space="preserve">
+    <value>پیام</value>
+  </data>
+  <data name="MessageBoxWarningCaption" xml:space="preserve">
+    <value>اخطار</value>
+  </data>
+  <data name="NameLengthError" xml:space="preserve">
+    <value>نام کتاب باید بین 2-25 کاراکتر باشد!</value>
+  </data>
+  <data name="NewBookExistsError" xml:space="preserve">
+    <value>کتابی با این نام وجود دارد!</value>
+  </data>
   <data name="ReturnButtonText" xml:space="preserve">
     <value>باز&amp;گشت</value>
   </data>
   <data name="SaveButtonText" xml:space="preserve">
     <value>&amp;ذخیره تغییرات</value>
   </data>
+  <data name="SuccessMessage" xml:space="preserve">
+    <value>شما با موفقیت تغییرات خود را ذخیره کردید!</value>
+  </data>
   <data name="WriterNameLabelText" xml:space="preserve">
     <value>نام ن&amp;ویسنده:</value>
+  </data>
+  <data name="WriterNameLengthError" xml:space="preserve">
+    <value>نام نویسنده باید بین 3-20 کاراکتر باشد!</value>
+  </data>
+  <data name="YearError" xml:space="preserve">
+    <value>سال انتشار باید بین 0-10000 باشد!</value>
   </data>
   <data name="YearLabelText" xml:space="preserve">
     <value>&amp;سال انتشار:</value>

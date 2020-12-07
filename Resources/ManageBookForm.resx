@@ -117,17 +117,35 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="BookDeletedMessage" xml:space="preserve">
+    <value>You have successfully deleted this book!</value>
+  </data>
   <data name="BookNameLabelText" xml:space="preserve">
     <value>Book &amp;Name:</value>
+  </data>
+  <data name="BookNotChangedError" xml:space="preserve">
+    <value>You have not changed the book!</value>
   </data>
   <data name="BookTypeLabelText" xml:space="preserve">
     <value>Book &amp;Type:</value>
   </data>
+  <data name="ChangeBookQuestion" xml:space="preserve">
+    <value>Are you sure you want to save these changes?</value>
+  </data>
   <data name="DeleteButtonText" xml:space="preserve">
     <value>&amp;Delete</value>
   </data>
+  <data name="DeleteQuestion" xml:space="preserve">
+    <value>Are You sure you want to delete this book?</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>The Description cannot be longer than 1024 characters!</value>
+  </data>
   <data name="DescriptionLabelText" xml:space="preserve">
     <value>Des&amp;cription:</value>
+  </data>
+  <data name="EmptyNameError" xml:space="preserve">
+    <value>You Need to give a name for the book!</value>
   </data>
   <data name="FormText" xml:space="preserve">
     <value>Manage Your Books</value>
@@ -135,14 +153,38 @@
   <data name="GenreLabelText" xml:space="preserve">
     <value>&amp;Genre:</value>
   </data>
+  <data name="MessageboxErrorCaption" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="MessageboxQuestionCaption" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MessageBoxWarningCaption" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="NameLengthError" xml:space="preserve">
+    <value>The books name must be between 2-25 characters!</value>
+  </data>
+  <data name="NewBookExistsError" xml:space="preserve">
+    <value>A book with this name already exists!</value>
+  </data>
   <data name="ReturnButtonText" xml:space="preserve">
     <value>R&amp;eturn</value>
   </data>
   <data name="SaveButtonText" xml:space="preserve">
     <value>&amp;Save Changes</value>
   </data>
+  <data name="SuccessMessage" xml:space="preserve">
+    <value>You Have successfully saved your changes!</value>
+  </data>
   <data name="WriterNameLabelText" xml:space="preserve">
     <value>&amp;Author:</value>
+  </data>
+  <data name="WriterNameLengthError" xml:space="preserve">
+    <value>The Author's name must be between 3-20 characters!</value>
+  </data>
+  <data name="YearError" xml:space="preserve">
+    <value>The publish year must be between 0-10000!</value>
   </data>
   <data name="YearLabelText" xml:space="preserve">
     <value>Publish &amp;Year:</value>
