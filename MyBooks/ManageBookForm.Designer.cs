@@ -45,6 +45,7 @@ namespace MyApplication
             this.saveButton = new System.Windows.Forms.Button();
             this.returnButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
+            this.disownButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // userBooksListbox
@@ -226,10 +227,24 @@ namespace MyApplication
             this.deleteButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.deleteButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
+            // disownButton
+            // 
+            this.disownButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.disownButton.Location = new System.Drawing.Point(597, 91);
+            this.disownButton.Name = "disownButton";
+            this.disownButton.Size = new System.Drawing.Size(75, 23);
+            this.disownButton.TabIndex = 16;
+            this.disownButton.Text = "Diso&wn";
+            this.disownButton.UseVisualStyleBackColor = true;
+            this.disownButton.Click += new System.EventHandler(this.DisownButton_Click);
+            this.disownButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.disownButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
             // ManageBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(684, 261);
+            this.Controls.Add(this.disownButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.returnButton);
             this.Controls.Add(this.saveButton);
@@ -275,5 +290,6 @@ namespace MyApplication
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button returnButton;
         private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button disownButton;
     }
 }

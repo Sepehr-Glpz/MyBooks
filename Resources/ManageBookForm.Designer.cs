@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You have successfully disowned this book!.
+        /// </summary>
+        public static string BookDisownedMessage {
+            get {
+                return ResourceManager.GetString("BookDisownedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Book &amp;Name:.
         /// </summary>
         public static string BookNameLabelText {
@@ -138,6 +147,24 @@ namespace Resources {
         public static string DescriptionLabelText {
             get {
                 return ResourceManager.GetString("DescriptionLabelText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Diso&amp;wn.
+        /// </summary>
+        public static string DisownButtonText {
+            get {
+                return ResourceManager.GetString("DisownButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to disown this book?.
+        /// </summary>
+        public static string DisownQuestion {
+            get {
+                return ResourceManager.GetString("DisownQuestion", resourceCulture);
             }
         }
         

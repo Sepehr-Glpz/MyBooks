@@ -555,5 +555,10 @@ namespace MyApplication
             manageBookForm.Show();
             
         }
+
+        private void ToolStripBookOwnItem_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

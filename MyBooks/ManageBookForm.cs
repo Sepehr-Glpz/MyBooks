@@ -11,6 +11,7 @@ namespace MyApplication
         #region UpdateFormColors()
         public void UpdateFormColors()
         {
+            this.BackColor = Infrastructure.Utility.FormBackcolor;
             bookNameLabel.BackColor = Infrastructure.Utility.FormBackcolor;
             bookNameLabel.ForeColor = Infrastructure.Utility.FormTextColor;
             writerNameLabel.BackColor = Infrastructure.Utility.FormBackcolor;
@@ -29,6 +30,8 @@ namespace MyApplication
             deleteButton.ForeColor = Infrastructure.Utility.FormTextColor;
             returnButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
             returnButton.ForeColor = Infrastructure.Utility.FormTextColor;
+            disownButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+            disownButton.ForeColor = Infrastructure.Utility.FormTextColor;
         }
         #endregion /UpdateFormColors()
 
@@ -115,6 +118,8 @@ namespace MyApplication
             deleteButton.Text = Resources.ManageBookForm.DeleteButtonText;
 
             returnButton.Text = Resources.ManageBookForm.ReturnButtonText;
+
+            disownButton.Text = Resources.ManageBookForm.DisownButtonText;
 
             #endregion /Form Language Setting
 
@@ -460,6 +465,80 @@ namespace MyApplication
         {
             System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
             currentButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+        }
+
+        private void DisownButton_Click(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.DialogResult result = System.Windows.Forms.DialogResult.None;
+            if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+            {
+                result =
+                    System.Windows.Forms.MessageBox.Show(text: Resources.ManageBookForm.DisownQuestion,
+                    caption: Resources.ManageBookForm.MessageboxQuestionCaption,
+                    buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+                    icon: System.Windows.Forms.MessageBoxIcon.Question,
+                    defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2);
+            }
+            if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+            {
+                result =
+                    System.Windows.Forms.MessageBox.Show(text: Resources.ManageBookForm.DisownQuestion,
+                    caption: Resources.ManageBookForm.MessageboxQuestionCaption,
+                    buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
+                    icon: System.Windows.Forms.MessageBoxIcon.Question,
+                    defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2,
+                    options: System.Windows.Forms.MessageBoxOptions.RightAlign
+                    | System.Windows.Forms.MessageBoxOptions.RtlReading);
+            }
+            if (result == System.Windows.Forms.DialogResult.No)
+            {
+                return;
+            }
+            Models.Book selectedBook = userBooksListbox.SelectedItem as Models.Book;
+            Models.DatabaseContext databaseContext = null;
+            try
+            {
+                databaseContext = new Models.DatabaseContext();
+                var disownedBook = databaseContext.Books
+                    .Where(current => current.Id == selectedBook.Id)
+                    .FirstOrDefault();
+                disownedBook.OwnerUser = null;
+                disownedBook.OwnerUserId = null;
+                databaseContext.SaveChanges();
+                this.DisplayOwnedBooks();
+                if (RightToLeft == System.Windows.Forms.RightToLeft.No)
+                {
+                    System.Windows.Forms.MessageBox.Show(text: Resources.ManageBookForm.BookDisownedMessage,
+                        caption: Resources.ManageBookForm.MessageboxQuestionCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                        icon: System.Windows.Forms.MessageBoxIcon.Information,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1);
+                }
+                if(RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                {
+                    System.Windows.Forms.MessageBox.Show(text: Resources.ManageBookForm.BookDisownedMessage,
+                        caption: Resources.ManageBookForm.MessageboxQuestionCaption,
+                        buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                        icon: System.Windows.Forms.MessageBoxIcon.Information,
+                        defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
+                        options: System.Windows.Forms.MessageBoxOptions.RightAlign
+                        | System.Windows.Forms.MessageBoxOptions.RtlReading);
+                }
+            }
+            catch(System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show($"Unexpected Error:{ex.Message}",
+                      caption: "ERROR", buttons: System.Windows.Forms.MessageBoxButtons.OK,
+                      icon: System.Windows.Forms.MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (databaseContext != null)
+                {
+                    databaseContext.Dispose();
+                }
+            }
+
         }
     }
 }

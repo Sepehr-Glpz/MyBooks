@@ -108,6 +108,7 @@ namespace MyApplication
             this.toolStripBookOwnItem.Name = "toolStripBookOwnItem";
             this.toolStripBookOwnItem.Size = new System.Drawing.Size(186, 22);
             this.toolStripBookOwnItem.Text = "Own Unwanted Book";
+            this.toolStripBookOwnItem.Click += new System.EventHandler(this.ToolStripBookOwnItem_Click);
             // 
             // toolStripUserOption
             // 

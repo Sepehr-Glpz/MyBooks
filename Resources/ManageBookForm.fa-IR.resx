@@ -120,6 +120,9 @@
   <data name="BookDeletedMessage" xml:space="preserve">
     <value>شما با موفقیت این کتاب را حذف کردید!</value>
   </data>
+  <data name="BookDisownedMessage" xml:space="preserve">
+    <value>شما با موفقیت این کتاب را رها کردید!</value>
+  </data>
   <data name="BookNameLabelText" xml:space="preserve">
     <value>&amp;نام کتاب:</value>
   </data>
@@ -143,6 +146,12 @@
   </data>
   <data name="DescriptionLabelText" xml:space="preserve">
     <value>تو&amp;ضیحات:</value>
+  </data>
+  <data name="DisownButtonText" xml:space="preserve">
+    <value>&amp;رها سازی</value>
+  </data>
+  <data name="DisownQuestion" xml:space="preserve">
+    <value>آیا از رها سازی این کتاب اطمینان دارید؟</value>
   </data>
   <data name="EmptyNameError" xml:space="preserve">
     <value>شما باید نامی برای کتاب وارد کنید!</value>

@@ -120,6 +120,9 @@
   <data name="BookDeletedMessage" xml:space="preserve">
     <value>You have successfully deleted this book!</value>
   </data>
+  <data name="BookDisownedMessage" xml:space="preserve">
+    <value>You have successfully disowned this book!</value>
+  </data>
   <data name="BookNameLabelText" xml:space="preserve">
     <value>Book &amp;Name:</value>
   </data>
@@ -143,6 +146,12 @@
   </data>
   <data name="DescriptionLabelText" xml:space="preserve">
     <value>Des&amp;cription:</value>
+  </data>
+  <data name="DisownButtonText" xml:space="preserve">
+    <value>Diso&amp;wn</value>
+  </data>
+  <data name="DisownQuestion" xml:space="preserve">
+    <value>Are you sure you want to disown this book?</value>
   </data>
   <data name="EmptyNameError" xml:space="preserve">
     <value>You Need to give a name for the book!</value>
