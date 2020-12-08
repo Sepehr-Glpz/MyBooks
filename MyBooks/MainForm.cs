@@ -538,6 +538,8 @@ namespace MyApplication
                 DisplayBookForm displayBookForm = new DisplayBookForm()
                 {
                     SelectedBook = selectedBook,
+                    FatherForm = this,
+                    TopMost = true,
                 };
                 this.Enabled = false;
                 displayBookForm.Show();
@@ -556,9 +558,15 @@ namespace MyApplication
             
         }
 
+        private OwnBookForm ownBookForm;
         private void ToolStripBookOwnItem_Click(object sender, System.EventArgs e)
         {
-
+            if (ownBookForm == null || ownBookForm.IsDisposed == true)
+            {
+                ownBookForm = new OwnBookForm();
+            }
+            this.Enabled = false;
+            ownBookForm.Show();
         }
     }
 }

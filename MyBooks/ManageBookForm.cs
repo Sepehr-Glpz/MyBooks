@@ -415,6 +415,10 @@ namespace MyApplication
                 var deletedBook = databaseContext.Books
                     .Where(current => current.Id == selectedBook.Id)
                     .FirstOrDefault();
+                var updatedUser = databaseContext.Users
+                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+                    .FirstOrDefault();
+                updatedUser.Books.Remove(deletedBook);
                 databaseContext.Books.Remove(deletedBook);
                 databaseContext.SaveChanges();
                 this.DisplayOwnedBooks();
@@ -504,6 +508,10 @@ namespace MyApplication
                     .FirstOrDefault();
                 disownedBook.OwnerUser = null;
                 disownedBook.OwnerUserId = null;
+                var updatedUser = databaseContext.Users
+                    .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
+                    .FirstOrDefault();
+                updatedUser.Books.Remove(selectedBook);
                 databaseContext.SaveChanges();
                 this.DisplayOwnedBooks();
                 if (RightToLeft == System.Windows.Forms.RightToLeft.No)

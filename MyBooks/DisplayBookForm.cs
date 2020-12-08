@@ -10,6 +10,8 @@ namespace MyApplication
 
         public Models.Book SelectedBook { protected get; set; }
 
+        public System.Windows.Forms.Form FatherForm { get; set; }
+
         #region UpdateFormColors()
         public void UpdateFormColors()
         {
@@ -138,7 +140,7 @@ namespace MyApplication
 
         private void DisplayBookForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
-            Infrastructure.Utility.MainForm.Enabled = true;
+            FatherForm.Enabled = true;
             this.Dispose();
         }
 

@@ -59,5 +59,77 @@ namespace Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You Have successfuly Owned this book!.
+        /// </summary>
+        public static string BookOwnedMessage {
+            get {
+                return ResourceManager.GetString("BookOwnedMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to own this book?.
+        /// </summary>
+        public static string BookOwnMessage {
+            get {
+                return ResourceManager.GetString("BookOwnMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Own Unwanted Book.
+        /// </summary>
+        public static string FormText {
+            get {
+                return ResourceManager.GetString("FormText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message.
+        /// </summary>
+        public static string MessageboxQuestionCaption {
+            get {
+                return ResourceManager.GetString("MessageboxQuestionCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Own Book.
+        /// </summary>
+        public static string OwnButtonText {
+            get {
+                return ResourceManager.GetString("OwnButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Return.
+        /// </summary>
+        public static string ReturnButtonText {
+            get {
+                return ResourceManager.GetString("ReturnButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;Search.
+        /// </summary>
+        public static string SearchButtonText {
+            get {
+                return ResourceManager.GetString("SearchButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search By &amp;Name:.
+        /// </summary>
+        public static string SearchByNameLabelText {
+            get {
+                return ResourceManager.GetString("SearchByNameLabelText", resourceCulture);
+            }
+        }
     }
 }
