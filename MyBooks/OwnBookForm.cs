@@ -249,5 +249,17 @@ namespace MyApplication
         {
             this.Close();
         }
+
+        private void Button_MouseEnter(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
+            currentButton.BackColor = System.Drawing.Color.LightBlue;
+        }
+
+        private void Button_MouseLeave(object sender, System.EventArgs e)
+        {
+            System.Windows.Forms.Button currentButton = sender as System.Windows.Forms.Button;
+            currentButton.BackColor = Infrastructure.Utility.FormButtonBackColor;
+        }
     }
 }

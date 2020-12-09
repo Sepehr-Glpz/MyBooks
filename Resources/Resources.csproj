@@ -117,6 +117,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RegisterForm.fa-IR.resx</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProfileForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProfileForm.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddBookForm.fa-IR.resx">
@@ -179,6 +184,11 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RegisterForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProfileForm.fa-IR.resx" />
+    <EmbeddedResource Include="UpdateProfileForm.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateProfileForm.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

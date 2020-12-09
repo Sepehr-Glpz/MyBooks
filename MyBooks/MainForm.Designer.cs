@@ -124,6 +124,7 @@ namespace MyApplication
             this.toolStripUserUpdateItem.Name = "toolStripUserUpdateItem";
             this.toolStripUserUpdateItem.Size = new System.Drawing.Size(195, 22);
             this.toolStripUserUpdateItem.Text = "Update Your Profile";
+            this.toolStripUserUpdateItem.Click += new System.EventHandler(this.ToolStripUserUpdateItem_Click);
             // 
             // toolStripUserChangePassItem
             // 

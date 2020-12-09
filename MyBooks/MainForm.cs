@@ -568,5 +568,16 @@ namespace MyApplication
             this.Enabled = false;
             ownBookForm.Show();
         }
+
+        private UpdateProfileForm updateProfileForm;
+        private void ToolStripUserUpdateItem_Click(object sender, System.EventArgs e)
+        {
+            if (updateProfileForm == null || updateProfileForm.IsDisposed == true)
+            {
+                updateProfileForm = new UpdateProfileForm();
+            }
+            this.Enabled = false;
+            updateProfileForm.Show();
+        }
     }
 }

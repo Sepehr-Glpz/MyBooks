@@ -78,6 +78,8 @@ namespace MyApplication
             this.searchButton.Text = "&Search";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.SearchButton_Click);
+            this.searchButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.searchButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // ownButton
             // 
@@ -88,6 +90,8 @@ namespace MyApplication
             this.ownButton.Text = "&Own Book";
             this.ownButton.UseVisualStyleBackColor = true;
             this.ownButton.Click += new System.EventHandler(this.OwnButton_Click);
+            this.ownButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.ownButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // returnButton
             // 
@@ -99,6 +103,8 @@ namespace MyApplication
             this.returnButton.Text = "&Return";
             this.returnButton.UseVisualStyleBackColor = true;
             this.returnButton.Click += new System.EventHandler(this.ReturnButton_Click);
+            this.returnButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.returnButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // OwnBookForm
             // 
