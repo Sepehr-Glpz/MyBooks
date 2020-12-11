@@ -110,6 +110,7 @@ namespace MyApplication
         private void AddBookForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
             Infrastructure.Utility.MainForm.Enabled = true;
+            Infrastructure.Utility.MainForm.ResetForm();
             this.Dispose();
         }
 

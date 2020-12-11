@@ -138,6 +138,7 @@ namespace MyApplication
         private void OwnBookForm_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
             Infrastructure.Utility.MainForm.Enabled = true;
+            Infrastructure.Utility.MainForm.ResetForm();
             if (databaseContext != null)
             {
                 databaseContext.Dispose();

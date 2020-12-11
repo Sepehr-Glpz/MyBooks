@@ -49,6 +49,8 @@
             StringLength(maximumLength: 20, MinimumLength = 3,
             ErrorMessageResourceType = typeof(Resources.ErrorMessages),
             ErrorMessageResourceName = nameof(Resources.ErrorMessages.UsernameLengthError))]
+        [System.ComponentModel.DataAnnotations.Schema.
+            Index(IsUnique = true)]
         public string Username { get; set; }
 
         [System.ComponentModel.DataAnnotations.Schema.

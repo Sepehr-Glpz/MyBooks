@@ -111,6 +111,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ManageBookForm.fa-IR.resx</DependentUpon>
     </Compile>
+    <Compile Include="ManageUsersForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageUsersForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUsersForm.fa-IR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManageUsersForm.fa-IR.resx</DependentUpon>
+    </Compile>
     <Compile Include="OwnBookForm.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -199,6 +209,14 @@
     <EmbeddedResource Include="ManageBookForm.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ManageBookForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsersForm.fa-IR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageUsersForm.fa-IR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageUsersForm.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ManageUsersForm.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OwnBookForm.fa-IR.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

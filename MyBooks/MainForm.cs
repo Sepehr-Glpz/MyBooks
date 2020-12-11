@@ -40,6 +40,21 @@ namespace MyApplication
             this.userWelcomeMessageLabel.Text = result;
         }
 
+        public void ResetForm()
+        {
+            searchByNameTextbox.Text = string.Empty;
+            searchByAuthorTextbox.Text = string.Empty;
+            searchByOwnerUsernameTextbox.Text = string.Empty;
+            genresComboBox.SelectedItem = null;
+            bookTypeCombobox.SelectedItem = null;
+            yearFromTextbox.Text = string.Empty;
+            yearToTextbox.Text = string.Empty;
+            pageIndexLabel.Text = "0";
+            pageLastPageLabel.Text = "0";
+            displayBooksListbox.DataSource = null;
+            searchByNameTextbox.Focus();
+        }
+
         #region UpdateFormColors()
         public void UpdateFormColors()
         {
@@ -449,17 +464,7 @@ namespace MyApplication
 
         private void ResetButton_Click(object sender, System.EventArgs e)
         {
-            searchByNameTextbox.Text = string.Empty;
-            searchByAuthorTextbox.Text = string.Empty;
-            searchByOwnerUsernameTextbox.Text = string.Empty;
-            genresComboBox.SelectedItem = null;
-            bookTypeCombobox.SelectedItem = null;
-            yearFromTextbox.Text = string.Empty;
-            yearToTextbox.Text = string.Empty;
-            pageIndexLabel.Text = "0";
-            pageLastPageLabel.Text = "0";
-            displayBooksListbox.DataSource = null;
-            searchByNameTextbox.Focus();
+            ResetForm();
         }
 
         private void Button_MouseEnter(object sender, System.EventArgs e)
