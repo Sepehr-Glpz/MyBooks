@@ -56,6 +56,7 @@
             this.usernameTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.usernameTextbox.Location = new System.Drawing.Point(96, 12);
+            this.usernameTextbox.MaxLength = 40;
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(382, 20);
             this.usernameTextbox.TabIndex = 1;
@@ -75,6 +76,7 @@
             this.passwordTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordTextbox.Location = new System.Drawing.Point(96, 50);
+            this.passwordTextbox.MaxLength = 40;
             this.passwordTextbox.Name = "passwordTextbox";
             this.passwordTextbox.Size = new System.Drawing.Size(357, 20);
             this.passwordTextbox.TabIndex = 3;
@@ -110,6 +112,7 @@
             this.repeatPasswordTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.repeatPasswordTextbox.Location = new System.Drawing.Point(96, 88);
+            this.repeatPasswordTextbox.MaxLength = 40;
             this.repeatPasswordTextbox.Name = "repeatPasswordTextbox";
             this.repeatPasswordTextbox.Size = new System.Drawing.Size(382, 20);
             this.repeatPasswordTextbox.TabIndex = 5;

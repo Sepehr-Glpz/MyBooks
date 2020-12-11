@@ -131,6 +131,7 @@ namespace MyApplication
             this.toolStripUserChangePassItem.Name = "toolStripUserChangePassItem";
             this.toolStripUserChangePassItem.Size = new System.Drawing.Size(195, 22);
             this.toolStripUserChangePassItem.Text = "Change Your Password";
+            this.toolStripUserChangePassItem.Click += new System.EventHandler(this.ToolStripUserChangePassItem_Click);
             // 
             // toolStripSettingOption
             // 
@@ -143,7 +144,7 @@ namespace MyApplication
             // toolStripColorSettingItem
             // 
             this.toolStripColorSettingItem.Name = "toolStripColorSettingItem";
-            this.toolStripColorSettingItem.Size = new System.Drawing.Size(177, 22);
+            this.toolStripColorSettingItem.Size = new System.Drawing.Size(180, 22);
             this.toolStripColorSettingItem.Text = "Personalize Colours";
             // 
             // toolStripAdminOption
@@ -158,13 +159,13 @@ namespace MyApplication
             // toolStripAdminUsersItem
             // 
             this.toolStripAdminUsersItem.Name = "toolStripAdminUsersItem";
-            this.toolStripAdminUsersItem.Size = new System.Drawing.Size(152, 22);
+            this.toolStripAdminUsersItem.Size = new System.Drawing.Size(180, 22);
             this.toolStripAdminUsersItem.Text = "Manage Users";
             // 
             // toolStripAdminBooksItem
             // 
             this.toolStripAdminBooksItem.Name = "toolStripAdminBooksItem";
-            this.toolStripAdminBooksItem.Size = new System.Drawing.Size(152, 22);
+            this.toolStripAdminBooksItem.Size = new System.Drawing.Size(180, 22);
             this.toolStripAdminBooksItem.Text = "Manage Books";
             // 
             // exitToolStripMenuItem

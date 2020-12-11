@@ -317,7 +317,9 @@ namespace MyApplication
                     Infrastructure.Utility.AuthenticatedUser = foundUser;
                     this.ResetForm();
                     this.Hide();
+                    this.Enabled = false;
 
+                    Infrastructure.Utility.MainForm.Enabled = true;
                     Infrastructure.Utility.MainForm.Show();
 
                 }

@@ -579,5 +579,19 @@ namespace MyApplication
             this.Enabled = false;
             updateProfileForm.Show();
         }
+
+        private ChangePassForm changePassForm;
+        private void ToolStripUserChangePassItem_Click(object sender, System.EventArgs e)
+        {
+            if (changePassForm == null || changePassForm.IsDisposed == true)
+            {
+                changePassForm = new ChangePassForm()
+                {
+                    TopMost = true,
+                };
+            }
+            this.Enabled = false;
+            changePassForm.Show();
+        }
     }
 }
