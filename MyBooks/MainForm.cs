@@ -598,5 +598,16 @@ namespace MyApplication
             this.Enabled = false;
             changePassForm.Show();
         }
+
+        private ManageUsersForm manageUsersForm;
+        private void ToolStripAdminUsersItem_Click(object sender, System.EventArgs e)
+        {
+            if (manageUsersForm == null || manageUsersForm.IsDisposed == true)
+            {
+                manageUsersForm = new ManageUsersForm();
+            }
+            this.Enabled = false;
+            manageUsersForm.Show();
+        }
     }
 }

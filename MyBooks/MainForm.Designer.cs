@@ -144,7 +144,7 @@ namespace MyApplication
             // toolStripColorSettingItem
             // 
             this.toolStripColorSettingItem.Name = "toolStripColorSettingItem";
-            this.toolStripColorSettingItem.Size = new System.Drawing.Size(180, 22);
+            this.toolStripColorSettingItem.Size = new System.Drawing.Size(177, 22);
             this.toolStripColorSettingItem.Text = "Personalize Colours";
             // 
             // toolStripAdminOption
@@ -161,6 +161,7 @@ namespace MyApplication
             this.toolStripAdminUsersItem.Name = "toolStripAdminUsersItem";
             this.toolStripAdminUsersItem.Size = new System.Drawing.Size(180, 22);
             this.toolStripAdminUsersItem.Text = "Manage Users";
+            this.toolStripAdminUsersItem.Click += new System.EventHandler(this.ToolStripAdminUsersItem_Click);
             // 
             // toolStripAdminBooksItem
             // 

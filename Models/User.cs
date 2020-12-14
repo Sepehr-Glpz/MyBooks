@@ -139,27 +139,27 @@
                 string result = $"Username: {Username}";
                 if (DisplayFullName != string.Empty)
                 {
-                    result = $"{result}- Fullname: {DisplayFullName}";
+                    result = $"{result} - Fullname: {DisplayFullName}";
                 }
                 if (IsActive == true)
                 {
-                    result = $"{result}- [ENABLED]";
+                    result = $"{result} - [ENABLED]";
                 }
                 else
                 {
-                    result = $"{result}- [DISABLED]";
+                    result = $"{result} - [DISABLED]";
                 }
                 if (IsAdmin == true)
                 {
-                    result = $"{result}- [ADMIN]";
+                    result = $"{result} - [ADMIN]";
                 }
                 else
                 {
-                    result = $"{result}- [USER]";
+                    result = $"{result} - [USER]";
                 }
                 if (IsSysAdmin == true)
                 {
-                    result = $"{result}- [SYSTEM ADMIN]";
+                    result = $"{result} - [SYSTEM ADMIN]";
                 }
                 return result;
             }

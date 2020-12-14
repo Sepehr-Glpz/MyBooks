@@ -48,15 +48,17 @@ namespace MyApplication
                 userBooksListbox.DataSource = ownedBooks;
                 userBooksListbox.DisplayMember = nameof(Models.Book.ListDisplayName);
                 userBooksListbox.ValueMember = nameof(Models.Book.BookName);
-                var selectedBook = userBooksListbox.SelectedItem as Models.Book;
-                bookNameTextbox.Text = selectedBook.BookName;
-                writerNameTextbox.Text = selectedBook.WriterName;
-                yearTextbox.Text = selectedBook.PublishYear.ToString();
-                genreCombobox.SelectedIndex =
-                    genreCombobox.FindStringExact(System.Enum.GetName(typeof(Models.BookGenres), selectedBook.Genre));
-                bookTypeCombobox.SelectedIndex =
-                    bookTypeCombobox.FindStringExact(System.Enum.GetName(typeof(Models.BookType), selectedBook.BookType));
-                descriptionTextbox.Text = selectedBook.Description;
+                if (userBooksListbox.SelectedItem is Models.Book selectedBook)
+                {
+                    bookNameTextbox.Text = selectedBook.BookName;
+                    writerNameTextbox.Text = selectedBook.WriterName;
+                    yearTextbox.Text = selectedBook.PublishYear.ToString();
+                    genreCombobox.SelectedIndex =
+                        genreCombobox.FindStringExact(System.Enum.GetName(typeof(Models.BookGenres), selectedBook.Genre));
+                    bookTypeCombobox.SelectedIndex =
+                        bookTypeCombobox.FindStringExact(System.Enum.GetName(typeof(Models.BookType), selectedBook.BookType));
+                    descriptionTextbox.Text = selectedBook.Description;
+                }
             }
             catch (System.Exception ex)
             {
@@ -146,15 +148,17 @@ namespace MyApplication
 
         private void UserBooksListbox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            var selectedBook = userBooksListbox.SelectedItem as Models.Book;
-            bookNameTextbox.Text = selectedBook.BookName;
-            writerNameTextbox.Text = selectedBook.WriterName;
-            yearTextbox.Text = selectedBook.PublishYear.ToString();
-            descriptionTextbox.Text = selectedBook.Description;
-            genreCombobox.SelectedIndex =
-                genreCombobox.FindStringExact(System.Enum.GetName(typeof(Models.BookGenres), selectedBook.Genre));
-            bookTypeCombobox.SelectedIndex =
-                bookTypeCombobox.FindStringExact(System.Enum.GetName(typeof(Models.BookType), selectedBook.BookType));
+            if (userBooksListbox.SelectedItem is Models.Book selectedBook)
+            {
+                bookNameTextbox.Text = selectedBook.BookName;
+                writerNameTextbox.Text = selectedBook.WriterName;
+                yearTextbox.Text = selectedBook.PublishYear.ToString();
+                descriptionTextbox.Text = selectedBook.Description;
+                genreCombobox.SelectedIndex =
+                    genreCombobox.FindStringExact(System.Enum.GetName(typeof(Models.BookGenres), selectedBook.Genre));
+                bookTypeCombobox.SelectedIndex =
+                    bookTypeCombobox.FindStringExact(System.Enum.GetName(typeof(Models.BookType), selectedBook.BookType));
+            }
         }
 
         private void ReturnButton_Click(object sender, System.EventArgs e)
@@ -164,6 +168,10 @@ namespace MyApplication
 
         private void SaveButton_Click(object sender, System.EventArgs e)
         {
+            if (userBooksListbox.SelectedItem == null)
+            {
+                return;
+            }
             bookNameTextbox.Text = bookNameTextbox.Text.Trim();
             while (bookNameTextbox.Text.Contains("  "))
             {
@@ -312,7 +320,7 @@ namespace MyApplication
                         buttons: System.Windows.Forms.MessageBoxButtons.YesNo,
                         icon: System.Windows.Forms.MessageBoxIcon.Question,
                         defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button2);
-                        
+
                 }
                 if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
                 {
@@ -342,7 +350,7 @@ namespace MyApplication
                     wantedBook.Description = selectedDescription;
                     databaseContext.SaveChanges();
                     this.DisplayOwnedBooks();
-                    if(RightToLeft == System.Windows.Forms.RightToLeft.No)
+                    if (RightToLeft == System.Windows.Forms.RightToLeft.No)
                     {
                         System.Windows.Forms.MessageBox.Show(text: Resources.ManageBookForm.SuccessMessage,
                             caption: Resources.ManageBookForm.MessageboxQuestionCaption,
@@ -357,7 +365,7 @@ namespace MyApplication
                             buttons: System.Windows.Forms.MessageBoxButtons.OK,
                             icon: System.Windows.Forms.MessageBoxIcon.Information,
                             defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1,
-                            options: System.Windows.Forms.MessageBoxOptions.RightAlign 
+                            options: System.Windows.Forms.MessageBoxOptions.RightAlign
                             | System.Windows.Forms.MessageBoxOptions.RtlReading);
                     }
 
@@ -382,6 +390,10 @@ namespace MyApplication
 
         private void DeleteButton_Click(object sender, System.EventArgs e)
         {
+            if (userBooksListbox.SelectedItem == null)
+            {
+                return;
+            }
             System.Windows.Forms.DialogResult result = System.Windows.Forms.DialogResult.None;
             if (RightToLeft == System.Windows.Forms.RightToLeft.No)
             {
@@ -423,8 +435,8 @@ namespace MyApplication
                 databaseContext.Books.Remove(deletedBook);
                 databaseContext.SaveChanges();
                 this.DisplayOwnedBooks();
-                
-                if(RightToLeft == System.Windows.Forms.RightToLeft.No)
+
+                if (RightToLeft == System.Windows.Forms.RightToLeft.No)
                 {
                     System.Windows.Forms.MessageBox.Show(text: Resources.ManageBookForm.BookDeletedMessage,
                         caption: Resources.ManageBookForm.MessageboxQuestionCaption,
@@ -432,7 +444,7 @@ namespace MyApplication
                         icon: System.Windows.Forms.MessageBoxIcon.Information,
                         defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1);
                 }
-                if(RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
                 {
                     System.Windows.Forms.MessageBox.Show(text: Resources.ManageBookForm.BookDeletedMessage,
                         caption: Resources.ManageBookForm.MessageboxQuestionCaption,
@@ -444,7 +456,7 @@ namespace MyApplication
                 }
 
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show($"Unexpected Error:{ex.Message}",
                       caption: "ERROR", buttons: System.Windows.Forms.MessageBoxButtons.OK,
@@ -474,6 +486,10 @@ namespace MyApplication
 
         private void DisownButton_Click(object sender, System.EventArgs e)
         {
+            if (userBooksListbox.SelectedItem == null)
+            {
+                return;
+            }
             System.Windows.Forms.DialogResult result = System.Windows.Forms.DialogResult.None;
             if (RightToLeft == System.Windows.Forms.RightToLeft.No)
             {
@@ -512,6 +528,7 @@ namespace MyApplication
                 var updatedUser = databaseContext.Users
                     .Where(current => current.Id == Infrastructure.Utility.AuthenticatedUser.Id)
                     .FirstOrDefault();
+                updatedUser.Books = new System.Collections.Generic.List<Models.Book>();
                 updatedUser.Books.Remove(selectedBook);
                 databaseContext.SaveChanges();
                 this.DisplayOwnedBooks();
@@ -523,7 +540,7 @@ namespace MyApplication
                         icon: System.Windows.Forms.MessageBoxIcon.Information,
                         defaultButton: System.Windows.Forms.MessageBoxDefaultButton.Button1);
                 }
-                if(RightToLeft == System.Windows.Forms.RightToLeft.Yes)
+                if (RightToLeft == System.Windows.Forms.RightToLeft.Yes)
                 {
                     System.Windows.Forms.MessageBox.Show(text: Resources.ManageBookForm.BookDisownedMessage,
                         caption: Resources.ManageBookForm.MessageboxQuestionCaption,
@@ -534,7 +551,7 @@ namespace MyApplication
                         | System.Windows.Forms.MessageBoxOptions.RtlReading);
                 }
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 System.Windows.Forms.MessageBox.Show($"Unexpected Error:{ex.Message}",
                       caption: "ERROR", buttons: System.Windows.Forms.MessageBoxButtons.OK,

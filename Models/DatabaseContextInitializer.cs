@@ -36,13 +36,24 @@ namespace Models
                 IsAdmin = false,
                 IsSysAdmin = false,
             };
-            
+
+            User AdminUser = new User()
+            {
+                Username = "Mr.Admin",
+                Password = "123456",
+                Description = "Second Admin of the party",
+                IsActive = true,
+                IsAdmin = true,
+            };
+
             firstUser.FullName.FirstName = "Sepehr";
             firstUser.FullName.LastName = "golpazir";
             firstUser.Books = new System.Collections.Generic.List<Book>();
             dummy.FullName.FirstName = "sir dummy";
             dummy.FullName.LastName = "The great";
             dummy.Books = new System.Collections.Generic.List<Book>();
+            AdminUser.Books = new System.Collections.Generic.List<Book>();
+            databaseContext.Users.Add(AdminUser);
             databaseContext.Users.Add(firstUser);
             databaseContext.Users.Add(dummy);
             databaseContext.Books.Add(testBook);
